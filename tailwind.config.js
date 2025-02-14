@@ -25,7 +25,7 @@ module.exports = {
           DEFAULT: "#1E75BA",
         },
         gray: {
-          DEFAULT: "#F2F8FD",
+          DEFAULT: "#2C2C2C",
         },
         secondary: {
           DEFAULT: "#FFC641",
