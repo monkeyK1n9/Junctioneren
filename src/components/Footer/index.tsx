@@ -37,19 +37,19 @@ const blogThree: NavProps[] = [
   {
     path: "#",
     icon: (
-      <Image src={images.FacebookImg} alt="pic" className="w-[10px] h-[19px]" />
+      <Image src={images.FacebookImg} alt="pic" className="w-[16px] h-[16px]" />
     ),
   },
   {
     path: "#",
     icon: (
-      <Image src={images.TwitterImg} alt="pic" className="w-[10px] h-[19px]" />
+      <Image src={images.TwitterImg} alt="pic" className="w-[16px] h-[16px]" />
     ),
   },
   {
     path: "#",
     icon: (
-      <Image src={images.LinkedinImg} alt="pic" className="w-[10px] h-[19px]" />
+      <Image src={images.LinkedinImg} alt="pic" className="w-[16px] h-[16px]" />
     ),
   },
   {
@@ -58,7 +58,7 @@ const blogThree: NavProps[] = [
       <Image
         src={images.PinterestImg}
         alt="pic"
-        className="w-[10px] h-[19px]"
+        className="w-[16px] h-[16px]"
       />
     ),
   },
