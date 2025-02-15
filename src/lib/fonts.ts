@@ -25,3 +25,29 @@ export const RobotoUiDisplay = localFont({
   variable: "--font-roboto-ui-display",
   preload: true,
 });
+
+/**
+ * Inter
+ */
+export const InterUiDisplay = localFont({
+  src: [
+    {
+      path: "../fonts/inter/ligth.ttf",
+      weight: "300",
+      style: "ligth",
+    },
+    {
+      path: "../fonts/Inter/regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/inter/bold.ttf",
+      weight: "600",
+      style: "bold",
+    },
+  ],
+  display: "swap",
+  variable: "--font-inter-ui-display",
+  preload: true,
+});

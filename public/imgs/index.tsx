@@ -6,6 +6,8 @@ import LinkedinImg from "./linkedin.svg";
 import FacebookImg from "./facebook.svg";
 import TwitterImg from "./twitter.svg";
 import PinterestImg from "./pininterest.svg";
+import ArrowLong01 from "./arrow-long-01.svg";
+import ArrowLong02 from "./arrow-long-02.svg";
 
 const images = {
   LocationImg,
@@ -15,6 +17,8 @@ const images = {
   LinkedinImg,
   FacebookImg,
   TwitterImg,
+  ArrowLong01,
+  ArrowLong02,
   PinterestImg,
 };
 

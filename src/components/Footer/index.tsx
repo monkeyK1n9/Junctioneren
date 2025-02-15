@@ -94,7 +94,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray py-[10px] lg:py-[24px]">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5">
           <div>
             <Image
               src={images.LogoImg}
@@ -139,7 +139,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="hidden lg:flex" />
+          <div className="hidden xl:flex" />
           <div className="pt-[14px] lg:pt-0">
             <h4
               className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] font-bold`}

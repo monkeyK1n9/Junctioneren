@@ -41,8 +41,9 @@ module.exports = {
       addComponents({
         ".container": {
           marginLeft: "auto",
-          maxWidth: "80%",
+          maxWidth: "90%",
           marginRight: "auto",
+          width: "1728px",
         },
       });
     },
