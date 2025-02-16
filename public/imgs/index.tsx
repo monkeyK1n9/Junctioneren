@@ -10,10 +10,10 @@ import PinterestImg from "./pininterest.svg";
 import ArrowLong01 from "./arrow-long-01.svg";
 import ArrowLong02 from "./arrow-long-02.svg";
 import BannerImg from "./banner.webp";
-import Card1Img from "./card1.svg";
-import Card2Img from "./card2.svg";
-import Card3Img from "./card3.svg";
-import Card4Img from "./card4.svg";
+import Card1Img from "./card1.webp";
+import Card2Img from "./card2.webp";
+import Card3Img from "./card3.webp";
+import Card4Img from "./card4.webp";
 import OrganigramImg from "./organigram.svg";
 
 const images = {
