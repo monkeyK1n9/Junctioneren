@@ -7,7 +7,7 @@ import images from "../../../public/imgs";
 const CodeAndMeasurements = () => {
   const fontClass = cn(InterUiDisplay.variable, InterUiDisplay.className);
   return (
-    <section className="my-[20px] lg:my-[46px]">
+    <section className="py-[20px] lg:py-[46px]">
       <div className="container mx-auto">
         <div className="bg-[#F8F8F8] rounded-[46px] p-[20px] lg:p-[54px]">
           <div className="flex flex-col lg:flex-row">
@@ -24,7 +24,7 @@ const CodeAndMeasurements = () => {
                 Chez Junctioner Construction Engineering, nous avons construit
                 nos valeurs sur les piliers du secteur de la construction
               </p>
-              <div className="mt-[18px] flex flex-col lg:flex-row lg:space-x-[24px] space-y-[10px] lg:space-y-0">
+              <div className="mt-[18px] flex flex-col md:flex-row md:space-x-[24px] space-y-[10px] md:space-y-0">
                 <CButton
                   icon={
                     <Image
