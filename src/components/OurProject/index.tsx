@@ -55,17 +55,18 @@ const OurProjects = () => {
     <section className="py-[20px] lg:py-[46px] lg:max-w-[80%] lg:mx-auto">
       <div className="container mx-auto">
         <Menu title="Our Projects" titleLink="See all our projects" path="#" />
-        <div className="mt-[25px] sm:mt-[40px] md:mt-[50px] lg:mt-[60px] grid grid-cols-1 sm:grid-cols-2 gap-[20px] lg:gap-[30px]">
+        <div className="mt-[25px] sm:mt-[40px] md:mt-[50px] lg:mt-[60px] grid sm:grid-cols-12 gap-[20px] lg:gap-[30px] h-[400px] lg:h-[255px]">
           {projectGrid01.map((item, index) => (
-            <div key={index} className="relative group">
-              <div>
-                <Image
-                  src={item.picture}
-                  alt="picture"
-                  className="lg:h-[255px] lg:w-[570px] rounded-[10px]"
-                />
-              </div>
-              <div className="lg:w-[570px] lg:h-[255px] absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
+            <div
+              key={index}
+              className="relative group sm:col-span-6 lg:col-span-6"
+            >
+              <Image
+                src={item.picture}
+                alt="picture"
+                className="h-full w-full rounded-[10px] object-cover"
+              />
+              <div className="w-full h-full absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
                 <div className="text-white text-center lg:py-[48px] lg:px-[60px]">
                   <h4
                     className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] lg:leading-[64px] tracking-[0%] font-bold ${fontClass} text-left`}
@@ -90,16 +91,17 @@ const OurProjects = () => {
             </div>
           ))}
         </div>
-        <div className="mt-[10px] sm:mt-[20px] lg:mt-[30px] flex flex-col sm:flex-row gap-[20px] lg:gap-[30px]">
-          <div className="relative group">
-            <div>
+        <div className="mt-[10px] sm:mt-[20px] lg:mt-[30px] grid sm:grid-cols-12 gap-[20px] lg:gap-[30px] h-[400px] lg:h-[255px]">
+          <div className="relative group col-span-12 sm:col-span-6 lg:col-span-3 h-full w-full">
+            <div className="relative h-full w-full">
               <Image
                 src={images.Card2Img}
                 alt="picture"
-                className={`lg:h-[255px] lg:w-[270px] rounded-[10px]`}
+                className={`relative rounded-[10px] object-cover`}
+                layout="fill"
               />
             </div>
-            <div className="lg:h-[255px] lg:w-[270px] absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
+            <div className="lg:h-[255px] lg:w-full absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
               <div className="text-white text-center lg:py-[48px] lg:px-[60px]">
                 <h4
                   className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] lg:leading-[64px] tracking-[0%] font-bold ${fontClass} text-left`}
@@ -122,15 +124,16 @@ const OurProjects = () => {
               </div>
             </div>
           </div>
-          <div className="relative group">
-            <div>
+          <div className="relative group col-span-12 sm:col-span-6 w-full h-full">
+            <div className="relative h-full w-full">
               <Image
                 src={images.Card3Img}
                 alt="picture"
-                className={`lg:h-[255px] lg:w-[470px] rounded-[10px]`}
+                className={`rounded-[10px] object-cover`}
+                layout="fill"
               />
             </div>
-            <div className="lg:w-[470px] lg:h-[255px] absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
+            <div className="w-full h-full absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
               <div className="text-white text-center lg:py-[48px] lg:px-[60px]">
                 <h4
                   className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] lg:leading-[64px] tracking-[0%] font-bold ${fontClass} text-left`}
@@ -153,15 +156,16 @@ const OurProjects = () => {
               </div>
             </div>
           </div>
-          <div className="relative group">
-            <div>
+          <div className="relative group col-span-12 sm:col-span-6 lg:col-span-3 w-full h-full">
+            <div className="h-full w-full relative">
               <Image
                 src={images.Card4Img}
                 alt="picture"
-                className={`lg:h-[255px] lg:w-[370px] rounded-[10px]`}
+                className={`object-cover rounded-[10px]`}
+                layout="fill"
               />
             </div>
-            <div className="lg:w-[370px] lg:h-[255px] absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
+            <div className="w-full h-full absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
               <div className="text-white text-center lg:py-[48px] lg:px-[60px]">
                 <h4
                   className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] lg:leading-[64px] tracking-[0%] font-bold ${fontClass} text-left`}
