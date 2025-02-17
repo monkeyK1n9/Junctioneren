@@ -46,10 +46,10 @@ const Header = () => {
             alt="logo"
             className="h-[49.63px] w-[131px]"
           />
-          <div className="flex xl:hidden">
+          <div className="flex lg:hidden">
             <FaBars size={24} />
           </div>
-          <ul className="hidden xl:flex space-x-[58px] pl-[415px]">
+          <ul className="hidden lg:flex lg:space-x-[40px]  xl:space-x-[58px] lg:pl-[390px] xl:pl-[415px]">
             {navs.map((item, index) => (
               <li key={index}>
                 <Link

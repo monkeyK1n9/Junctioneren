@@ -54,7 +54,12 @@ const OurProjects = () => {
   return (
     <section className="py-[20px] lg:py-[46px] lg:max-w-[80%] lg:mx-auto">
       <div className="container mx-auto">
-        <Menu title="Our Projects" titleLink="See all our projects" path="#" />
+        <Menu
+          title="Our Projects"
+          titleLink="See all our projects"
+          path="#"
+          show
+        />
         <div className="mt-[25px] sm:mt-[40px] md:mt-[50px] lg:mt-[60px] grid sm:grid-cols-12 gap-[20px] lg:gap-[30px] h-[400px] lg:h-[255px]">
           {projectGrid01.map((item, index) => (
             <div
