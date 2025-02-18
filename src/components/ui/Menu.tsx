@@ -16,7 +16,7 @@ const fontClass = cn(RobotoUiDisplay.className, RobotoUiDisplay.variable);
 const Menu = ({ title, titleLink, path, show }: MenuProps) => (
   <div className="flex items-center flex-col sm:flex-row sm:justify-between">
     <h2
-      className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] text-[#BDBDBD] lg:leading-[64px] tracking-[0%] font-normal ${fontClass}`}
+      className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] text-[#BDBDBD] lg:leading-[64px] tracking-[0%] font-light ${fontClass}`}
     >
       {title}
     </h2>
