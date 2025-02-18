@@ -101,16 +101,10 @@ const WhoWeAre = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div
-                className={`flex ${
-                  index !== datas.length - 1 && index !== 2
-                    ? "justify-center lg:justify-between"
-                    : "justify-center"
-                } items-center text-[#B9B9B9]`}
-              >
-                <TextAbout>{item.title}</TextAbout>
-                {index !== datas.length - 1 && index !== 2 && (
-                  <div className="pl-[26.1px] hidden lg:flex">
+              <div className="flex justify-center items-center text-[#B9B9B9]">
+                <TextAbout className="lg:w-[98%]">{item.title}</TextAbout>
+                {index < datas.length - 1 && index !== 2 && (
+                  <div className="pl-[26.1px] hidden lg:flex w-[2%]">
                     <TextAbout>/</TextAbout>
                   </div>
                 )}
