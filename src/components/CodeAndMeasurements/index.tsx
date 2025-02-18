@@ -58,10 +58,10 @@ const CodeAndMeasurements = () => {
                 The Junctioners
               </p>
               <div className="relative h-[73px] my-[17px]">
-                <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-0 top-0 z-10"></div>
-                <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[50px] top-0 z-20"></div>
-                <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[100px] top-0 z-30"></div>
-                <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[150px] top-0 z-40"></div>
+                <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-0 top-0 z-40 border-[#312783] border-[5px]"></div>
+                <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[50px] top-0 z-30 border-[#312783] border-[5px]"></div>
+                <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[100px] top-0 z-20 border-[#312783] border-[5px]"></div>
+                <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[150px] top-0 z-10 border-[#312783] border-[5px]"></div>
               </div>
               <p
                 className={`${fontClass} font-normal text-[10px] sm:text-[11px] lg:text-[12px] leading-[13px] sm:leading-[16px] lg:leading-[19.36px] tracking-[0%] text-center lg:text-right`}
