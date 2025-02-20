@@ -28,18 +28,6 @@ const CodeAndMeasurements = () => {
                 <CButton
                   icon={
                     <Image
-                      src={images.ArrowLong01}
-                      alt="icon"
-                      className="h-[24px] w-[24px]"
-                    />
-                  }
-                  className="bg-[#312783] text-white rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
-                >
-                  Contact us now
-                </CButton>
-                <CButton
-                  icon={
-                    <Image
                       src={images.ArrowLong02}
                       alt="icon"
                       className="h-[24px] w-[24px]"
@@ -48,6 +36,18 @@ const CodeAndMeasurements = () => {
                   className="bg-white text-[#656565] rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
                 >
                   See our services
+                </CButton>
+                <CButton
+                  icon={
+                    <Image
+                      src={images.ArrowLong01}
+                      alt="icon"
+                      className="h-[24px] w-[24px]"
+                    />
+                  }
+                  className="bg-[#312783] text-white rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
+                >
+                  Contact us now
                 </CButton>
               </div>
             </div>

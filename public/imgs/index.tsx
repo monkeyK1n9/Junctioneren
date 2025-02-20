@@ -16,6 +16,8 @@ import Card3Img from "./card3.webp";
 import Card4Img from "./card4.webp";
 import Card5Img from "./card5.webp";
 import OrganigramImg from "./organigram.svg";
+import Who1Img from "./who1.webp";
+import Rect1Img from "./Rectangle1.svg";
 
 const images = {
   LocationImg,
@@ -36,6 +38,8 @@ const images = {
   Card4Img,
   OrganigramImg,
   Card5Img,
+  Who1Img,
+  Rect1Img,
 };
 
 export default images;
