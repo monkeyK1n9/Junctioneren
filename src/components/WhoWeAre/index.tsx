@@ -83,7 +83,6 @@ const WhoWeAre = () => {
   return (
     <section className="bg-[#f1f1f1] py-[30px] sm:py-[50px] md:py-[80px] lg:py-[131px] rounded-[43px]">
       <div className="lg:max-w-[80%] lg:mx-auto">
-        <div className="container mx-auto"></div>
         <Menu
           title="Who we are"
           titleLink="learn more about us"
@@ -91,7 +90,6 @@ const WhoWeAre = () => {
           show
         />
       </div>
-
       <div className="container mx-auto">
         <div className="mt-[30px] sm:mt-[40px] md:mt-[60px] lg:mt-[76px] grid grid-cols-12 gap-[20px] lg:gap-[40px]">
           {datas.map((item, index) => (

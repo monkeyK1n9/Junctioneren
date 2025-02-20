@@ -3,6 +3,7 @@ import CodeAndMeasurements from "@/components/CodeAndMeasurements";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import OurProjects from "@/components/OurProject";
+import WhatWeDo from "@/components/WhatWeDo";
 import WhoWeAre from "@/components/WhoWeAre";
 import { DefaultLayout } from "@/layouts/default.layout";
 
@@ -11,6 +12,7 @@ const Home = () => {
     <DefaultLayout>
       <Banner />
       <CodeAndMeasurements />
+      <WhatWeDo />
       <OurProjects />
       <WhoWeAre />
       <ContactUs />
