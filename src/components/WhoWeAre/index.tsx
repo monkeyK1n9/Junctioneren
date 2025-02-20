@@ -71,7 +71,7 @@ const CardPicture = ({ picture, title }: { picture: any; title: string }) => {
 const TextAbout = ({ children, ...props }: TextAboutProps) => (
   <h4
     {...props}
-    className={`${fontClass} lg:text-[64px] lg:leading-[77.45px] tracking-[0%] font-normal`}
+    className={`${fontClass} lg:text-[45px] xl:text-[64px] lg:leading-[65px] xl:leading-[77.45px] tracking-[0%] font-normal`}
   >
     {children}
   </h4>
@@ -114,7 +114,7 @@ const WhoWeAre = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute -top-24 text-white z-50"
+                    className="absolute -top-24 text-white z-50 hidden lg:flex"
                   >
                     <CardPicture picture={item.picture} title={item.title} />
                   </motion.div>

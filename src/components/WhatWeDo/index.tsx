@@ -34,7 +34,7 @@ ${index === val ? "w-full bg-white text-[#DF4D1B]" : "w-auto bg-transparent"}
         index === val
           ? "w-full bg-white text-[#DF4D1B]"
           : "w-auto bg-transparent"
-      } lg:text-[36px] lg:leading-[47.57px] lg:tracking-[0%] font-normal transition-all duration-300 p-2 rounded-lg py-[30px] max-w-[637px]`}
+      } lg:text-[25px] xl:text-[36px] lg:leading-[35px] xl:leading-[47.57px] lg:tracking-[0%] font-normal transition-all duration-300 p-2 rounded-lg py-[30px] max-w-[637px]`}
     >
       {children}
     </h4>
@@ -99,7 +99,7 @@ const WhatWeDo = () => {
             ))}
           </div>
 
-          <div className="absolute top-0 right-[300px] z-0">
+          <div className="absolute top-0 lg:right-[-80px] xl:right-[100px] z-0">
             <div className="relative lg:h-[513px] lg:w-[390px] flex-shrink-0">
               <AnimatePresence>
                 {activeIndex !== null && (
