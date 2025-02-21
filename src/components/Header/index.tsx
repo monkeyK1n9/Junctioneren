@@ -30,7 +30,7 @@ const navs: NavProps[] = [
   },
   {
     name: "Contacts",
-    path: "#",
+    path: "/contact-us",
   },
 ];
 
@@ -41,11 +41,13 @@ const Header = () => {
     <header className="absolute inset-0 top-0 left-0 z-10 h-[102px]">
       <div className="container mx-auto h-full">
         <div className="flex items-center h-full justify-between xl:justify-normal">
-          <Image
-            src={images.Logo2Img}
-            alt="logo"
-            className="h-[49.63px] w-[131px]"
-          />
+          <Link href={"/"}>
+            <Image
+              src={images.Logo2Img}
+              alt="logo"
+              className="h-[49.63px] w-[131px]"
+            />
+          </Link>
           <div className="flex lg:hidden">
             <FaBars size={24} />
           </div>

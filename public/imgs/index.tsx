@@ -19,6 +19,7 @@ import OrganigramImg from "./organigram.svg";
 import Who1Img from "./who1.webp";
 import Rect1Img from "./Rectangle1.svg";
 import ContactImg from "./contact.webp";
+import MapImg from "./map.webp";
 
 const images = {
   LocationImg,
@@ -42,6 +43,7 @@ const images = {
   Who1Img,
   Rect1Img,
   ContactImg,
+  MapImg,
 };
 
 export default images;
