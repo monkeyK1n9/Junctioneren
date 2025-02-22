@@ -5,6 +5,8 @@ import Menu from "../ui/Menu";
 import { InterUiDisplay } from "@/lib/fonts";
 import Image from "next/image";
 import cn from "clsx";
+import SlideLeft from "../Animation/SlideLeft";
+import SlideRight from "../Animation/SlideRight";
 
 type DataProps = {
   title: string;
@@ -82,22 +84,24 @@ const WhatWeDo = () => {
         />
         <div className="relative lg:gap-[57px] lg:mt-[57px]">
           {/* Text Container */}
-          <div className="w-full z-10">
-            {datas.map((item, index) => (
-              <div
-                key={index}
-                onMouseEnter={() => setActiveIndex(index)}
-                onMouseLeave={() => setActiveIndex(index)}
-              >
-                <TextForm
-                  index={index}
-                  val={activeIndex !== null ? activeIndex : undefined}
+          <SlideRight delay={0.4}>
+            <div className="w-full z-10">
+              {datas.map((item, index) => (
+                <div
+                  key={index}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onMouseLeave={() => setActiveIndex(index)}
                 >
-                  {item.title}
-                </TextForm>
-              </div>
-            ))}
-          </div>
+                  <TextForm
+                    index={index}
+                    val={activeIndex !== null ? activeIndex : undefined}
+                  >
+                    {item.title}
+                  </TextForm>
+                </div>
+              ))}
+            </div>
+          </SlideRight>
 
           <div className="absolute top-0 lg:right-[-80px] xl:right-[100px] z-0">
             <div className="relative lg:h-[513px] lg:w-[390px] flex-shrink-0">
