@@ -6,7 +6,7 @@ import localFont from "next/font/local";
 export const RobotoUiDisplay = localFont({
   src: [
     {
-      path: "../fonts/Roboto/ligth.ttf",
+      path: "../fonts/Roboto/light.ttf",
       weight: "300",
       style: "normal",
     },
@@ -37,7 +37,7 @@ export const RobotoUiDisplay = localFont({
 export const InterUiDisplay = localFont({
   src: [
     {
-      path: "../fonts/inter/ligth.ttf",
+      path: "../fonts/Inter/ligth.ttf",
       weight: "300",
       style: "ligth",
     },
@@ -47,7 +47,7 @@ export const InterUiDisplay = localFont({
       style: "normal",
     },
     {
-      path: "../fonts/inter/bold.ttf",
+      path: "../fonts/Inter/bold.ttf",
       weight: "600",
       style: "bold",
     },
