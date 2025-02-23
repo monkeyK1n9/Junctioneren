@@ -97,7 +97,7 @@ const WhoWeAre = () => {
             {datas.map((item, index) => (
               <div
                 key={index}
-                className="col-span-12 lg:col-span-4 relative text-[#B9B9B9]"
+                className="col-span-6 lg:col-span-4 relative text-[#B9B9B9]"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
