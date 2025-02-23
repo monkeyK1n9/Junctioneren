@@ -18,7 +18,7 @@ const ContactUs = () => {
               <Form text="interested in" />
               <Form textarea text="Message*" />
             </div>
-            <div className="w-full col-span-12 lg:col-span-7 h-full">
+            <div className="w-full col-span-12 lg:col-span-7 h-full hidden lg:flex">
               <Image
                 src={images.ContactImg}
                 alt="picture"
