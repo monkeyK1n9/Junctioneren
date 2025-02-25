@@ -91,6 +91,7 @@ const WhatWeDo = () => {
                   key={index}
                   onMouseEnter={() => setActiveIndex(index)}
                   onMouseLeave={() => setActiveIndex(index)}
+                  className="text-center lg:text-left"
                 >
                   <TextForm
                     index={index}
