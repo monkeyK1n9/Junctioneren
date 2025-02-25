@@ -5,17 +5,44 @@ import cn from "clsx";
 import { InterUiDisplay } from "@/lib/fonts";
 import CButton from "../ui/Button";
 import SlideUp from "../Animation/SlideUp";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Banner = () => {
   const fontClass = cn(InterUiDisplay.variable, InterUiDisplay.className);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+  };
+
   return (
     <section className="relative">
       <Header />
-      <Image
-        src={images.BannerImg}
-        alt="picture"
-        className="h-[550px] sm:h-[650px] md:h-[750px] lg:h-[885px] w-full object-cover rounded-bl-[42px] rounded-br-[42px] transform scale-x-[-1] "
-      />
+      <Slider {...settings}>
+        <div>
+          <Image
+            src={images.BannerImg}
+            alt="picture"
+            className="h-[550px] sm:h-[650px] md:h-[750px] lg:h-[885px] w-full object-cover rounded-bl-[42px] rounded-br-[42px] transform scale-x-[-1]"
+          />
+        </div>
+        <div>
+          <Image
+            src={images.Card5Img}
+            alt="picture"
+            className="h-[550px] sm:h-[650px] md:h-[750px] lg:h-[885px] w-full object-cover rounded-bl-[42px] rounded-br-[42px] transform scale-x-[-1]"
+          />
+        </div>
+      </Slider>
       <div className="absolute inset-0 bg-black bg-opacity-5 rounded-bl-[42px] rounded-br-[42px]" />
       <div className="absolute inset-0 mt-[180px] sm:mt-[250px] lg:mt-[339px] flex flex-col text-white lg:ml-[234px] lg:w-[685px] max-w-[90%] mx-auto lg:max-w-full">
         <SlideUp delay={0.1}>
