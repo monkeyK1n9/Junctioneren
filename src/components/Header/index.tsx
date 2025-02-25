@@ -5,6 +5,8 @@ import { RobotoUiDisplay } from "@/lib/fonts";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaBars } from "react-icons/fa";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { useState } from "react";
 
 type NavProps = {
   name: string;
@@ -36,6 +38,10 @@ const navs: NavProps[] = [
 
 const Header = () => {
   const fontClass = cn(RobotoUiDisplay.variable, RobotoUiDisplay.className);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOpen = () => {
+    setIsOpen(!isOpen);
+  };
   const router = useRouter();
   return (
     <header className="absolute inset-0 top-0 left-0 z-10 h-[102px]">
@@ -49,7 +55,8 @@ const Header = () => {
             />
           </Link>
           <div className="flex lg:hidden">
-            <FaBars size={24} />
+            {!isOpen && <FaBars size={24} onClick={handleOpen} />}
+            {isOpen && <AiFillCloseCircle size={30} onClick={handleOpen} />}
           </div>
           <ul className="hidden lg:flex lg:space-x-[40px]  xl:space-x-[58px] lg:pl-[390px] xl:pl-[415px]">
             {navs.map((item, index) => (
@@ -68,6 +75,29 @@ const Header = () => {
             ))}
           </ul>
         </div>
+        {isOpen && (
+          <div className="z-50 bg-white rounded-md px-4 py-8">
+            <ul className="flex flex-col space-y-4 text-center">
+              {navs.map((item, index) => (
+                <li
+                  key={index}
+                  className={`${
+                    router.pathname === item.path
+                      ? "bg-[#DF4D1B] text-white font-semibold py-2 rounded-md"
+                      : "text-[#333333]"
+                  }`}
+                >
+                  <Link
+                    className={`uppercase ${fontClass} text-[12px] w-full leading-[12px] tracking-[20%] font-normal`}
+                    href={String(item.path)}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </header>
   );
