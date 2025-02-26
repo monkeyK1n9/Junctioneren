@@ -101,7 +101,11 @@ const WhoWeAre = () => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <div className="flex justify-center items-center text-[#B9B9B9]">
+                <div
+                  className={`flex justify-center items-center text-[#B9B9B9] ${
+                    hoveredIndex === index ? "hidden" : "flex"
+                  }`}
+                >
                   <TextAbout className="lg:w-[98%]">{item.title}</TextAbout>
                   {index < datas.length - 1 && index !== 2 && (
                     <div className="pl-[26.1px] hidden lg:flex w-[2%]">
