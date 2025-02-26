@@ -12,7 +12,6 @@ const Home = () => {
   return (
     <DefaultLayout className="overflow-x-hidden">
       <Header />
-      <div className="relative bg-red-500  z-50 top-0 left-0"></div>
       <Banner />
       <CodeAndMeasurements />
       <WhatWeDo />
