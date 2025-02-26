@@ -1,12 +1,10 @@
 import Image from "next/image";
 import images from "../../../public/imgs";
-import Header from "../Header";
 import cn from "clsx";
 import { InterUiDisplay } from "@/lib/fonts";
 import CButton from "../ui/Button";
 import SlideUp from "../Animation/SlideUp";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -20,14 +18,13 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     fade: true,
   };
 
   return (
     <section className="relative">
-      <Header />
-      <Slider {...settings}>
+      <Slider {...settings} className="m-0 p-0">
         <div>
           <Image
             src={images.BannerImg}
@@ -35,9 +32,9 @@ const Banner = () => {
             className="h-[550px] sm:h-[650px] md:h-[750px] lg:h-[885px] w-full object-cover rounded-bl-[42px] rounded-br-[42px] transform scale-x-[-1]"
           />
         </div>
-        <div>
+        <div style={{ margin: 0, padding: 0 }}>
           <Image
-            src={images.Card5Img}
+            src={images.Card4Img}
             alt="picture"
             className="h-[550px] sm:h-[650px] md:h-[750px] lg:h-[885px] w-full object-cover rounded-bl-[42px] rounded-br-[42px] transform scale-x-[-1]"
           />

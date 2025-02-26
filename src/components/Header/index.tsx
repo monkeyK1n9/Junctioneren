@@ -44,7 +44,7 @@ const Header = () => {
   };
   const router = useRouter();
   return (
-    <header className="absolute inset-0 top-0 left-0 z-10 h-[102px]">
+    <header className="z-50 h-[102px] sticky top-0 left-0 w-full bg-white shadow-sm">
       <div className="container mx-auto h-full">
         <div className="flex items-center h-full justify-between xl:justify-normal">
           <Link href={"/"}>
