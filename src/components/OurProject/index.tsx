@@ -52,7 +52,11 @@ const projectGrid02: ProjectProps[] = [
   },
 ];
 
-const OurProjects = () => {
+type MyProps = {
+  showBtn?: boolean;
+};
+
+const OurProjects = ({ showBtn }: MyProps) => {
   return (
     <section className="py-[20px] lg:py-[46px] lg:max-w-[80%] lg:mx-auto">
       <SlideUp delay={0.5}>
@@ -197,20 +201,22 @@ const OurProjects = () => {
               </div>
             </div>
           </div>
-          <div className="mt-[20px] sm:mt-[30px] md:mt-[40px] lg:mt-[55px] flex justify-center items-center">
-            <button
-              className={`bg-[#f1f1f1] rounded-[40px] lg:w-[355px] lg:h-[76px] ${fontClassInter} text-[14px] sm:text-[16px] lg:text-[20px] leading-[18px] sm:leading-[21px] lg:leading-[24.2px] flex items-center justify-center px-6 sm:px-4 lg:px-0`}
-            >
-              See our work process
-              <span className="ml-[12px] sm:ml-[16px] lg:ml-[22px]">
-                <Image
-                  src={images.OrganigramImg}
-                  alt="icon"
-                  className="w-[20px] lg:w-[20px] h-[30px] lg:h-[50px]"
-                />
-              </span>
-            </button>
-          </div>
+          {showBtn && (
+            <div className="mt-[20px] sm:mt-[30px] md:mt-[40px] lg:mt-[55px] flex justify-center items-center">
+              <button
+                className={`bg-[#f1f1f1] rounded-[40px] lg:w-[355px] lg:h-[76px] ${fontClassInter} text-[14px] sm:text-[16px] lg:text-[20px] leading-[18px] sm:leading-[21px] lg:leading-[24.2px] flex items-center justify-center px-6 sm:px-4 lg:px-0`}
+              >
+                See our work process
+                <span className="ml-[12px] sm:ml-[16px] lg:ml-[22px]">
+                  <Image
+                    src={images.OrganigramImg}
+                    alt="icon"
+                    className="w-[20px] lg:w-[20px] h-[30px] lg:h-[50px]"
+                  />
+                </span>
+              </button>
+            </div>
+          )}
         </div>
       </SlideUp>
     </section>
