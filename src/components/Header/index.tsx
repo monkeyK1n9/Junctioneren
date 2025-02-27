@@ -20,7 +20,7 @@ const navs: NavProps[] = [
   },
   {
     name: "Our projects",
-    path: "#",
+    path: "/our-projects",
   },
   {
     name: "What we do",
