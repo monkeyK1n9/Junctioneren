@@ -23,7 +23,7 @@ export const CommonText = ({
     <p
       {...props}
       className={cn(
-        "text-black ${fontClassInter} font-[300] tracking-[0] leading-[19.36px] text-[16px]",
+        "text-black ${fontClassInter} font-[300] tracking-[0%] leading-[19.36px] text-[16px]",
         fontClassInter,
         className
       )}
