@@ -11,7 +11,8 @@ const HowWeWork = () => {
           finish.
         </CommonText>
         <div className="mt-[101px]">
-          <div className="flex justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
+            <div className="hidden lg:flex" />
             <Work
               title="Chef de projet"
               description="Below is a chart that shows how we organise our projects from start to finish."
