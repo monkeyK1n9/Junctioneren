@@ -6,7 +6,7 @@ const HowWeWork = () => {
     <section className="py-[20px] lg:py-[46px] lg:max-w-[80%] lg:mx-auto">
       <div className="container mx-auto">
         <Menu title="How we work" titleLink="" path="#" />
-        <CommonText className="lg:mt-[41px]">
+        <CommonText className="lg:mt-[41px] text-center lg:text-left">
           Below is a chart that shows how we organise our projects from start to
           finish.
         </CommonText>
