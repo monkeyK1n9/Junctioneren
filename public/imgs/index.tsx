@@ -20,6 +20,11 @@ import Who1Img from "./who1.webp";
 import Rect1Img from "./Rectangle1.svg";
 import ContactImg from "./contact.webp";
 import MapImg from "./map.webp";
+import Cadre from "./cadre.svg";
+import Prof1 from "./prof1.png";
+import Prof2 from "./prof2.png";
+import Prof3 from "./prof3.png";
+import Prof4 from "./prof4.png";
 
 const images = {
   LocationImg,
@@ -44,6 +49,11 @@ const images = {
   Rect1Img,
   ContactImg,
   MapImg,
+  Cadre,
+  Prof1,
+  Prof2,
+  Prof3,
+  Prof4,
 };
 
 export default images;

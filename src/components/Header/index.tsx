@@ -28,7 +28,7 @@ const navs: NavProps[] = [
   },
   {
     name: "Who we are",
-    path: "#",
+    path: "/who-we-are",
   },
   {
     name: "Contacts",
