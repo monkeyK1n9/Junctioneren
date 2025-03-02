@@ -60,10 +60,34 @@ const CodeAndMeasurements = () => {
                   The Junctioners
                 </p>
                 <div className="relative h-[73px] my-[17px]">
-                  <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-0 top-0 z-40 border-[#312783] border-[5px]"></div>
-                  <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[50px] top-0 z-30 border-[#312783] border-[5px]"></div>
-                  <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[100px] top-0 z-20 border-[#312783] border-[5px]"></div>
-                  <div className="absolute w-[73px] h-[73px] bg-[#C0C0C0] rounded-full right-[150px] top-0 z-10 border-[#312783] border-[5px]"></div>
+                  <div className="absolute w-[73px] h-[73px] rounded-full right-0 top-0 z-40 border-[#312783] border-[4px]">
+                    <Image
+                      src={images.Prof3}
+                      alt="picture"
+                      className="w-[67px] h-[67px] rounded-full"
+                    />
+                  </div>
+                  <div className="absolute w-[73px] h-[73px] rounded-full right-[50px] top-0 z-30 border-[#312783] border-[4px]">
+                    <Image
+                      src={images.Prof2}
+                      alt="picture"
+                      className="w-[67px] h-[67px] rounded-full"
+                    />
+                  </div>
+                  <div className="absolute w-[73px] h-[73px] rounded-full right-[100px] top-0 z-20 border-[#312783] border-[4px]">
+                    <Image
+                      src={images.Prof1}
+                      alt="picture"
+                      className="w-[67px] h-[67px] rounded-full"
+                    />
+                  </div>
+                  <div className="absolute w-[73px] h-[73px] rounded-full right-[150px] top-0 z-10 border-[#312783] border-[4px]">
+                    <Image
+                      src={images.Prof4}
+                      alt="picture"
+                      className="w-[67px] h-[67px] rounded-full"
+                    />
+                  </div>
                 </div>
                 <p
                   className={`${fontClass} font-normal text-[10px] sm:text-[11px] lg:text-[12px] leading-[13px] sm:leading-[16px] lg:leading-[19.36px] tracking-[0%] text-center lg:text-right`}
