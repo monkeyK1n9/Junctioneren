@@ -5,7 +5,6 @@ import Image from "next/image";
 import images from "../../../public/imgs";
 import Link from "next/link";
 import React from "react";
-import SlideRight from "../Animation/SlideRight";
 import SlideUp from "../Animation/SlideUp";
 
 const fontClass = cn(RobotoUiDisplay.className, RobotoUiDisplay.variable);
