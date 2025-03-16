@@ -1,6 +1,4 @@
-import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
-import Form from "@/components/Form";
 import Header from "@/components/Header";
 import { DefaultLayout } from "@/layouts/default.layout";
 import images from "../../../public/imgs";
