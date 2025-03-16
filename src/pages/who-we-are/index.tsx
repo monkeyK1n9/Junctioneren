@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import { DefaultLayout } from "@/layouts/default.layout";
-import { InterUiDisplay, RobotoUiDisplay } from "@/lib/fonts";
+import { RobotoUiDisplay } from "@/lib/fonts";
 import cn from "clsx";
 import images from "../../../public/imgs";
 import Footer from "@/components/Footer";
