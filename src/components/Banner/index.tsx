@@ -31,7 +31,6 @@ const Banner = () => {
       image: images.Card4Img,
       text: "Découvrez nos services pour une expérience unique",
     },
-    // Add more slides as needed
   ];
 
   return (
