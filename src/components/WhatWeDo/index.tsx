@@ -5,7 +5,6 @@ import Menu from "../ui/Menu";
 import { InterUiDisplay } from "@/lib/fonts";
 import Image from "next/image";
 import cn from "clsx";
-import SlideLeft from "../Animation/SlideLeft";
 import SlideRight from "../Animation/SlideRight";
 
 type DataProps = {
