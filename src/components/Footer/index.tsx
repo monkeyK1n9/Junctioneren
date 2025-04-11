@@ -82,7 +82,7 @@ const blogTwo: NavProps[] = [
     ),
   },
   {
-    name: "junctionerCE@gmail.com",
+    name: "junctionerce@gmail.com",
     icon: (
       <Image src={images.MailImg} alt="pic" className="w-[13.2px] h-[16px]" />
     ),
