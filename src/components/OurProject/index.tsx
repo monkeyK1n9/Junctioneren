@@ -66,7 +66,7 @@ const OurProjects = ({ showBtn }: MyProps) => {
             path="#"
             show
           />
-          <div className="mt-[25px] sm:mt-[40px] md:mt-[50px] lg:mt-[60px] grid sm:grid-cols-12 gap-[20px] lg:gap-[30px] h-[400px] lg:h-[255px]">
+          <div className="mt-[25px] sm:mt-[40px] md:mt-[50px] lg:mt-[60px] grid sm:grid-cols-12 gap-[20px] lg:gap-[30px] h-[400px] lg:h-[255px] 2xl:h-[350px]">
             {projectGrid01.map((item, index) => (
               <div
                 key={index}
