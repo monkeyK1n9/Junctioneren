@@ -25,6 +25,9 @@ import Prof1 from "./prof1.png";
 import Prof2 from "./prof2.png";
 import Prof3 from "./prof3.png";
 import Prof4 from "./prof4.png";
+import Hero1 from "./hero1.webp";
+import Hero2 from "./hero2.webp";
+import Hero3 from "./hero3.webp";
 
 const images = {
   LocationImg,
@@ -54,6 +57,9 @@ const images = {
   Prof2,
   Prof3,
   Prof4,
+  Hero1,
+  Hero2,
+  Hero3,
 };
 
 export default images;
