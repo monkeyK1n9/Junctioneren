@@ -32,6 +32,10 @@ import WWDDesign from "./wwdDesign.jpg";
 import WWDInfras from "./wwdInfras.jpg";
 import WWDIntell from "./wwdIntell.jpg";
 import WWDManag from "./wwdManag.jpg";
+import PUnMf from "./pUMf.webp";
+import PuEy from "./pUEy.webp";
+import pNm from "./pNm.webp";
+import pJv from "./pJv.webp";
 
 const images = {
   LocationImg,
@@ -68,6 +72,10 @@ const images = {
   WWDInfras,
   WWDIntell,
   WWDManag,
+  pJv,
+  pNm,
+  PUnMf,
+  PuEy,
 };
 
 export default images;

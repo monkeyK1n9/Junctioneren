@@ -14,19 +14,17 @@ type ProjectProps = {
   picture: any;
   title: string;
   link: string;
-  width?: any;
-  height?: any;
 };
 
 const projectGrid01: ProjectProps[] = [
   {
-    picture: images.Card1Img,
-    title: "Une cité universitaire",
+    picture: images.PUnMf,
+    title: "Cité universitaire a Mfou",
     link: "#",
   },
   {
-    picture: images.Card1Img,
-    title: "Une cité universitaire",
+    picture: images.PuEy,
+    title: "Cité universitaire a Eyang",
     link: "#",
   },
 ];
@@ -34,19 +32,17 @@ const projectGrid01: ProjectProps[] = [
 const projectGrid02: ProjectProps[] = [
   {
     picture: images.Card1Img,
-    title: "Une cité universitaire",
-    link: "#",
-    width: 270,
-    height: 255,
-  },
-  {
-    picture: images.Card1Img,
-    title: "Une cité universitaire",
+    title: "Immeuble à but locatif a Nomayos",
     link: "#",
   },
   {
-    picture: images.Card1Img,
-    title: "Une cité universitaire",
+    picture: images.pJv,
+    title: "Fairy Appartement Montée Jouvence",
+    link: "#",
+  },
+  {
+    picture: images.Card4Img,
+    title: "Projet résidentiel premium",
     link: "#",
   },
 ];
@@ -57,43 +53,50 @@ type MyProps = {
 
 const OurProjects = ({ showBtn }: MyProps) => {
   return (
-    <section className="py-[20px] lg:py-[46px] lg:max-w-[80%] lg:mx-auto">
+    <section className="py-5 lg:py-12 container mx-auto px-4 lg:px-0">
       <SlideUp delay={0.5}>
-        <div className="container mx-auto">
+        <div className="max-w-7xl mx-auto">
           <Menu
             title="Our Projects"
             titleLink="See all our projects"
             path="#"
             show
           />
-          <div className="mt-[25px] sm:mt-[40px] md:mt-[50px] lg:mt-[60px] grid sm:grid-cols-12 gap-[20px] lg:gap-[30px] h-[400px] lg:h-[255px] 2xl:h-[350px]">
+
+          {/* First Grid Row */}
+          <div className="mt-6 sm:mt-10 lg:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
             {projectGrid01.map((item, index) => (
               <div
                 key={index}
-                className="relative group sm:col-span-6 lg:col-span-6"
+                className="relative group aspect-[4/3] lg:aspect-[5/3]"
               >
-                <Image
-                  src={item.picture}
-                  alt="picture"
-                  className="h-full w-full rounded-[10px] object-cover"
-                />
-                <div className="w-full h-full absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
-                  <div className="text-white text-center lg:py-[48px] lg:px-[60px]">
+                <div className="relative h-full w-full">
+                  <Image
+                    src={item.picture}
+                    alt={item.title}
+                    className="rounded-lg object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                  />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-lg p-4">
+                  <div className="text-white text-left p-4">
                     <h4
-                      className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] lg:leading-[64px] tracking-[0%] font-bold ${fontClass} text-left`}
+                      className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold ${fontClass}`}
                     >
                       {item.title}
                     </h4>
                     <Link
-                      href={String(item.link)}
-                      className={`flex justify-start items-center ${fontClass} text-[10px] lg:text-[12px] leading-[12px] tracking-[20%] text-center uppercase mt-[6px]`}
+                      href={item.link}
+                      className={`flex items-center mt-2 ${fontClass} text-xs lg:text-sm uppercase tracking-widest`}
                     >
                       View More
-                      <span className="ml-[6px]">
+                      <span className="ml-2">
                         <Image
                           src={images.ArrowLong01}
-                          alt="icon"
-                          className="h-[24px] w-[24px]"
+                          alt="arrow"
+                          width={24}
+                          height={24}
                         />
                       </span>
                     </Link>
@@ -102,115 +105,60 @@ const OurProjects = ({ showBtn }: MyProps) => {
               </div>
             ))}
           </div>
-          <div className="mt-[10px] sm:mt-[20px] lg:mt-[30px] grid sm:grid-cols-12 gap-[20px] lg:gap-[30px] h-[400px] lg:h-[255px]">
-            <div className="relative group col-span-12 sm:col-span-6 lg:col-span-3 h-full w-full">
-              <div className="relative h-full w-full">
-                <Image
-                  src={images.Card2Img}
-                  alt="picture"
-                  className={`relative rounded-[10px] object-cover`}
-                  layout="fill"
-                />
-              </div>
-              <div className="lg:h-[255px] lg:w-full absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
-                <div className="text-white text-center lg:py-[48px] lg:px-[60px]">
-                  <h4
-                    className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] lg:leading-[64px] tracking-[0%] font-bold ${fontClass} text-left`}
-                  >
-                    title
-                  </h4>
-                  <Link
-                    href={"#"}
-                    className={`flex justify-start items-center ${fontClass} text-[10px] lg:text-[12px] leading-[12px] tracking-[20%] text-center uppercase mt-[6px]`}
-                  >
-                    View More
-                    <span className="ml-[6px]">
-                      <Image
-                        src={images.ArrowLong01}
-                        alt="icon"
-                        className="h-[24px] w-[24px]"
-                      />
-                    </span>
-                  </Link>
+
+          {/* Second Grid Row */}
+          <div className="mt-4 sm:mt-6 lg:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            {projectGrid02.map((item, index) => (
+              <div key={index} className="relative group aspect-[4/3]">
+                <div className="relative h-full w-full">
+                  <Image
+                    src={item.picture}
+                    alt={item.title}
+                    className="rounded-lg object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-lg p-4">
+                  <div className="text-white text-left p-4">
+                    <h4
+                      className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${fontClass}`}
+                    >
+                      {item.title}
+                    </h4>
+                    <Link
+                      href={item.link}
+                      className={`flex items-center mt-2 ${fontClass} text-xs lg:text-sm uppercase tracking-widest`}
+                    >
+                      View More
+                      <span className="ml-2">
+                        <Image
+                          src={images.ArrowLong01}
+                          alt="arrow"
+                          width={24}
+                          height={24}
+                        />
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="relative group col-span-12 sm:col-span-6 w-full h-full">
-              <div className="relative h-full w-full">
-                <Image
-                  src={images.Card3Img}
-                  alt="picture"
-                  className={`rounded-[10px] object-cover`}
-                  layout="fill"
-                />
-              </div>
-              <div className="w-full h-full absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
-                <div className="text-white text-center lg:py-[48px] lg:px-[60px]">
-                  <h4
-                    className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] lg:leading-[64px] tracking-[0%] font-bold ${fontClass} text-left`}
-                  >
-                    title
-                  </h4>
-                  <Link
-                    href={"#"}
-                    className={`flex justify-start items-center ${fontClass} text-[10px] lg:text-[12px] leading-[12px] tracking-[20%] text-center uppercase mt-[6px]`}
-                  >
-                    View More
-                    <span className="ml-[6px]">
-                      <Image
-                        src={images.ArrowLong01}
-                        alt="icon"
-                        className="h-[24px] w-[24px]"
-                      />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="relative group col-span-12 sm:col-span-6 lg:col-span-3 w-full h-full">
-              <div className="h-full w-full relative">
-                <Image
-                  src={images.Card4Img}
-                  alt="picture"
-                  className={`object-cover rounded-[10px]`}
-                  layout="fill"
-                />
-              </div>
-              <div className="w-full h-full absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-[10px]">
-                <div className="text-white text-center lg:py-[48px] lg:px-[60px]">
-                  <h4
-                    className={`text-[25px] sm:text-[30px] md:text-[40px] lg:text-[64px] lg:leading-[64px] tracking-[0%] font-bold ${fontClass} text-left`}
-                  >
-                    title
-                  </h4>
-                  <Link
-                    href={"#"}
-                    className={`flex justify-start items-center ${fontClass} text-[10px] lg:text-[12px] leading-[12px] tracking-[20%] text-center uppercase mt-[6px]`}
-                  >
-                    View More
-                    <span className="ml-[6px]">
-                      <Image
-                        src={images.ArrowLong01}
-                        alt="icon"
-                        className="h-[24px] w-[24px]"
-                      />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+
           {showBtn && (
-            <div className="mt-[20px] sm:mt-[30px] md:mt-[40px] lg:mt-[55px] flex justify-center items-center">
+            <div className="mt-8 sm:mt-10 lg:mt-14 flex justify-center">
               <button
-                className={`bg-[#f1f1f1] rounded-[40px] lg:w-[355px] lg:h-[76px] ${fontClassInter} text-[14px] sm:text-[16px] lg:text-[20px] leading-[18px] sm:leading-[21px] lg:leading-[24.2px] flex items-center justify-center px-6 sm:px-4 lg:px-0`}
+                className={`bg-[#f1f1f1] rounded-full px-8 py-4 lg:px-12 lg:py-5 ${fontClassInter} text-base lg:text-xl flex items-center hover:bg-gray-200 transition-colors`}
               >
                 See our work process
-                <span className="ml-[12px] sm:ml-[16px] lg:ml-[22px]">
+                <span className="ml-3 lg:ml-4">
                   <Image
                     src={images.OrganigramImg}
-                    alt="icon"
-                    className="w-[20px] lg:w-[20px] h-[30px] lg:h-[50px]"
+                    alt="process"
+                    width={20}
+                    height={20}
+                    className="w-5 h-7 lg:w-6 lg:h-8"
                   />
                 </span>
               </button>
