@@ -28,6 +28,10 @@ import Prof4 from "./prof4.png";
 import Hero1 from "./hero1.webp";
 import Hero2 from "./hero2.webp";
 import Hero3 from "./hero3.webp";
+import WWDDesign from "./wwdDesign.jpg";
+import WWDInfras from "./wwdInfras.jpg";
+import WWDIntell from "./wwdIntell.jpg";
+import WWDManag from "./wwdManag.jpg";
 
 const images = {
   LocationImg,
@@ -60,6 +64,10 @@ const images = {
   Hero1,
   Hero2,
   Hero3,
+  WWDDesign,
+  WWDInfras,
+  WWDIntell,
+  WWDManag,
 };
 
 export default images;

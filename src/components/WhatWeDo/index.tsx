@@ -46,25 +46,25 @@ const datas: DataProps[] = [
   {
     title: "Construction management",
     path: "#",
-    picture: images.Who1Img,
+    picture: images.WWDManag,
     shape: "rounded-md",
   },
   {
-    title: "Construction et realisation d'infrastructure",
+    title: "Conception architecturale et réalisation d'infrastructures",
     path: "#",
-    picture: images.Who1Img,
+    picture: images.WWDInfras,
     shape: "rounded-full",
   },
   {
-    title: "Design d'interieure de tout standing",
+    title: "Design d'intérieur et Extérieur",
     path: "#",
-    picture: images.Who1Img,
+    picture: images.WWDDesign,
     shape: "rounded-tl-[50px] rounded-br-[50px]",
   },
   {
-    title: "Batimet/ Maison intelligent",
+    title: "Maisons intelligentes",
     path: "#",
-    picture: images.Who1Img,
+    picture: images.WWDIntell,
     shape: "rounded-tr-[100px] rounded-bl-[100px]",
   },
 ];
