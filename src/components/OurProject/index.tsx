@@ -31,7 +31,7 @@ const projectGrid01: ProjectProps[] = [
 
 const projectGrid02: ProjectProps[] = [
   {
-    picture: images.Card1Img,
+    picture: images.pNm,
     title: "Immeuble à but locatif a Nomayos",
     link: "#",
   },
