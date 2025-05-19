@@ -53,7 +53,7 @@ const CodeAndMeasurements = () => {
                   </CButton>
                 </div>
               </div>
-              <div className="flex flex-col pt-[12px] lg:pt-0">
+              <div className="flex flex-col pt-[12px] lg:pt-0 w-full">
                 <p
                   className={`${fontClass} font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[19.36px] tracking-[0%] text-center lg:text-right w-full`}
                 >
@@ -89,12 +89,14 @@ const CodeAndMeasurements = () => {
                     />
                   </div>
                 </div>
-                <p
-                  className={`${fontClass} font-normal text-[10px] sm:text-[11px] lg:text-[12px] leading-[13px] sm:leading-[16px] lg:leading-[19.36px] tracking-[0%] text-center lg:text-right`}
-                >
-                  The expert team brings a wealth of knowledge and creativity to
-                  every project
-                </p>
+                <div className="flex justify-end">
+                  <p
+                    className={`${fontClass} font-normal text-[10px] sm:text-[11px] lg:text-[12px] leading-[13px] sm:leading-[16px] lg:leading-[19.36px] tracking-[0%] text-center lg:text-right lg:w-[236px]`}
+                  >
+                    The expert team brings a wealth of knowledge and creativity
+                    to every project
+                  </p>
+                </div>
               </div>
             </div>
           </div>
