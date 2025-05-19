@@ -22,17 +22,17 @@ type DataProps = {
 const datas: DataProps[] = [
   {
     path: "#",
-    picture: images.Card2Img,
+    picture: images.wwaYoung,
     title: "Young Team",
   },
   {
     path: "#",
-    picture: images.Card1Img,
+    picture: images.wwaAmb,
     title: "Ambitious",
   },
   {
     path: "#",
-    picture: images.Card3Img,
+    picture: images.wwaDream,
     title: "Dreamers",
   },
   {
@@ -42,12 +42,12 @@ const datas: DataProps[] = [
   },
   {
     path: "#",
-    picture: images.Card2Img,
+    picture: images.wwaCam,
     title: "Cameroonians",
   },
   {
     path: "#",
-    picture: images.Card5Img,
+    picture: images.wwaEng,
     title: "Engineers",
   },
 ];

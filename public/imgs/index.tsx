@@ -36,8 +36,18 @@ import PUnMf from "./pUMf.webp";
 import PuEy from "./pUEy.webp";
 import pNm from "./pNm.webp";
 import pJv from "./pJv.webp";
+import wwaEng from "./wwaEng.webp";
+import wwaDream from "./wwaDream.webp";
+import wwaAmb from "./wwaAmb.webp";
+import wwaCam from "./wwaCam.webp";
+import wwaYoung from "./wwaYoung.webp";
 
 const images = {
+  wwaAmb,
+  wwaEng,
+  wwaDream,
+  wwaCam,
+  wwaYoung,
   LocationImg,
   LogoImg,
   Logo2Img,
