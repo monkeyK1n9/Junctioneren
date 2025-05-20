@@ -28,14 +28,17 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="mt-[20px] lg:mt-[50px] flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-[50px]">
-            <button className="flex justify-center items-center text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
+            {/* Send Email Button */}
+            <button className="flex justify-center items-center text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 hover:text-[#4a3b9d]">
               Send email
               <span className="pl-[4px]">
                 <FaArrowRight />
               </span>
             </button>
+
+            {/* WhatsApp Button */}
             <div
-              className="rounded-full bg-[#F3F3F3] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer"
+              className="rounded-full bg-[#F3F3F3] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
               onClick={() => window.open("https://wa.me/+23769", "_blank")}
             >
               <FaWhatsapp color="green" size={27} className="mr-[14px]" />
