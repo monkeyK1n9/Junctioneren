@@ -25,15 +25,18 @@ const Banner = () => {
   const slides = [
     {
       image: images.Hero1,
-      text: "Your dreams and myths are our daily realities",
+      text: "Gagnez du temps, de la confiance et des ressources avec notre expérience",
+      isBlack: true,
     },
     {
       image: images.Hero2,
       text: "Your dreams and myths are our daily realities",
+      isBlack: false,
     },
     {
       image: images.Hero3,
       text: "Your dreams and myths are our daily realities",
+      isBlack: false,
     },
   ];
 
@@ -47,15 +50,17 @@ const Banner = () => {
               alt="picture"
               className="h-[550px] sm:h-[650px] md:h-[750px] lg:h-[885px] w-full object-cover rounded-bl-[42px] rounded-br-[42px] transform scale-x-[-1]"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-20 rounded-bl-[42px] rounded-br-[42px] h-[550px] lg:h-[885px]" />
-            <div className="absolute inset-0 mt-[180px] sm:mt-[250px] lg:mt-[339px] flex flex-col text-white lg:w-[685px] max-w-[90%] mx-auto lg:max-w-full">
+            <div className="absolute inset-0 bg-black bg-opacity-30 rounded-bl-[42px] rounded-br-[42px] h-[550px] lg:h-[885px]" />
+            <div className="absolute inset-0 mt-[180px] sm:mt-[250px] lg:mt-[339px] flex flex-col text-white lg:w-[995px] max-w-[90%] mx-auto lg:max-w-full">
               <SlideUp delay={0.1}>
                 <h1
-                  className={`text-[28px] sm:text-[34px] md:text-[38px] lg:text-[48px] leading-[38px] sm:leading-[42px] lg:leading-[58.09px] lg:tracking-[0%] font-bold text-center ${fontClass}`}
+                  className={`text-[28px] sm:text-[34px] md:text-[38px] lg:text-[48px] leading-[38px] sm:leading-[42px] lg:leading-[100%] lg:tracking-[0%] font-bold text-center ${fontClass} ${
+                    slide.isBlack ? "text-black" : "text-white"
+                  }`}
                 >
                   {slide.text}
                 </h1>
-                <div className="mt-[18px] lg:mt-[25px] flex flex-col md:flex-row md:space-x-[24px] space-y-[10px] md:space-y-0 max-w-[85%] lg:max-w-full mx-auto lg:mx-0">
+                <div className="mt-[18px] lg:mt-[25px] flex flex-col md:flex-row md:space-x-[24px] space-y-[10px] md:space-y-0 max-w-[90%] lg:max-w-full mx-auto lg:mx-0 justify-center items-center">
                   <CButton
                     icon={
                       <Image
