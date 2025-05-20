@@ -47,7 +47,7 @@ const Banner = () => {
               alt="picture"
               className="h-[550px] sm:h-[650px] md:h-[750px] lg:h-[885px] w-full object-cover rounded-bl-[42px] rounded-br-[42px] transform scale-x-[-1]"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-20 rounded-bl-[42px] rounded-br-[42px] lg:h-[885px]" />
+            <div className="absolute inset-0 bg-black bg-opacity-20 rounded-bl-[42px] rounded-br-[42px] h-[550px] lg:h-[885px]" />
             <div className="absolute inset-0 mt-[180px] sm:mt-[250px] lg:mt-[339px] flex flex-col text-white lg:w-[685px] max-w-[90%] mx-auto lg:max-w-full">
               <SlideUp delay={0.1}>
                 <h1
