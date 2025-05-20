@@ -20,12 +20,12 @@ const projectGrid01: ProjectProps[] = [
   {
     picture: images.PUnMf,
     title: "Cité universitaire a Mfou",
-    link: "#",
+    link: "/our-projects/cite-universitaire-mfou",
   },
   {
     picture: images.PuEy,
     title: "Cité universitaire a Eyang",
-    link: "#",
+    link: "/our-projects/cite-universitaire-eyang",
   },
 ];
 
@@ -33,17 +33,17 @@ const projectGrid02: ProjectProps[] = [
   {
     picture: images.pNm,
     title: "Immeuble à but locatif a Nomayos",
-    link: "#",
+    link: "/our-projects/immeuble-nomayos",
   },
   {
     picture: images.pJv,
     title: "Fairy Appartement Montée Jouvence",
-    link: "#",
+    link: "/our-projects/fairy-jouvence",
   },
   {
     picture: images.Card4Img,
     title: "Projet résidentiel premium",
-    link: "#",
+    link: "/our-projects/residence-premium",
   },
 ];
 
