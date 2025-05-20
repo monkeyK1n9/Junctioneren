@@ -22,12 +22,23 @@ interface TextFormProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const fontClass = cn(InterUiDisplay.className, InterUiDisplay.variable);
 
-const TextForm = ({ children, index, val, ...props }: TextFormProps) => (
+const TextForm = ({
+  children,
+  index,
+  val,
+  path,
+  ...props
+}: TextFormProps & { path?: string }) => (
   <div
     {...props}
     className={`
-${index === val ? "w-full bg-white text-[#DF4D1B]" : "w-auto bg-transparent"} 
-  `}
+      ${
+        index === val
+          ? "w-full bg-white text-[#DF4D1B]"
+          : "w-auto bg-transparent"
+      } 
+      flex items-center justify-between lg:pr-[20px]
+    `}
   >
     <h4
       className={`
@@ -39,6 +50,18 @@ ${index === val ? "w-full bg-white text-[#DF4D1B]" : "w-auto bg-transparent"}
     >
       {children}
     </h4>
+    {index === val && path && (
+      <a
+        href={path}
+        className="flex items-center justify-center w-[80px] h-[80px] bg-[#DF4D1B] rounded-full shadow-lg transition-colors border-[7px] border-[#312783]"
+      >
+        <Image
+          src={images.ArrowTopRigth}
+          alt="pict"
+          className="w-[36px] h-[36px]"
+        />
+      </a>
+    )}
   </div>
 );
 
@@ -94,6 +117,7 @@ const WhatWeDo = () => {
                 >
                   <TextForm
                     index={index}
+                    path={item.path}
                     val={activeIndex !== null ? activeIndex : undefined}
                   >
                     {item.title}
@@ -103,8 +127,8 @@ const WhatWeDo = () => {
             </div>
           </SlideRight>
 
-          <div className="absolute top-0 lg:right-[-80px] xl:right-[100px] z-0">
-            <div className="relative lg:h-[513px] lg:w-[390px] flex-shrink-0">
+          <div className="absolute top-0 lg:right-[-80px] xl:right-[400px] z-0">
+            <div className="relative lg:h-[596px] lg:w-[509px] flex-shrink-0">
               <AnimatePresence>
                 {activeIndex !== null && (
                   <motion.div

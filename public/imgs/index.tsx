@@ -41,6 +41,7 @@ import wwaDream from "./wwaDream.webp";
 import wwaAmb from "./wwaAmb.webp";
 import wwaCam from "./wwaCam.webp";
 import wwaYoung from "./wwaYoung.webp";
+import ArrowTopRigth from "./topright.png";
 
 const images = {
   wwaAmb,
@@ -86,6 +87,7 @@ const images = {
   pNm,
   PUnMf,
   PuEy,
+  ArrowTopRigth,
 };
 
 export default images;
