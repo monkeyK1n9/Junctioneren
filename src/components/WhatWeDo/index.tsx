@@ -128,7 +128,7 @@ const WhatWeDo = () => {
           </SlideRight>
 
           <div className="absolute top-0 lg:right-[-80px] xl:right-[400px] z-0">
-            <div className="relative lg:h-[596px] lg:w-[509px] flex-shrink-0">
+            <div className="relative sm:ml-[30%] lg:h-[596px] lg:w-[509px] flex-shrink-0">
               <AnimatePresence>
                 {activeIndex !== null && (
                   <motion.div
