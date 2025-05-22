@@ -37,7 +37,7 @@ const TextForm = ({
           ? "w-full bg-white text-[#DF4D1B]"
           : "w-auto bg-transparent"
       } 
-      flex items-center justify-between lg:pr-[20px]
+      flex items-center justify-center lg:justify-between lg:pr-[20px]
     `}
   >
     <h4
@@ -53,7 +53,7 @@ const TextForm = ({
     {index === val && path && (
       <a
         href={path}
-        className="flex items-center justify-center w-[80px] h-[80px] bg-[#DF4D1B] rounded-full shadow-lg transition-colors border-[7px] border-[#312783]"
+        className="hidden lg:flex items-center justify-center w-[80px] h-[80px] bg-[#DF4D1B] rounded-full shadow-lg transition-colors border-[7px] border-[#312783]"
       >
         <Image
           src={images.ArrowTopRigth}
