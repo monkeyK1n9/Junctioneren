@@ -101,7 +101,7 @@ const WhatWeDo = () => {
         <Menu
           title="What we do"
           titleLink="See all our services"
-          path="#"
+          path="/our-services"
           show
         />
         <div className="relative lg:gap-[57px] lg:mt-[57px]">
