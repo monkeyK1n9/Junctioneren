@@ -149,7 +149,7 @@ const OurProjects = ({ showBtn }: MyProps) => {
           {showBtn && (
             <div className="mt-8 sm:mt-10 lg:mt-14 flex justify-center">
               <button
-                className={`bg-[#f1f1f1] rounded-full px-8 py-4 lg:px-12 lg:py-5 ${fontClassInter} text-base lg:text-xl flex items-center hover:bg-gray-200 transition-colors`}
+                className={`bg-[#f1f1f1] rounded-full px-8 py-4 lg:px-12 lg:py-5 ${fontClassInter} text-base lg:text-xl flex items-center hover:bg-gray-200 transition-transform duration-300 hover:scale-110`}
               >
                 See our work process
                 <span className="ml-3 lg:ml-4">
