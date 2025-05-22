@@ -106,7 +106,7 @@ const datas: CardType[] = [
 const WhoWeArePage = () => {
   const CardItem = ({ content, name, occupation, pic, linkedin }: CardType) => {
     return (
-      <div className="w-full lg:w-[468px] h-auto lg:h-[222px] gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start">
+      <div className="w-full lg:w-[474px] h-auto lg:h-[222px] gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start">
         <Image
           src={pic}
           alt="picture"
@@ -142,7 +142,7 @@ const WhoWeArePage = () => {
   return (
     <DefaultLayout>
       <Header />
-      <main className="mt-[40px] sm:mt-[60px] lg:mt-[84px]">
+      <main className="mt-[20px] sm:mt-[60px] lg:mt-[84px]">
         <section className="py-[20px] lg:py-[46px] lg:max-w-[62%] lg:mx-auto px-2 lg:px-0">
           <h5
             className={`${fontClassRoboto} text-[#BDBDBD] font-[300] text-[40px] sm:text-[50px] lg:text-[64px] leading-[64px] tracking-[0%]`}
@@ -150,11 +150,11 @@ const WhoWeArePage = () => {
             Meet our team
           </h5>
           <h5
-            className={`${fontClassRoboto} text-[#333333] font-[700] text-[40px] sm:text-[50px] lg:text-[64px] leading-[50px] sm:leading-[50px] lg:leading-[75px] tracking-[0%] lg:max-w-[986px] mt-[25px]`}
+            className={`${fontClassRoboto} text-[#333333] font-[700] text-[40px] sm:text-[50px] lg:text-[64px] leading-[50px] sm:leading-[50px] lg:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px]`}
           >
             Meet the junctioners that makes everything possible
           </h5>
-          <div className="mt-[100px]">
+          <div className="mt-[20px] sm:mt-[40px] lg:mt-[100px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-[20px] lg:gap-x-[76px] lg:gap-y-[50px]">
               {datas.map((item, index) => (
                 <CardItem
