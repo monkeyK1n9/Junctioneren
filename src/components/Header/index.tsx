@@ -51,9 +51,10 @@ const Header = () => {
             <Image
               src={images.Logo2Img}
               alt="logo"
-              className="h-[49.63px] w-[131px]"
+              className="h-[49.63px] w-[131px] transition-transform duration-300 hover:scale-110"
             />
           </Link>
+
           <div className="flex lg:hidden">
             {!isOpen && <FaBars size={24} onClick={handleOpen} />}
             {isOpen && <AiFillCloseCircle size={30} onClick={handleOpen} />}

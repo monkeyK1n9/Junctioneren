@@ -7,6 +7,7 @@ import SlideUp from "../Animation/SlideUp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
 const Banner = () => {
   const fontClass = cn(InterUiDisplay.variable, InterUiDisplay.className);
@@ -61,30 +62,34 @@ const Banner = () => {
                   {slide.text}
                 </h1>
                 <div className="mt-[18px] lg:mt-[25px] flex flex-col md:flex-row md:space-x-[24px] space-y-[10px] md:space-y-0 max-w-[90%] lg:max-w-full mx-auto lg:mx-0 justify-center items-center">
-                  <CButton
-                    icon={
-                      <Image
-                        src={images.ArrowLong01}
-                        alt="icon"
-                        className="h-[24px] w-[24px]"
-                      />
-                    }
-                    className="bg-[#312783] text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%]"
-                  >
-                    Contact us now
-                  </CButton>
-                  <CButton
-                    icon={
-                      <Image
-                        src={images.ArrowLong01}
-                        alt="icon"
-                        className="h-[24px] w-[24px]"
-                      />
-                    }
-                    className="text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] border-white lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%]"
-                  >
-                    See our services
-                  </CButton>
+                  <Link href={"/contact-us"}>
+                    <CButton
+                      icon={
+                        <Image
+                          src={images.ArrowLong01}
+                          alt="icon"
+                          className="h-[24px] w-[24px]"
+                        />
+                      }
+                      className="bg-[#312783] text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%]"
+                    >
+                      Contact us now
+                    </CButton>
+                  </Link>
+                  <Link href={"/our-services"}>
+                    <CButton
+                      icon={
+                        <Image
+                          src={images.ArrowLong01}
+                          alt="icon"
+                          className="h-[24px] w-[24px]"
+                        />
+                      }
+                      className="text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] border-white lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%]"
+                    >
+                      See our services
+                    </CButton>
+                  </Link>
                 </div>
               </SlideUp>
             </div>
