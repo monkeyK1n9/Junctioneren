@@ -49,8 +49,20 @@ import wwaAmb from "./wwaAmb.webp";
 import wwaCam from "./wwaCam.webp";
 import wwaYoung from "./wwaYoung.webp";
 import ArrowTopRigth from "./topright.png";
+import Conception from "./services/concep.png";
+import Design from "./services/design.png";
+import Maison from "./services/maison.png";
+import Management from "./services/mang.png";
+import Others from "./services/others.png";
+import Terrassement from "./services/terras.png";
 
 const images = {
+  Conception,
+  Design,
+  Maison,
+  Management,
+  Others,
+  Terrassement,
   wwaAmb,
   wwaEng,
   wwaDream,
