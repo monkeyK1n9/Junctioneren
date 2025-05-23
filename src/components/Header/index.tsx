@@ -61,7 +61,10 @@ const Header = () => {
           </div>
           <ul className="hidden lg:flex lg:space-x-[40px]  xl:space-x-[58px] lg:pl-[390px] xl:pl-[415px]">
             {navs.map((item, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                className="transition-transform duration-300 hover:scale-110"
+              >
                 <Link
                   className={`uppercase ${fontClass} text-[12px] leading-[12px] tracking-[20%] font-normal ${
                     router.pathname === item.path
