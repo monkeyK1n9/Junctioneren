@@ -59,7 +59,7 @@ const OurProjects = ({ showBtn }: MyProps) => {
           <Menu
             title="Our Projects"
             titleLink="See all our projects"
-            path="#"
+            path="/our-projects/all-our-projects"
             show
           />
 

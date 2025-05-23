@@ -54,9 +54,11 @@ import Design from "./services/design.png";
 import Maison from "./services/maison.png";
 import Management from "./services/mang.png";
 import Others from "./services/others.png";
+import Others1 from "./services/others1.png";
 import Terrassement from "./services/terras.png";
 
 const images = {
+  Others1,
   Conception,
   Design,
   Maison,
