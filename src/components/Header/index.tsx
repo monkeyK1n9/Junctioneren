@@ -51,16 +51,20 @@ const Header = () => {
             <Image
               src={images.Logo2Img}
               alt="logo"
-              className="h-[49.63px] w-[131px]"
+              className="h-[49.63px] w-[131px] transition-transform duration-300 hover:scale-110"
             />
           </Link>
+
           <div className="flex lg:hidden">
             {!isOpen && <FaBars size={24} onClick={handleOpen} />}
             {isOpen && <AiFillCloseCircle size={30} onClick={handleOpen} />}
           </div>
           <ul className="hidden lg:flex lg:space-x-[40px]  xl:space-x-[58px] lg:pl-[390px] xl:pl-[415px]">
             {navs.map((item, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                className="transition-transform duration-300 hover:scale-110"
+              >
                 <Link
                   className={`uppercase ${fontClass} text-[12px] leading-[12px] tracking-[20%] font-normal ${
                     router.pathname === item.path

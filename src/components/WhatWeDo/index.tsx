@@ -37,7 +37,7 @@ const TextForm = ({
           ? "w-full bg-white text-[#DF4D1B]"
           : "w-auto bg-transparent"
       } 
-      flex items-center justify-between lg:pr-[20px]
+      flex items-center justify-center lg:justify-between lg:pr-[20px]
     `}
   >
     <h4
@@ -53,7 +53,7 @@ const TextForm = ({
     {index === val && path && (
       <a
         href={path}
-        className="flex items-center justify-center w-[80px] h-[80px] bg-[#DF4D1B] rounded-full shadow-lg transition-colors border-[7px] border-[#312783]"
+        className="hidden lg:flex items-center justify-center w-[80px] h-[80px] bg-[#DF4D1B] rounded-full shadow-lg transition-colors border-[7px] border-[#312783]"
       >
         <Image
           src={images.ArrowTopRigth}
@@ -101,7 +101,7 @@ const WhatWeDo = () => {
         <Menu
           title="What we do"
           titleLink="See all our services"
-          path="#"
+          path="/our-services"
           show
         />
         <div className="relative lg:gap-[57px] lg:mt-[57px]">
@@ -128,7 +128,7 @@ const WhatWeDo = () => {
           </SlideRight>
 
           <div className="absolute top-0 lg:right-[-80px] xl:right-[400px] z-0">
-            <div className="relative lg:h-[596px] lg:w-[509px] flex-shrink-0">
+            <div className="relative sm:ml-[35%] lg:h-[473.73px] lg:w-[404.65px] flex-shrink-0">
               <AnimatePresence>
                 {activeIndex !== null && (
                   <motion.div

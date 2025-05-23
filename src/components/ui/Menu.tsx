@@ -23,7 +23,7 @@ const Menu = ({ title, titleLink, path, show }: MenuProps) => (
     {show && (
       <Link
         href={String(path)}
-        className={`flex justify-center items-center ${fontClass} text-[#312783] text-[10px] lg:text-[12px] leading-[12px] tracking-[20%] text-center uppercase`}
+        className={`flex justify-center items-center ${fontClass} text-[#312783] text-[10px] lg:text-[12px] leading-[12px] tracking-[20%] text-center uppercase transition-transform duration-300 hover:scale-110`}
       >
         {titleLink}
         <span className="ml-[6px]">

@@ -4,6 +4,7 @@ import images from "../../../public/imgs";
 import Form from "../Form";
 import SlideUp from "../Animation/SlideUp";
 import { FaArrowCircleRight, FaArrowRight, FaWhatsapp } from "react-icons/fa";
+import { fontClassRoboto } from "@/pages/who-we-are";
 
 const ContactUs = () => {
   return (
@@ -29,7 +30,9 @@ const ContactUs = () => {
           </div>
           <div className="mt-[20px] lg:mt-[50px] flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-[50px]">
             {/* Send Email Button */}
-            <button className="flex justify-center items-center text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 hover:text-[#4a3b9d]">
+            <button
+              className={`flex justify-center items-center text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 hover:text-[#4a3b9d] ${fontClassRoboto}`}
+            >
               Send email
               <span className="pl-[4px]">
                 <FaArrowRight />
