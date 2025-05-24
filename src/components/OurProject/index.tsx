@@ -6,6 +6,7 @@ import images from "../../../public/imgs";
 import Link from "next/link";
 import React from "react";
 import SlideUp from "../Animation/SlideUp";
+import { useTranslation } from "next-i18next";
 
 const fontClass = cn(RobotoUiDisplay.className, RobotoUiDisplay.variable);
 const fontClassInter = cn(InterUiDisplay.className, InterUiDisplay.variable);
@@ -16,49 +17,49 @@ type ProjectProps = {
   link: string;
 };
 
-const projectGrid01: ProjectProps[] = [
-  {
-    picture: images.PUnMf,
-    title: "Cité universitaire a Mfou",
-    link: "/our-projects/cite-universitaire-mfou",
-  },
-  {
-    picture: images.PuEy,
-    title: "Cité universitaire a Eyang",
-    link: "/our-projects/cite-universitaire-eyang",
-  },
-];
-
-const projectGrid02: ProjectProps[] = [
-  {
-    picture: images.pNm,
-    title: "Immeuble à but locatif a Nomayos",
-    link: "/our-projects/immeuble-nomayos",
-  },
-  {
-    picture: images.pJv,
-    title: "Fairy Appartement Montée Jouvence",
-    link: "/our-projects/fairy-jouvence",
-  },
-  {
-    picture: images.Card4Img,
-    title: "Projet résidentiel premium",
-    link: "/our-projects/residence-premium",
-  },
-];
-
 type MyProps = {
   showBtn?: boolean;
 };
 
 const OurProjects = ({ showBtn }: MyProps) => {
+  const { t } = useTranslation("common");
+  const projectGrid01: ProjectProps[] = [
+    {
+      picture: images.PUnMf,
+      title: t("projects.titleOne"),
+      link: "/our-projects/cite-universitaire-mfou",
+    },
+    {
+      picture: images.PuEy,
+      title: t("projects.titleTwo"),
+      link: "/our-projects/cite-universitaire-eyang",
+    },
+  ];
+
+  const projectGrid02: ProjectProps[] = [
+    {
+      picture: images.pNm,
+      title: t("projects.titleThree"),
+      link: "/our-projects/immeuble-nomayos",
+    },
+    {
+      picture: images.pJv,
+      title: t("projects.titleFour"),
+      link: "/our-projects/fairy-jouvence",
+    },
+    {
+      picture: images.Card4Img,
+      title: t("projects.titleFive"),
+      link: "/our-projects/residence-premium",
+    },
+  ];
   return (
     <section className="py-5 lg:py-12 container mx-auto px-4 lg:px-0">
       <SlideUp delay={0.5}>
         <div className="max-w-7xl mx-auto">
           <Menu
-            title="Our Projects"
-            titleLink="See all our projects"
+            title={t("projects.title")}
+            titleLink={t("projects.viewAll")}
             path="/our-projects/all-our-projects"
             show
           />
@@ -90,7 +91,7 @@ const OurProjects = ({ showBtn }: MyProps) => {
                       href={item.link}
                       className={`flex items-center mt-2 ${fontClass} text-xs lg:text-sm uppercase tracking-widest`}
                     >
-                      View More
+                      {t("projects.more")}
                       <span className="ml-2">
                         <Image
                           src={images.ArrowLong01}
@@ -151,7 +152,7 @@ const OurProjects = ({ showBtn }: MyProps) => {
               <button
                 className={`bg-[#f1f1f1] rounded-full px-8 py-4 lg:px-12 lg:py-5 ${fontClassInter} text-base lg:text-xl flex items-center hover:bg-gray-200 transition-transform duration-300 hover:scale-110`}
               >
-                See our work process
+                {t("projects.work")}
                 <span className="ml-3 lg:ml-4">
                   <Image
                     src={images.OrganigramImg}

@@ -35,7 +35,14 @@
   },
   "projects": {
     "title": "Our Projects",
-    "viewAll": "View All Projects"
+    "viewAll": "View All Projects",
+    "titleOne": "University Residence in Mfou",
+    "titleTwo": "University Residence in Eyang",
+    "titleThree": "Rental Apartment Building in Nomayos",
+    "titleFour": "Fairy Apartments – Montée Jouvence",
+    "titleFive": "Premium Residential Project",
+    "work": "See our work process",
+    "more": "View More"
   },
   "contact": {
     "title": "Contact Us",

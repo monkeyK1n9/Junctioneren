@@ -35,7 +35,14 @@
   },
   "projects": {
     "title": "Nos projets",
-    "viewAll": "Voir tous les projets"
+    "viewAll": "Voir tous les projets",
+    "titleOne": "Cité universitaire a Mfou",
+    "titleTwo": "Cité universitaire a Eyang",
+    "titleThree": "Immeuble à but locatif a Nomayos",
+    "titleFour": "Fairy Appartement Montée Jouvence",
+    "titleFive": "Projet résidentiel premium",
+    "work": "Voir notre démarche de travail",
+    "more": "Voir Plus"
   },
   "contact": {
     "title": "Nous contacter",
