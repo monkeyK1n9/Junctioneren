@@ -3,22 +3,24 @@ import Menu from "../ui/Menu";
 import images from "../../../public/imgs";
 import Form from "../Form";
 import SlideUp from "../Animation/SlideUp";
-import { FaArrowCircleRight, FaArrowRight, FaWhatsapp } from "react-icons/fa";
+import { FaArrowRight, FaWhatsapp } from "react-icons/fa";
 import { fontClassRoboto } from "@/pages/who-we-are";
+import { useTranslation } from "next-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation("common");
   return (
     <section className="py-[20px] lg:py-[46px] lg:max-w-[891px] lg:mx-auto lg:my-[95px]">
       <SlideUp delay={0.3}>
         <div className="mx-auto">
-          <Menu title="Contact Us" titleLink="" path="#" />
+          <Menu title={t("contact.title")} titleLink="" path="#" />
           <div className="grid grid-cols-12 lg:mt-[22px] gap-[10px] sm:gap-[20px] lg:gap-[30px] h-[369px]">
             <div className="w-full col-span-12 lg:col-span-5 flex flex-col space-y-[10px]">
-              <Form text="Name" />
-              <Form text="Phone Number*" />
-              <Form text="Email" />
-              <Form text="interested in" />
-              <Form textarea text="Message*" />
+              <Form text={t("contact.name")} />
+              <Form text={t("contact.phone")} />
+              <Form text={t("contact.email")} />
+              <Form text={t("contact.intrs")} />
+              <Form textarea text={t("contact.msg")} />
             </div>
             <div className="w-full col-span-12 lg:col-span-7 h-full hidden lg:flex">
               <Image
@@ -33,7 +35,7 @@ const ContactUs = () => {
             <button
               className={`flex justify-center items-center text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 hover:text-[#4a3b9d] ${fontClassRoboto}`}
             >
-              Send email
+              {t("contact.send")}
               <span className="pl-[4px]">
                 <FaArrowRight />
               </span>
@@ -46,7 +48,7 @@ const ContactUs = () => {
             >
               <FaWhatsapp color="green" size={27} className="mr-[14px]" />
               <p className="text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
-                Contact us on whatsapp
+                {t("contact.contact")}
               </p>
             </div>
           </div>

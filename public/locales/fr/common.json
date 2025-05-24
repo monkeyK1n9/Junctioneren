@@ -31,7 +31,13 @@
   },
   "whoWeAre": {
     "title": "Qui nous sommes",
-    "description": "Une équipe passionnée de développeurs et de designers"
+    "link": "en savoir plus sur nous",
+    "team": "Équipe Jeune",
+    "amb": "Ambitieux",
+    "dream": "Rêveurs",
+    "bestTeam": "Meilleure Équipe",
+    "cam": "Camerounais",
+    "eng": "Ingénieurs"
   },
   "projects": {
     "title": "Nos projets",
@@ -46,7 +52,13 @@
   },
   "contact": {
     "title": "Nous contacter",
-    "getInTouch": "Contactez-nous"
+    "name": "Nom",
+    "phone": "Numéro de téléphone*",
+    "email": "Email",
+    "intrs": "Intéressé par",
+    "msg": "Message*",
+    "send": "Envoyer l'email",
+    "contact": "Contactez-nous sur WhatsApp"
   },
   "footer": {
     "copyright": "© 2025 Votre entreprise. Tous droits réservés."

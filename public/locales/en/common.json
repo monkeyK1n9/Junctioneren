@@ -31,7 +31,13 @@
   },
   "whoWeAre": {
     "title": "Who We Are",
-    "description": "A passionate team of developers and designers"
+    "link": "learn more about us",
+    "team": "Young Team",
+    "amb": "Ambitious",
+    "dream": "Dreamers",
+    "bestTeam": "Best Team",
+    "cam": "Cameroonians",
+    "eng": "Enginners"
   },
   "projects": {
     "title": "Our Projects",
@@ -46,7 +52,13 @@
   },
   "contact": {
     "title": "Contact Us",
-    "getInTouch": "Get in touch with us"
+    "name": "Name",
+    "phone": "Phone Number*",
+    "email": "Email",
+    "intrs": "Interested in",
+    "msg": "Message*",
+    "send": "Send email",
+    "contact": "Contact us on whatsapp"
   },
   "footer": {
     "copyright": "© 2025 Your Company. All rights reserved."

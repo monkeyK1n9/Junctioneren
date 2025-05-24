@@ -6,6 +6,7 @@ import Menu from "../ui/Menu";
 import cn from "clsx";
 import { InterUiDisplay } from "@/lib/fonts";
 import SlideUp from "../Animation/SlideUp";
+import { useTranslation } from "next-i18next";
 
 const fontClass = cn(InterUiDisplay.variable, InterUiDisplay.className);
 
@@ -18,39 +19,6 @@ type DataProps = {
   picture: any;
   path: string;
 };
-
-const datas: DataProps[] = [
-  {
-    path: "#",
-    picture: images.wwaYoung,
-    title: "Young Team",
-  },
-  {
-    path: "#",
-    picture: images.wwaAmb,
-    title: "Ambitious",
-  },
-  {
-    path: "#",
-    picture: images.wwaDream,
-    title: "Dreamers",
-  },
-  {
-    path: "#",
-    picture: images.Card4Img,
-    title: "Best team",
-  },
-  {
-    path: "#",
-    picture: images.wwaCam,
-    title: "Cameroonians",
-  },
-  {
-    path: "#",
-    picture: images.wwaEng,
-    title: "Engineers",
-  },
-];
 
 const CardPicture = ({ picture, title }: { picture: any; title: string }) => {
   return (
@@ -79,15 +47,48 @@ const TextAbout = ({ children, ...props }: TextAboutProps) => (
 );
 
 const WhoWeAre = () => {
+  const { t } = useTranslation("common");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const datas: DataProps[] = [
+    {
+      path: "#",
+      picture: images.wwaYoung,
+      title: t("whoWeAre.team"),
+    },
+    {
+      path: "#",
+      picture: images.wwaAmb,
+      title: t("whoWeAre.amb"),
+    },
+    {
+      path: "#",
+      picture: images.wwaDream,
+      title: t("whoWeAre.dream"),
+    },
+    {
+      path: "#",
+      picture: images.Card4Img,
+      title: t("whoWeAre.bestTeam"),
+    },
+    {
+      path: "#",
+      picture: images.wwaCam,
+      title: t("whoWeAre.cam"),
+    },
+    {
+      path: "#",
+      picture: images.wwaEng,
+      title: t("whoWeAre.eng"),
+    },
+  ];
 
   return (
     <section className="bg-[#f1f1f1] py-[30px] sm:py-[50px] md:py-[80px] lg:py-[131px] rounded-[43px]">
       <SlideUp delay={0.3}>
         <div className="lg:max-w-[80%] lg:mx-auto">
           <Menu
-            title="Who we are"
-            titleLink="learn more about us"
+            title={t("whoWeAre.title")}
+            titleLink={t("whoWeAre.link")}
             path="#"
             show
           />
