@@ -4,8 +4,10 @@ import CButton from "../ui/Button";
 import Image from "next/image";
 import images from "../../../public/imgs";
 import SlideUp from "../Animation/SlideUp";
+import { useTranslation } from "next-i18next";
 
 const CodeAndMeasurements = () => {
+  const { t } = useTranslation("common");
   const fontClass = cn(InterUiDisplay.variable, InterUiDisplay.className);
   return (
     <SlideUp delay={0.4}>
@@ -17,14 +19,12 @@ const CodeAndMeasurements = () => {
                 <h3
                   className={`${fontClass} font-normal text-[25px] sm:text-[36px] xl:text-[48px] leading-[35px] sm:leading-[50px] xl:leading-[58.08px] tracking-[0%] w-full lg:w-[570px] xl:w-[892px] text-center lg:text-left`}
                 >
-                  Responsability, Trust, Transparency, Competance, client
-                  satisfaction
+                  {t("codeAndMeasure.title")}
                 </h3>
                 <p
                   className={`pt-[6px] ${fontClass} font-light text-[12px] sm:text-[14px] lg:text-[16px] leading-[19.36px] tracking-[0%] lg:w-[560px] xl:w-[736px] text-center lg:text-left`}
                 >
-                  Chez Junctioner Construction Engineering, nous avons construit
-                  nos valeurs sur les piliers du secteur de la construction
+                  {t("codeAndMeasure.description")}
                 </p>
                 <div className="mt-[18px] flex flex-col md:flex-row md:space-x-[24px] space-y-[10px] md:space-y-0">
                   <CButton
@@ -37,7 +37,7 @@ const CodeAndMeasurements = () => {
                     }
                     className="bg-white text-[#656565] rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
                   >
-                    See our services
+                    {t("codeAndMeasure.service")}
                   </CButton>
                   <CButton
                     icon={
@@ -49,7 +49,7 @@ const CodeAndMeasurements = () => {
                     }
                     className="bg-[#312783] text-white rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
                   >
-                    Contact us now
+                    {t("codeAndMeasure.contact")}
                   </CButton>
                 </div>
               </div>
@@ -57,7 +57,7 @@ const CodeAndMeasurements = () => {
                 <p
                   className={`${fontClass} font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[19.36px] tracking-[0%] text-center lg:text-right w-full`}
                 >
-                  The Junctioners
+                  {t("codeAndMeasure.teamTitle")}
                 </p>
                 <div className="relative h-[73px] my-[17px]">
                   <div className="absolute w-[73px] h-[73px] rounded-full right-0 top-0 z-40 border-[#312783] border-[4px]">
@@ -93,8 +93,7 @@ const CodeAndMeasurements = () => {
                   <p
                     className={`${fontClass} font-normal text-[10px] sm:text-[11px] lg:text-[12px] leading-[13px] sm:leading-[16px] lg:leading-[19.36px] tracking-[0%] text-center lg:text-right lg:w-[236px]`}
                   >
-                    The expert team brings a wealth of knowledge and creativity
-                    to every project
+                    {t("codeAndMeasure.teamDesc")}
                   </p>
                 </div>
               </div>

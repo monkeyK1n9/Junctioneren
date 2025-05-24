@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "welcome": "Welcome",
+    "projects": "Our projects",
+    "whatWeDo": "What we do",
+    "whoWeAre": "Who we are",
+    "contact": "Contacts"
+  },
+  "banner": {
+    "titleOne": "Save time, build trust, and gain resources with our experience",
+    "titleTwo": "Your dreams and myths are our daily realities",
+    "titleThree": "Your dreams and myths are our daily realities",
+    "contact": "Contact us now",
+    "service": "See our services"
+  },
+  "codeAndMeasure": {
+    "title": "Responsability, Trust, Transparency, Competance, client satisfaction",
+    "description": "At Junctioner Construction Engineering, we have built our values on the pillars of the construction industry",
+    "contact": "Contact us now",
+    "service": "See our services",
+    "teamTitle": "The Junctioners",
+    "teamDesc": "The expert team brings a wealth of knowledge and creativity to every project"
+  },
+  "whatWeDo": {
+    "title": "What we do",
+    "one": "Construction management",
+    "two": "Architectural design and infrastructure development",
+    "three": "Interior and exterior design",
+    "four": "Smart homes",
+    "seeAll": "See all our services"
+  },
+  "whoWeAre": {
+    "title": "Who We Are",
+    "link": "learn more about us",
+    "team": "Young Team",
+    "amb": "Ambitious",
+    "dream": "Dreamers",
+    "bestTeam": "Best Team",
+    "cam": "Cameroonians",
+    "eng": "Enginners"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "viewAll": "View All Projects",
+    "titleOne": "University Residence in Mfou",
+    "titleTwo": "University Residence in Eyang",
+    "titleThree": "Rental Apartment Building in Nomayos",
+    "titleFour": "Fairy Apartments – Montée Jouvence",
+    "titleFive": "Premium Residential Project",
+    "work": "See our work process",
+    "more": "View More"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "phone": "Phone Number*",
+    "email": "Email",
+    "intrs": "Interested in",
+    "msg": "Message*",
+    "send": "Send email",
+    "contact": "Contact us on whatsapp"
+  },
+  "footer": {
+    "titleOne": "Information",
+    "titleTwo": "Contacts",
+    "titleThree": "Social Media",
+    "linkOne": "Welcome",
+    "linkTwo": "Our Projects",
+    "linkThree": "What we do",
+    "linkFour": "Who we are",
+    "linkFive": "Contacts",
+    "copy": "All rights reserved.",
+    "int": "Junctioner Construction Engineering"
+  }
+}

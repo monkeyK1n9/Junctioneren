@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import { FaArrowRight, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const fontClassRoboto = cn(
   RobotoUiDisplay.className,
@@ -212,6 +214,14 @@ const WhoWeArePage = () => {
       <Footer />
     </DefaultLayout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
 };
 
 export default WhoWeArePage;

@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "welcome": "Bienvenue",
+    "projects": "Nos projets",
+    "whatWeDo": "Ce que nous faisons",
+    "whoWeAre": "Qui nous sommes",
+    "contact": "Contacts"
+  },
+  "banner": {
+    "titleOne": "Gagnez du temps, de la confiance et des ressources avec notre expérience",
+    "titleTwo": "Vos rêves et vos mythes sont notre quotidien",
+    "titleThree": "Vos rêves et vos mythes sont notre quotidien",
+    "contact": "Contactez-nous",
+    "service": "Voir nos services"
+  },
+  "codeAndMeasure": {
+    "title": "Responsabilité, Confiance, Transparence, Compétence, Satisfaction du client",
+    "description": "Chez Junctioner Construction Engineering, nous avons construit nos valeurs sur les piliers du secteur de la construction",
+    "contact": "Contactez-nous",
+    "service": "Voir nos services",
+    "teamTitle": "Les Junctioners",
+    "teamDesc": "L'équipe d'experts apporte une richesse de connaissances et de créativité à chaque projet"
+  },
+  "whatWeDo": {
+    "title": "Ce que nous faisons",
+    "one": "Construction management",
+    "two": "Conception architecturale et réalisation d'infrastructures",
+    "three": "Design d'intérieur et Extérieur",
+    "four": "Maisons intelligentes",
+    "seeAll": "Voir tous nos services"
+  },
+  "whoWeAre": {
+    "title": "Qui nous sommes",
+    "link": "en savoir plus sur nous",
+    "team": "Équipe Jeune",
+    "amb": "Ambitieux",
+    "dream": "Rêveurs",
+    "bestTeam": "Meilleure Équipe",
+    "cam": "Camerounais",
+    "eng": "Ingénieurs"
+  },
+  "projects": {
+    "title": "Nos projets",
+    "viewAll": "Voir tous les projets",
+    "titleOne": "Cité universitaire a Mfou",
+    "titleTwo": "Cité universitaire a Eyang",
+    "titleThree": "Immeuble à but locatif a Nomayos",
+    "titleFour": "Fairy Appartement Montée Jouvence",
+    "titleFive": "Projet résidentiel premium",
+    "work": "Voir notre démarche de travail",
+    "more": "Voir Plus"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "name": "Nom",
+    "phone": "Numéro de téléphone*",
+    "email": "Email",
+    "intrs": "Intéressé par",
+    "msg": "Message*",
+    "send": "Envoyer l'email",
+    "contact": "Contactez-nous sur WhatsApp"
+  },
+  "footer": {
+    "titleOne": "Informations",
+    "titleTwo": "Contacts",
+    "titleThree": "Réseaux sociaux",
+    "linkOne": "Accueil",
+    "linkTwo": "Nos projets",
+    "linkThree": "Ce que nous faisons",
+    "linkFour": "Qui nous sommes",
+    "linkFive": "Contacts",
+    "copy": "Tous droits réservés.",
+    "int": "Junctioner Ingénierie de la construction"
+  }
+}

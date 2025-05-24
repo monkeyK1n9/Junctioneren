@@ -6,6 +6,8 @@ import Image from "next/image";
 import Menu from "@/components/ui/Menu";
 import cn from "clsx";
 import { RobotoUiDisplay } from "@/lib/fonts";
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const ContactUS = () => {
   const fontClass = cn(RobotoUiDisplay.variable, RobotoUiDisplay.className);
@@ -60,6 +62,14 @@ const ContactUS = () => {
       <Footer />
     </DefaultLayout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
 };
 
 export default ContactUS;
