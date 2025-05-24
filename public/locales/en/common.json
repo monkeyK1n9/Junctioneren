@@ -61,6 +61,15 @@
     "contact": "Contact us on whatsapp"
   },
   "footer": {
-    "copyright": "© 2025 Your Company. All rights reserved."
+    "titleOne": "Information",
+    "titleTwo": "Contacts",
+    "titleThree": "Social Media",
+    "linkOne": "Welcome",
+    "linkTwo": "Our Projects",
+    "linkThree": "What we do",
+    "linkFour": "Who we are",
+    "linkFive": "Contacts",
+    "copy": "All rights reserved.",
+    "int": "Junctioner Construction Engineering"
   }
 }
