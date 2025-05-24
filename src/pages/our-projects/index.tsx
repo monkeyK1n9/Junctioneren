@@ -4,8 +4,12 @@ import Header from "@/components/Header";
 import HowWeWork from "@/components/HowWeWork";
 import Footer from "@/components/Footer";
 import OthersProjects from "@/components/OthersProjects";
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const OurProjectsPage = () => {
+  const { t } = useTranslation("common");
   return (
     <DefaultLayout className="overflow-x-hidden">
       <Header />
@@ -19,4 +23,11 @@ const OurProjectsPage = () => {
   );
 };
 
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
+};
 export default OurProjectsPage;

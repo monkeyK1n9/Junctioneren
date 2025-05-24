@@ -8,9 +8,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Banner = () => {
   const fontClass = cn(InterUiDisplay.variable, InterUiDisplay.className);
+  const { t } = useTranslation("common");
 
   const settings = {
     dots: false,
@@ -26,17 +28,17 @@ const Banner = () => {
   const slides = [
     {
       image: images.Hero1,
-      text: "Gagnez du temps, de la confiance et des ressources avec notre expérience",
+      text: t("banner.titleOne"),
       isBlack: true,
     },
     {
       image: images.Hero2,
-      text: "Your dreams and myths are our daily realities",
+      text: t("banner.titleTwo"),
       isBlack: false,
     },
     {
       image: images.Hero3,
-      text: "Your dreams and myths are our daily realities",
+      text: t("banner.titleThree"),
       isBlack: false,
     },
   ];
@@ -73,7 +75,7 @@ const Banner = () => {
                       }
                       className="bg-[#312783] text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%]"
                     >
-                      Contact us now
+                      {t("banner.contact")}
                     </CButton>
                   </Link>
                   <Link href={"/our-services"}>
@@ -87,7 +89,7 @@ const Banner = () => {
                       }
                       className="text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] border-white lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%]"
                     >
-                      See our services
+                      {t("banner.service")}
                     </CButton>
                   </Link>
                 </div>
