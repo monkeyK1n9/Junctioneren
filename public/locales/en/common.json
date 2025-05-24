@@ -1,0 +1,47 @@
+{
+  "navigation": {
+    "welcome": "Welcome",
+    "projects": "Our projects",
+    "whatWeDo": "What we do",
+    "whoWeAre": "Who we are",
+    "contact": "Contacts"
+  },
+  "banner": {
+    "titleOne": "Save time, build trust, and gain resources with our experience",
+    "titleTwo": "Your dreams and myths are our daily realities",
+    "titleThree": "Your dreams and myths are our daily realities",
+    "contact": "Contact us now",
+    "service": "See our services"
+  },
+  "codeAndMeasure": {
+    "title": "Responsability, Trust, Transparency, Competance, client satisfaction",
+    "description": "At Junctioner Construction Engineering, we have built our values on the pillars of the construction industry",
+    "contact": "Contact us now",
+    "service": "See our services",
+    "teamTitle": "The Junctioners",
+    "teamDesc": "The expert team brings a wealth of knowledge and creativity to every project"
+  },
+  "whatWeDo": {
+    "title": "What we do",
+    "one": "Construction management",
+    "two": "Architectural design and infrastructure development",
+    "three": "Interior and exterior design",
+    "four": "Smart homes",
+    "seeAll": "See all our services"
+  },
+  "whoWeAre": {
+    "title": "Who We Are",
+    "description": "A passionate team of developers and designers"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "viewAll": "View All Projects"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "getInTouch": "Get in touch with us"
+  },
+  "footer": {
+    "copyright": "© 2025 Your Company. All rights reserved."
+  }
+}

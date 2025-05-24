@@ -6,48 +6,80 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaBars } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import LanguageSwitcher from "../LanguageSwitcher";
+import { useTranslation } from "next-i18next";
 
 type NavProps = {
   name: string;
   path: string;
 };
 
-const navs: NavProps[] = [
-  {
-    name: "Welcome",
-    path: "/",
-  },
-  {
-    name: "Our projects",
-    path: "/our-projects",
-  },
-  {
-    name: "What we do",
-    path: "#",
-  },
-  {
-    name: "Who we are",
-    path: "/who-we-are",
-  },
-  {
-    name: "Contacts",
-    path: "/contact-us",
-  },
-];
-
 const Header = () => {
+  const { t } = useTranslation("common");
+  const navs: NavProps[] = [
+    {
+      name: t("navigation.welcome"),
+      path: "/",
+    },
+    {
+      name: t("navigation.projects"),
+      path: "/our-projects",
+    },
+    {
+      name: t("navigation.whatWeDo"),
+      path: "#",
+    },
+    {
+      name: t("navigation.whoWeAre"),
+      path: "/who-we-are",
+    },
+    {
+      name: t("navigation.contact"),
+      path: "/contact-us",
+    },
+  ];
   const fontClass = cn(RobotoUiDisplay.variable, RobotoUiDisplay.className);
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
-  const router = useRouter();
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsOpen(false);
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router]);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (isOpen && !target.closest(".mobile-menu-container")) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("click", handleClickOutside);
+      return () => document.removeEventListener("click", handleClickOutside);
+    }
+  }, [isOpen]);
+
   return (
     <header className="z-50 h-[102px] sticky top-0 left-0 w-full bg-white shadow-sm">
       <div className="container mx-auto h-full">
-        <div className="flex items-center h-full justify-between xl:justify-normal">
-          <Link href={"/"}>
+        <div className="flex items-center h-full justify-between">
+          {/* Logo */}
+          <Link href={"/"} className="flex-shrink-0">
             <Image
               src={images.Logo2Img}
               alt="logo"
@@ -55,44 +87,20 @@ const Header = () => {
             />
           </Link>
 
-          <div className="flex lg:hidden">
-            {!isOpen && <FaBars size={24} onClick={handleOpen} />}
-            {isOpen && <AiFillCloseCircle size={30} onClick={handleOpen} />}
-          </div>
-          <ul className="hidden lg:flex lg:space-x-[40px]  xl:space-x-[58px] lg:pl-[390px] xl:pl-[415px]">
-            {navs.map((item, index) => (
-              <li
-                key={index}
-                className="transition-transform duration-300 hover:scale-110"
-              >
-                <Link
-                  className={`uppercase ${fontClass} text-[12px] leading-[12px] tracking-[20%] font-normal ${
-                    router.pathname === item.path
-                      ? "border-t border-b border-[#DF4D1B] py-2 font-semibold"
-                      : ""
-                  } text-[#333333]`}
-                  href={String(item.path)}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        {isOpen && (
-          <div className="z-50 bg-white rounded-md px-4 py-8">
-            <ul className="flex flex-col space-y-4 text-center">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center">
+            <ul className="flex space-x-[40px] xl:space-x-[58px]">
               {navs.map((item, index) => (
                 <li
                   key={index}
-                  className={`${
-                    router.pathname === item.path
-                      ? "bg-[#DF4D1B] text-white font-semibold py-2 rounded-md"
-                      : "text-[#333333]"
-                  }`}
+                  className="transition-transform duration-300 hover:scale-110"
                 >
                   <Link
-                    className={`uppercase ${fontClass} text-[12px] w-full leading-[12px] tracking-[20%] font-normal`}
+                    className={`uppercase ${fontClass} text-[12px] leading-[12px] tracking-[20%] font-normal ${
+                      router.pathname === item.path
+                        ? "border-t border-b border-[#DF4D1B] py-2 font-semibold"
+                        : ""
+                    } text-[#333333] hover:text-[#DF4D1B] transition-colors duration-200`}
                     href={String(item.path)}
                   >
                     {item.name}
@@ -100,6 +108,59 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+          </nav>
+
+          {/* Right side: Language Switcher + Mobile Menu Button */}
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden p-1"
+              onClick={handleOpen}
+              aria-label="Toggle menu"
+            >
+              {!isOpen && (
+                <FaBars
+                  size={24}
+                  className="text-gray-700 hover:text-[#DF4D1B] transition-colors duration-200"
+                />
+              )}
+              {isOpen && (
+                <AiFillCloseCircle
+                  size={30}
+                  className="text-[#DF4D1B] hover:text-red-600 transition-colors duration-200"
+                />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="mobile-menu-container lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100">
+            <div className="container mx-auto">
+              <div className="px-4 py-6">
+                <ul className="flex flex-col space-y-4">
+                  {navs.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        className={cn(
+                          `block uppercase ${fontClass} text-[14px] leading-[16px] tracking-[20%] font-normal py-3 px-4 rounded-lg transition-all duration-200`,
+                          router.pathname === item.path
+                            ? "bg-[#DF4D1B] text-white font-semibold shadow-sm"
+                            : "text-[#333333] hover:bg-gray-50 hover:text-[#DF4D1B]"
+                        )}
+                        href={String(item.path)}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         )}
       </div>

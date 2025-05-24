@@ -1,0 +1,47 @@
+{
+  "navigation": {
+    "welcome": "Bienvenue",
+    "projects": "Nos projets",
+    "whatWeDo": "Ce que nous faisons",
+    "whoWeAre": "Qui nous sommes",
+    "contact": "Contacts"
+  },
+  "banner": {
+    "titleOne": "Gagnez du temps, de la confiance et des ressources avec notre expérience",
+    "titleTwo": "Vos rêves et vos mythes sont notre quotidien",
+    "titleThree": "Vos rêves et vos mythes sont notre quotidien",
+    "contact": "Contactez-nous",
+    "service": "Voir nos services"
+  },
+  "codeAndMeasure": {
+    "title": "Responsabilité, Confiance, Transparence, Compétence, Satisfaction du client",
+    "description": "Chez Junctioner Construction Engineering, nous avons construit nos valeurs sur les piliers du secteur de la construction",
+    "contact": "Contactez-nous",
+    "service": "Voir nos services",
+    "teamTitle": "Les Junctioners",
+    "teamDesc": "L'équipe d'experts apporte une richesse de connaissances et de créativité à chaque projet"
+  },
+  "whatWeDo": {
+    "title": "Ce que nous faisons",
+    "one": "Construction management",
+    "two": "Conception architecturale et réalisation d'infrastructures",
+    "three": "Design d'intérieur et Extérieur",
+    "four": "Maisons intelligentes",
+    "seeAll": "Voir tous nos services"
+  },
+  "whoWeAre": {
+    "title": "Qui nous sommes",
+    "description": "Une équipe passionnée de développeurs et de designers"
+  },
+  "projects": {
+    "title": "Nos projets",
+    "viewAll": "Voir tous les projets"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "getInTouch": "Contactez-nous"
+  },
+  "footer": {
+    "copyright": "© 2025 Votre entreprise. Tous droits réservés."
+  }
+}

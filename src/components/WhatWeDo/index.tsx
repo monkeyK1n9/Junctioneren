@@ -6,6 +6,7 @@ import { InterUiDisplay } from "@/lib/fonts";
 import Image from "next/image";
 import cn from "clsx";
 import SlideRight from "../Animation/SlideRight";
+import { useTranslation } from "next-i18next";
 
 type DataProps = {
   title: string;
@@ -65,42 +66,43 @@ const TextForm = ({
   </div>
 );
 
-const datas: DataProps[] = [
-  {
-    title: "Construction management",
-    path: "#",
-    picture: images.WWDManag,
-    shape: "rounded-md",
-  },
-  {
-    title: "Conception architecturale et réalisation d'infrastructures",
-    path: "#",
-    picture: images.WWDInfras,
-    shape: "rounded-full",
-  },
-  {
-    title: "Design d'intérieur et Extérieur",
-    path: "#",
-    picture: images.WWDDesign,
-    shape: "rounded-tl-[50px] rounded-br-[50px]",
-  },
-  {
-    title: "Maisons intelligentes",
-    path: "#",
-    picture: images.WWDIntell,
-    shape: "rounded-tr-[100px] rounded-bl-[100px]",
-  },
-];
-
 const WhatWeDo = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const { t } = useTranslation("common");
+
+  const datas: DataProps[] = [
+    {
+      title: t("whatWeDo.one"),
+      path: "#",
+      picture: images.WWDManag,
+      shape: "rounded-md",
+    },
+    {
+      title: t("whatWeDo.two"),
+      path: "#",
+      picture: images.WWDInfras,
+      shape: "rounded-full",
+    },
+    {
+      title: t("whatWeDo.three"),
+      path: "#",
+      picture: images.WWDDesign,
+      shape: "rounded-tl-[50px] rounded-br-[50px]",
+    },
+    {
+      title: t("whatWeDo.four"),
+      path: "#",
+      picture: images.WWDIntell,
+      shape: "rounded-tr-[100px] rounded-bl-[100px]",
+    },
+  ];
 
   return (
     <section className="bg-[#f1f1f1] py-[30px] sm:py-[50px] md:py-[80px] lg:py-[131px] rounded-[43px]">
       <div className="lg:max-w-[80%] lg:mx-auto">
         <Menu
-          title="What we do"
-          titleLink="See all our services"
+          title={t("whatWeDo.title")}
+          titleLink={t("whatWeDo.seeAll")}
           path="/our-services"
           show
         />
