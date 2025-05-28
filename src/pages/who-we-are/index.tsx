@@ -148,7 +148,7 @@ const WhoWeArePage = () => {
       <main className="mt-[20px] sm:mt-[60px] lg:mt-[84px]">
         <section className="pt-[16px] lg:pt-[32px] lg:max-w-[1143px] mx-auto px-2 lg:px-0">
           <h5
-            className={`${fontClassRoboto} text-[#333333] font-[700] text-[40px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2`}
+            className={`${fontClassRoboto} text-[#333333] font-[700] text-[36px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2 text-center sm:text-left`}
           >
             We are the junctioners that make averything possible
           </h5>

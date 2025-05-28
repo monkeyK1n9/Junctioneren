@@ -61,13 +61,7 @@ const Header = () => {
 
   // Close mobile menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Element;
-      if (isOpen && !target.closest(".mobile-menu-container")) {
-        setIsOpen(false);
-      }
-    };
-
+    const handleClickOutside = (event: MouseEvent) => {};
     if (isOpen) {
       document.addEventListener("click", handleClickOutside);
       return () => document.removeEventListener("click", handleClickOutside);
@@ -117,7 +111,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-1"
-              onClick={handleOpen}
+              onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
               {!isOpen && (
@@ -146,7 +140,7 @@ const Header = () => {
                     <li key={index}>
                       <Link
                         className={cn(
-                          `block uppercase ${fontClass} text-[14px] leading-[16px] tracking-[20%] font-normal py-3 px-4 rounded-lg transition-all duration-200`,
+                          `block uppercase ${fontClass} text-[14px] leading-[16px] tracking-[20%] font-normal py-3 px-4 rounded-lg transition-all duration-200 text-center`,
                           router.pathname === item.path
                             ? "bg-[#DF4D1B] text-white font-semibold shadow-sm"
                             : "text-[#333333] hover:bg-gray-50 hover:text-[#DF4D1B]"
