@@ -83,7 +83,7 @@ const Header = () => {
             <Image
               src={images.Logo2Img}
               alt="logo"
-              className="h-[49.63px] w-[131px] transition-transform duration-300 hover:scale-110"
+              className="h-[40px] sm:h-[49.63px] w-[120px] sm:w-[131px] transition-transform duration-300 hover:scale-110"
             />
           </Link>
 

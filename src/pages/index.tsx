@@ -10,8 +10,12 @@ import WhatWeDo from "@/components/WhatWeDo";
 import WhoWeAre from "@/components/WhoWeAre";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { DefaultLayout } from "@/layouts/default.layout";
+import SlideUp from "@/components/Animation/SlideUp";
+import { useTranslation } from "next-i18next";
+import Menu from "@/components/ui/Menu";
 
 const Home = () => {
+  const { t } = useTranslation("common");
   return (
     <DefaultLayout className="overflow-x-hidden">
       <div className="fixed top-4 right-4 z-50">
@@ -22,7 +26,19 @@ const Home = () => {
       <CodeAndMeasurements />
       <WhatWeDo />
       <OurProjects showBtn />
-      <WhoWeAre />
+      <section className="bg-[#f1f1f1] py-[30px] sm:py-[50px] md:py-[80px] lg:py-[131px] rounded-[43px]">
+        <SlideUp delay={0.3}>
+          <div className="lg:max-w-[80%] lg:mx-auto">
+            <Menu
+              title={t("whoWeAre.title")}
+              titleLink={t("whoWeAre.link")}
+              path="/who-we-are"
+              show
+            />
+            <WhoWeAre />
+          </div>
+        </SlideUp>
+      </section>
       <ContactUs />
       <Footer />
     </DefaultLayout>

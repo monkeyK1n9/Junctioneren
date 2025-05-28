@@ -33,35 +33,40 @@ const TextForm = ({
   <div
     {...props}
     className={`
-      ${
-        index === val
-          ? "w-full bg-white text-[#DF4D1B]"
-          : "w-auto bg-transparent"
-      } 
-      flex items-center justify-center lg:justify-between lg:pr-[20px]
+      relative flex items-center justify-center lg:justify-between lg:h-[100px]
     `}
   >
+    {/* Highlight background that extends to screen edges */}
+    {index === val && (
+      <div
+        className="flex justify-between absolute inset-0 left-1/2 -translate-x-1/2 w-screen h-full bg-white z-0 transition-all duration-300"
+        aria-hidden="true"
+      />
+    )}
     <h4
       className={`
-        ${fontClass} ${
-        index === val
-          ? "w-full bg-white text-[#DF4D1B]"
-          : "w-auto bg-transparent"
-      } lg:text-[25px] xl:text-[36px] lg:leading-[35px] xl:leading-[47.57px] lg:tracking-[0%] font-normal transition-all duration-300 p-2 rounded-lg py-[30px] max-w-[637px]`}
+        ${fontClass}
+        relative z-10
+        lg:max-w-[637px]
+        ${index === val ? "text-[#DF4D1B]" : "text-inherit"}
+        lg:text-[25px] xl:text-[36px] lg:leading-[35px] xl:leading-[47.57px] lg:tracking-[0%] font-normal transition-all duration-300 p-2 rounded-lg
+      `}
     >
       {children}
     </h4>
     {index === val && path && (
-      <a
-        href={path}
-        className="hidden lg:flex items-center justify-center w-[80px] h-[80px] bg-[#DF4D1B] rounded-full shadow-lg transition-colors border-[7px] border-[#312783]"
-      >
-        <Image
-          src={images.ArrowTopRigth}
-          alt="pict"
-          className="w-[36px] h-[36px]"
-        />
-      </a>
+      <div className="relative h-[80px]">
+        <a
+          href={path}
+          className="hidden lg:flex items-center justify-center w-[80px] h-[80px] bg-[#DF4D1B] rounded-full shadow-lg transition-colors border-[7px] border-[#312783] absolute z-10"
+        >
+          <Image
+            src={images.ArrowTopRigth}
+            alt="pict"
+            className="w-[36px] h-[36px]"
+          />
+        </a>
+      </div>
     )}
   </div>
 );
@@ -98,7 +103,7 @@ const WhatWeDo = () => {
   ];
 
   return (
-    <section className="bg-[#f1f1f1] py-[30px] sm:py-[50px] md:py-[80px] lg:py-[131px] rounded-[43px]">
+    <section className="bg-[#f1f1f1] py-[30px] sm:py-[50px] md:py-[80px] lg:py-[131px] rounded-[43px] overflow-hidden">
       <div className="lg:max-w-[80%] lg:mx-auto">
         <Menu
           title={t("whatWeDo.title")}
@@ -115,7 +120,7 @@ const WhatWeDo = () => {
                   key={index}
                   onMouseEnter={() => setActiveIndex(index)}
                   onMouseLeave={() => setActiveIndex(index)}
-                  className="text-center lg:text-left"
+                  className="text-center lg:text-left lg:mb-[25px]"
                 >
                   <TextForm
                     index={index}
@@ -129,8 +134,20 @@ const WhatWeDo = () => {
             </div>
           </SlideRight>
 
-          <div className="absolute top-0 lg:right-[-80px] xl:right-[400px] z-0">
-            <div className="relative sm:ml-[35%] lg:h-[473.73px] lg:w-[404.65px] flex-shrink-0">
+          {/* Extended white lines to edges */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Top line extending to edges */}
+            <div className="absolute top-0 left-[-100px] right-[-100px] h-[1px] bg-white opacity-20"></div>
+            {/* Bottom line extending to edges */}
+            <div className="absolute bottom-0 left-[-100px] right-[-100px] h-[1px] bg-white opacity-20"></div>
+            {/* Left line extending to edges */}
+            <div className="absolute top-[-100px] bottom-[-100px] left-0 w-[1px] bg-white opacity-20"></div>
+            {/* Right line extending to edges */}
+            <div className="absolute top-[-100px] bottom-[-100px] right-0 w-[1px] bg-white opacity-20"></div>
+          </div>
+
+          <div className="absolute top-0 lg:right-[-80px] xl:right-[300px] z-0">
+            <div className="relative sm:ml-[35%] lg:h-[400px] lg:w-[350.65px] flex-shrink-0">
               <AnimatePresence>
                 {activeIndex !== null && (
                   <motion.div
@@ -139,19 +156,29 @@ const WhatWeDo = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute inset-0 overflow-hidden group"
+                    className="absolute inset-0 overflow-hidden group rounded-2xl"
                   >
-                    <div className="absolute inset-0 flex items-center justify-center w-full h-full">
+                    <div className="absolute inset-0 flex items-center justify-center w-full h-full rounded-2xl overflow-hidden">
                       <Image
                         src={images.Rect1Img}
                         alt="rectangle"
-                        className="w-full h-full"
+                        className="w-[400px] h-[400px]"
+                      />
+                      <Image
+                        src={images.Rect2Img}
+                        alt="rectangle"
+                        className="absolute w-[300px] h-[320px]"
+                      />
+                      <Image
+                        src={images.Rect3Img}
+                        alt="rectangle"
+                        className="absolute w-[300px] h-[380px]"
                       />
                     </div>
                     <Image
                       src={datas[activeIndex].picture}
                       alt="picture"
-                      className="w-9/12 h-9/12 object-cover absolute top-[50%] left-[50%]"
+                      className="w-9/12 h-9/12 object-cover absolute top-[50%] left-[50%] rounded-2xl"
                       style={{
                         transform: "translate(-50%, -50%)",
                       }}
@@ -161,19 +188,19 @@ const WhatWeDo = () => {
                 )}
               </AnimatePresence>
 
-              {/* Default Image */}
+              {/* Default Image with rounded corners */}
               {activeIndex === null && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute inset-0 rounded-lg overflow-hidden"
+                  className="absolute inset-0 rounded-2xl overflow-hidden"
                 >
                   <Image
                     src={datas[0].picture}
                     alt="default picture"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-2xl"
                     priority
                   />
                 </motion.div>
