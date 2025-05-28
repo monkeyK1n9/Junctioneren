@@ -9,6 +9,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useTranslation } from "next-i18next";
+import { motion, AnimatePresence } from "framer-motion";
 
 type NavProps = {
   name: string;
@@ -69,7 +70,7 @@ const Header = () => {
   }, [isOpen]);
 
   return (
-    <header className="z-50 h-[102px] sticky top-0 left-0 w-full bg-white shadow-sm">
+    <header className="z-50 h-[102px] fixed top-0 left-0 w-full bg-white shadow-sm backdrop-blur-md backdrop-saturate-150">
       <div className="container mx-auto h-full">
         <div className="flex items-center h-full justify-between">
           {/* Logo */}
@@ -110,15 +111,29 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-1"
-              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-1 flex flex-col justify-center items-center w-10 h-10"
+              onClick={handleOpen}
               aria-label="Toggle menu"
             >
               {!isOpen && (
-                <FaBars
-                  size={24}
-                  className="text-gray-700 hover:text-[#DF4D1B] transition-colors duration-200"
-                />
+                // Modern hamburger animation
+                <span className="flex flex-col justify-between w-6 h-5">
+                  <span
+                    className={`block h-[3px] w-full bg-[#312783] rounded transition-all duration-300 ${
+                      isOpen ? "rotate-45 translate-y-2" : ""
+                    }`}
+                  ></span>
+                  <span
+                    className={`block h-[3px] w-full bg-[#312783] rounded transition-all duration-300 ${
+                      isOpen ? "opacity-0" : ""
+                    }`}
+                  ></span>
+                  <span
+                    className={`block h-[3px] w-full bg-[#312783] rounded transition-all duration-300 ${
+                      isOpen ? "-rotate-45 -translate-y-2" : ""
+                    }`}
+                  ></span>
+                </span>
               )}
               {isOpen && (
                 <AiFillCloseCircle
@@ -130,33 +145,41 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="mobile-menu-container lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100">
-            <div className="container mx-auto">
-              <div className="px-4 py-6">
-                <ul className="flex flex-col space-y-4">
-                  {navs.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        className={cn(
-                          `block uppercase ${fontClass} text-[14px] leading-[16px] tracking-[20%] font-normal py-3 px-4 rounded-lg transition-all duration-200 text-center`,
-                          router.pathname === item.path
-                            ? "bg-[#DF4D1B] text-white font-semibold shadow-sm"
-                            : "text-[#333333] hover:bg-gray-50 hover:text-[#DF4D1B]"
-                        )}
-                        href={String(item.path)}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+        {/* Mobile Menu with animation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ y: -40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -40, opacity: 0 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="mobile-menu-container lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100"
+            >
+              <div className="container mx-auto">
+                <div className="px-4 py-6">
+                  <ul className="flex flex-col space-y-4">
+                    {navs.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          className={cn(
+                            `block uppercase ${fontClass} text-[14px] leading-[16px] tracking-[20%] font-normal py-3 px-4 rounded-lg transition-all duration-200 text-center`,
+                            router.pathname === item.path
+                              ? "bg-[#DF4D1B] text-white font-semibold shadow-sm"
+                              : "text-[#333333] hover:bg-gray-50 hover:text-[#DF4D1B]"
+                          )}
+                          href={String(item.path)}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );

@@ -11,53 +11,80 @@ const HowWeWork = () => {
           finish.
         </CommonText>
         <div className="mt-[101px]">
+          {/* Première ligne - Chef de projet centré */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
             <div className="hidden lg:flex" />
             <Work
-              title="Chef de projet"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="CHEF DE PROJET"
+              description="Responsable de la supervision globale des projets."
             />
           </div>
+
           <hr className="my-[29px]" />
+
+          {/* Deuxième ligne - 3 postes */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
             <Work
-              title="ing genie civil"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="ARCHITECT"
+              description="Responsable de la supervision globale des projets."
             />
             <Work
-              title="control de document"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="ING GENIE CIVIL"
+              description="Responsable de la conception et de la mise en œuvre des structures et des systèmes de construction."
             />
             <Work
-              title="architect"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="CONTROL DE DOCUMENT"
+              description="Gère la documentation et assure la cohérence des informations tout au long du projet."
             />
           </div>
+
           <hr className="my-[29px]" />
+
+          {/* Troisième ligne - 3 postes */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
             <Work
-              title="ing genie civil"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="INGÉNIEUR DE CHANTIER"
+              description="Supervise la planification et l'exécution des travaux sur le terrain."
             />
             <Work
-              title="control de document"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="GÉOMÈTRE"
+              description="Effectue des relevés topographiques et des mesures pour soutenir la conception et la construction."
             />
             <Work
-              title="architect"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="CONTRÔLEUR GÉNÉRAL"
+              description="Assure la qualité globale du projet en supervisant les différents aspects et en garantissant la conformité aux normes."
             />
           </div>
+
           <hr className="my-[29px]" />
+
+          {/* Cinquième ligne - 2 postes centrés */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
-            <div />
+            <div className="hidden xl:flex" />
             <Work
-              title="architect"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="RESPONSABLE ÉLECTRIQUE"
+              description="Gère la conception et l'installation des systèmes électriques du projet."
             />
             <Work
-              title="ing genie civil"
-              description="Below is a chart that shows how we organise our projects from start to finish."
+              title="RESPONSABLE MAÇONNERIE"
+              description="Supervise les travaux de construction en lien avec la maçonnerie et les matériaux de construction."
+            />
+          </div>
+
+          <hr className="my-[29px]" />
+          {/* Quatrième ligne - 3 postes */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
+            <Work
+              title="RESPONSABLE PLOMBERIE"
+              description="Responsable de la conception et de l'installation des systèmes de plomberie du projet."
+            />
+            <Work
+              title="RESPONSABLE MENUISERIE"
+              description="Gère la conception et la réalisation des éléments de menuiserie et de finition."
+            />
+            <Work
+              title="RESPONSABLE CHAUDRERIE"
+              description="Supervise la conception et l'installation des systèmes de structure métallique."
             />
           </div>
         </div>
