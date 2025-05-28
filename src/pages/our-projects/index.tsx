@@ -13,7 +13,7 @@ const OurProjectsPage = () => {
   return (
     <DefaultLayout className="overflow-x-hidden">
       <Header />
-      <main className="mt-[40px] sm:mt-[80px] lg:mt-[147px]">
+      <main className="mt-[100px] lg:mt-[147px]">
         <OurProjects showBtn={false} />
         <HowWeWork />
         <OthersProjects />
