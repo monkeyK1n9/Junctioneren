@@ -175,7 +175,7 @@ const Banner = () => {
             aria-label={`Go to slide ${index + 1}`}
           >
             {currentSlide === index && (
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse" />
             )}
           </button>
         ))}
