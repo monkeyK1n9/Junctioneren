@@ -102,7 +102,7 @@ const OurServices = () => {
   return (
     <DefaultLayout>
       <Header />
-      <main className="mt-[20px] sm:mt-[60px] lg:mt-[80px]">
+      <main className="mt-[100px]">
         <section className="py-[15px] lg:py-[30px] lg:max-w-[62%] lg:mx-auto px-2 lg:px-0">
           <h5
             className={`${fontClassRoboto} text-[#BDBDBD] font-[300] text-[40px] sm:text-[50px] lg:text-[64px] leading-[64px] tracking-[0%]`}
