@@ -22,11 +22,7 @@ export const CommonText = ({
   return (
     <p
       {...props}
-      className={cn(
-        "text-black ${fontClassInter} font-[300] tracking-[0%] leading-[19.36px] text-[16px]",
-        fontClassInter,
-        className
-      )}
+      className={`text-black font-[300] tracking-[0%] leading-[19.36px] text-[16px] ${fontClassInter} ${className}`}
     >
       {children}
     </p>
@@ -41,7 +37,7 @@ export const Work = ({ description, title }: WorkProps) => {
       >
         {title}
       </h4>
-      <CommonText className="lg:w-[306px]">{description}</CommonText>
+      <CommonText>{description}</CommonText>
     </div>
   );
 };

@@ -106,7 +106,7 @@ const LanguageSwitcher = () => {
             key={language.code}
             onClick={() => handleLanguageChange(language.code)}
             className={cn(
-              "flex items-center gap-1 px-3 py-1.5 rounded-md transition-all duration-200",
+              "flex items-center gap-1 px-2 py-1.5 rounded-md transition-all duration-200",
               router.locale === language.code
                 ? "bg-[#DF4D1B] text-white shadow-sm"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200",

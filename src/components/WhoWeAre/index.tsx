@@ -40,7 +40,15 @@ const CardPicture = ({ picture, title }: { picture: any; title: string }) => {
 const TextAbout = ({ children, ...props }: TextAboutProps) => (
   <h4
     {...props}
-    className={`${fontClass} lg:text-[45px] xl:text-[64px] lg:leading-[65px] xl:leading-[77.45px] tracking-[0%] font-normal`}
+    className={`
+      ${fontClass}
+      text-center
+      text-[34px] sm:text-[44px] xl:text-[48px] 2xl:text-[70px]
+      leading-[1.15] sm:leading-[1.1] lg:leading-[1.05] xl:leading-[1]
+      tracking-[0%] font-normal
+      my-2 sm:my-8 lg:my-10
+      ${props.className || ""}
+    `}
   >
     {children}
   </h4>
@@ -83,56 +91,46 @@ const WhoWeAre = () => {
   ];
 
   return (
-    <section className="bg-[#f1f1f1] py-[30px] sm:py-[50px] md:py-[80px] lg:py-[131px] rounded-[43px]">
-      <SlideUp delay={0.3}>
-        <div className="lg:max-w-[80%] lg:mx-auto">
-          <Menu
-            title={t("whoWeAre.title")}
-            titleLink={t("whoWeAre.link")}
-            path="#"
-            show
-          />
-        </div>
-        <div className="container mx-auto">
-          <div className="mt-[30px] sm:mt-[40px] md:mt-[60px] lg:mt-[76px] grid grid-cols-12 gap-[20px] lg:gap-[40px]">
-            {datas.map((item, index) => (
-              <div
-                key={index}
-                className="col-span-6 lg:col-span-4 relative text-[#B9B9B9]"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <div
-                  className={`flex justify-center items-center text-[#B9B9B9] ${
-                    hoveredIndex === index ? "hidden" : "flex"
-                  }`}
-                >
-                  <TextAbout className="lg:w-[98%]">{item.title}</TextAbout>
-                  {index < datas.length - 1 && index !== 2 && (
-                    <div className="pl-[26.1px] hidden lg:flex w-[2%]">
-                      <TextAbout>/</TextAbout>
-                    </div>
-                  )}
+    <div className="container mx-auto">
+      <div className="mt-[30px] sm:mt-[40px] md:mt-[60px] lg:mt-[76px] grid grid-cols-12 gap-[10px] sm:gap-[20px]">
+        {datas.map((item, index) => (
+          <div
+            key={index}
+            className="col-span-12 lg:col-span-4 relative text-[#B9B9B9]"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <div
+              className={`flex justify-center items-center text-[#B9B9B9] ${
+                hoveredIndex === index ? "hidden" : "flex"
+              }`}
+            >
+              <TextAbout className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[520px]">
+                {item.title}
+              </TextAbout>
+              {index < datas.length - 1 && index !== 2 && (
+                <div className="hidden flex-1 lg:flex justify-center">
+                  <TextAbout>/</TextAbout>
                 </div>
-                <AnimatePresence>
-                  {hoveredIndex === index && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.3 }}
-                      className="absolute -top-24 text-white z-50 hidden lg:flex"
-                    >
-                      <CardPicture picture={item.picture} title={item.title} />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
+              )}
+            </div>
+            <AnimatePresence>
+              {hoveredIndex === index && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute -top-24 text-white z-50 hidden lg:flex"
+                >
+                  <CardPicture picture={item.picture} title={item.title} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-        </div>
-      </SlideUp>
-    </section>
+        ))}
+      </div>
+    </div>
   );
 };
 

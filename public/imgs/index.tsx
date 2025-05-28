@@ -18,6 +18,8 @@ import Card5Img from "./card5.webp";
 import OrganigramImg from "./organigram.svg";
 import Who1Img from "./who1.webp";
 import Rect1Img from "./Rectangle1.svg";
+import Rect2Img from "./Rectangle2.png";
+import Rect3Img from "./Rectangle3.png";
 import ContactImg from "./contact.webp";
 import MapImg from "./map.webp";
 import Cadre from "./cadre.svg";
@@ -116,6 +118,8 @@ const images = {
   Prof9,
   Prof10,
   Prof11,
+  Rect2Img,
+  Rect3Img,
 };
 
 export default images;
