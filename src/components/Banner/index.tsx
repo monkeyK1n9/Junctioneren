@@ -94,7 +94,7 @@ const Banner = () => {
                           className="h-[24px] w-[24px] transition-transform duration-300"
                         />
                       }
-                      className="bg-[#312783] hover:bg-[#3d2f9a] text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%] transition-all duration-300 hover:shadow-xl hover:scale-105 backdrop-blur-sm"
+                      className="bg-[#312783] hover:bg-[#3d2f9a] text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%] transition-all duration-300 hover:shadow-xl hover:scale-105 backdrop-blur-sm border-none"
                     >
                       {t("banner.contact")}
                     </CButton>
