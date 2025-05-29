@@ -23,7 +23,6 @@ const ContactUS = () => {
       <Header />
       <section className="my-[120px] md:my-[150px] lg:my-[180px] xl:my-[243px] container mx-auto flex flex-col px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-12 gap-[15px] sm:gap-[20px] md:gap-[25px] lg:gap-[30px] lg:mt-[22px]">
-          {/* Information Section */}
           <div className="w-full col-span-12 lg:col-span-4 flex flex-col space-y-[15px] sm:space-y-[20px] lg:space-y-[10px] mb-[30px] lg:mb-0">
             <div>
               <Menu title="Contact" titleLink="" path="#" />
