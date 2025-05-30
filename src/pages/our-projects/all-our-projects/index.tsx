@@ -95,12 +95,12 @@ const CardItem = ({
             {content}
           </p>
         </div>
-        <div>
+        <div className="w-[128px] lg:w-[324.17px] px-[20px] sm:px-[30px] lg:px-[36px] bg-white h-[36px] sm:h-[40px] lg:h-[60px] justify-center transition-transform duration-300 hover:scale-110 items-center flex border-[1.25px] border-[#1E1E1E] rounded-[18.7px] mt-4 sm:mt-0">
           <Link
             href={path}
-            className={`flex items-center mt-[5px] ${fontClassRoboto} font-[400] text-[10px] lg:text-[12px] leading-[12px] tracking-[20%] uppercase text-[#333333] bg-white w-[222px] h-[40px] sm:h-[55px] lg:h-[71px] justify-center transition-transform duration-300 hover:scale-110`}
+            className={`flex items-center justify-between mt-[5px] ${fontClassRoboto} font-[400] text-[10px] lg:text-[14px] leading-[15px] tracking-[20%] uppercase text-[#333333] w-full`}
           >
-            View More
+            read more
             <FaLongArrowAltRight className="pl-[4px] lg:pl-[6px]" size={17} />
           </Link>
         </div>

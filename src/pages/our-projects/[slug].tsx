@@ -8,6 +8,7 @@ import Image from "next/image";
 import { DefaultLayout } from "@/layouts/default.layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 type ProjectProps = {
   frontMatter: {
@@ -22,7 +23,7 @@ const ProjectPage = ({ frontMatter, mdxSource }: ProjectProps) => {
   return (
     <DefaultLayout className="overflow-x-hidden">
       <Header />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 mt-[100px]">
         <div className="text-center lg:text-left mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#312783]">
             {frontMatter.title}
@@ -54,18 +55,26 @@ const ProjectPage = ({ frontMatter, mdxSource }: ProjectProps) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   const projectsDir = path.join(process.cwd(), "src/content/projects");
   const filenames = fs.readdirSync(projectsDir);
 
-  const paths = filenames.map((filename) => ({
-    params: { slug: filename.replace(/\.mdx?$/, "") },
-  }));
+  const paths = [];
+
+  // Générer les paths pour toutes les locales
+  for (const locale of locales || ["fr"]) {
+    for (const filename of filenames) {
+      paths.push({
+        params: { slug: filename.replace(/\.mdx?$/, "") },
+        locale,
+      });
+    }
+  }
 
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   const { slug } = params as { slug: string };
   const filePath = path.join(
     process.cwd(),
@@ -81,6 +90,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       frontMatter,
       mdxSource,
+      // Ajouter les traductions pour que le Header fonctionne
+      ...(await serverSideTranslations(locale || "fr", ["common"])),
     },
   };
 };
