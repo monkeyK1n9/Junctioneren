@@ -43,7 +43,7 @@ const TextAbout = ({ children, ...props }: TextAboutProps) => (
     className={`
       ${fontClass}
       text-center
-      text-[34px] sm:text-[44px] xl:text-[48px] 2xl:text-[70px]
+      text-[34px] sm:text-[40px] xl:text-[44px] 2xl:text-[48px]
       leading-[1.15] sm:leading-[1.1] lg:leading-[1.05] xl:leading-[1]
       tracking-[0%] font-normal
       my-2 sm:my-8 lg:my-10

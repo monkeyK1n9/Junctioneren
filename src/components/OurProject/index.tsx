@@ -54,9 +54,9 @@ const OurProjects = ({ showBtn }: MyProps) => {
     },
   ];
   return (
-    <section className="py-5 lg:py-12 container mx-auto px-4 lg:px-0">
+    <section className="py-5 lg:py-12 px-4 lg:px-0">
       <SlideUp delay={0.5}>
-        <div className="max-w-7xl mx-auto">
+        <div className="lg:max-w-[80%] lg:mx-auto">
           <Menu
             title={t("projects.title")}
             titleLink={t("projects.viewAll")}
@@ -146,25 +146,6 @@ const OurProjects = ({ showBtn }: MyProps) => {
               </div>
             ))}
           </div>
-
-          {showBtn && (
-            <div className="mt-8 sm:mt-10 lg:mt-14 flex justify-center">
-              <button
-                className={`bg-[#f1f1f1] rounded-full px-8 py-4 lg:px-12 lg:py-5 ${fontClassInter} text-base lg:text-xl flex items-center hover:bg-gray-200 transition-transform duration-300 hover:scale-110`}
-              >
-                {t("projects.work")}
-                <span className="ml-3 lg:ml-4">
-                  <Image
-                    src={images.OrganigramImg}
-                    alt="process"
-                    width={20}
-                    height={20}
-                    className="w-5 h-7 lg:w-6 lg:h-8"
-                  />
-                </span>
-              </button>
-            </div>
-          )}
         </div>
       </SlideUp>
     </section>
