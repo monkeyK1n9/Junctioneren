@@ -7,10 +7,17 @@ import { RobotoUiDisplay } from "@/lib/fonts";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState } from "react";
+import Form from "@/components/Form";
+import { useTranslation } from "next-i18next";
+import { FaArrowRight, FaWhatsapp } from "react-icons/fa";
+import { fontClassRoboto } from "../who-we-are";
+import Link from "next/link";
+import CButton from "@/components/ui/Button";
 
 const ContactUS = () => {
   const fontClass = cn(RobotoUiDisplay.variable, RobotoUiDisplay.className);
   const [isMapLoading, setIsMapLoading] = useState(true);
+  const { t } = useTranslation();
 
   const handleMapLoad = () => {
     setTimeout(() => {
@@ -21,7 +28,7 @@ const ContactUS = () => {
   return (
     <DefaultLayout className="overflow-auto">
       <Header />
-      <section className="my-[120px] md:my-[150px] lg:my-[180px] xl:my-[243px] container mx-auto flex flex-col px-4 sm:px-6 lg:px-8">
+      <section className="mt-[120px] md:mt-[140px] lg:mt-[170px] xl:mt-[180px] container mx-auto flex flex-col px-4 sm:px-6 lg:px-8 mb-[40px] sm:mb-[80px] lg:mb-[150px]">
         <div className="grid grid-cols-12 gap-[15px] sm:gap-[20px] md:gap-[25px] lg:gap-[30px] lg:mt-[22px]">
           <div className="w-full col-span-12 lg:col-span-4 flex flex-col space-y-[15px] sm:space-y-[20px] lg:space-y-[10px] mb-[30px] lg:mb-0">
             <div>
@@ -32,33 +39,35 @@ const ContactUS = () => {
                 Information
               </h4>
             </div>
-            <div className="flex flex-col space-y-[25px] sm:space-y-[30px] md:space-y-[35px] lg:space-y-[40px] xl:space-y-[50px]">
-              <p
-                className={`${fontClass} font-bold text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] lg:leading-[21.09px] text-[#333333] text-center lg:text-left`}
-              >
-                Junctioner Construction Engineering
-                <br />
-                <span className="font-light">Before Tradex Simbock</span>
-              </p>
-              <p
-                className={`${fontClass} font-bold text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] lg:leading-[21.09px] text-[#333333] text-center lg:text-left`}
-              >
-                (+237) 695 977 562
-              </p>
-              <p
-                className={`${fontClass} font-light text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] lg:leading-[21.09px] text-[#333333] text-center lg:text-left`}
-              >
-                junctionerce@gmail.com
-              </p>
-              <button
-                className={`${fontClass} font-normal text-[11px] sm:text-[12px] leading-[12px] tracking-[0.2em] sm:tracking-[20%] text-white bg-gradient-to-r from-[#312783] to-[#4c3ba3] hover:from-[#4c3ba3] hover:to-[#312783] uppercase p-[15px] sm:p-[20px] lg:p-[30px] rounded-lg w-full sm:w-auto lg:w-[221.81px] transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95 mx-auto lg:mx-0`}
-              >
-                contact us
-              </button>
+            <div className="w-full col-span-12 lg:col-span-5 flex flex-col space-y-[10px]">
+              <Form text={t("contact.name")} />
+              <Form text={t("contact.phone")} />
+              <Form text={t("contact.email")} />
+              <Form text={t("contact.intrs")} />
+              <Form textarea text={t("contact.msg")} />
             </div>
+            <div className="mt-[20px] lg:mt-[50px] flex flex-col space-y-4">
+              {/* Send Email Button */}
+              <Link href={"/contact-us"}>
+                <CButton className="bg-[#312783] hover:bg-[#3d2f9a] text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%] transition-all duration-300 hover:shadow-xl hover:scale-105 backdrop-blur-sm border-none">
+                  {t("banner.contact")}
+                </CButton>
+              </Link>
+              {/* WhatsApp Button */}
+              <div
+                className="rounded-full bg-[#F3F3F3] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0] md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px]"
+                onClick={() => window.open("https://wa.me/+23769", "_blank")}
+              >
+                <FaWhatsapp color="green" size={27} className="mr-[14px]" />
+                <p className="text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
+                  {t("contact.contact")}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col space-y-[25px] sm:space-y-[30px] md:space-y-[35px] lg:space-y-[40px] xl:space-y-[50px]"></div>
           </div>
-          <div className="w-full col-span-12 lg:col-span-8 h-full">
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[501px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-gray-200">
+          <div className="w-full col-span-12 lg:col-span-8 h-full lg:mt-[230px]">
+            <div className="relative h-[400px] md:h-[276px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-gray-200 lg:w-[606px]">
               {/* Loader élégant */}
               {isMapLoading && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 z-10">
@@ -191,6 +200,27 @@ const ContactUS = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="flex flex-col mt-[20px] lg:mt-[57px]">
+              <p
+                className={`${fontClass} font-bold text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] lg:leading-[21.09px] text-[#333333] text-center lg:text-left`}
+              >
+                Junctioner Construction Engineering
+                <br />
+                <span className="font-light">Before Tradex Simbock</span>
+              </p>
+              <div className="flex flex-col lg:flex-row lg:space-x-[45px] items-center mt-[18px]">
+                <p
+                  className={`${fontClass} font-bold text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] lg:leading-[21.09px] text-[#333333] text-center lg:text-left`}
+                >
+                  (+237) 695 977 562
+                </p>
+                <p
+                  className={`${fontClass} font-light text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] lg:leading-[21.09px] text-[#333333] text-center lg:text-left`}
+                >
+                  junctionerce@gmail.com
+                </p>
               </div>
             </div>
           </div>
