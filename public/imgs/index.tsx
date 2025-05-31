@@ -58,6 +58,7 @@ import Management from "./services/mang.png";
 import Others from "./services/others.png";
 import Others1 from "./services/others1.png";
 import Terrassement from "./services/terras.png";
+import Tiktok from "./tiktok.png";
 
 const images = {
   Others1,
@@ -120,6 +121,7 @@ const images = {
   Prof11,
   Rect2Img,
   Rect3Img,
+  Tiktok,
 };
 
 export default images;

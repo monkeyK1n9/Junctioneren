@@ -17,11 +17,11 @@ const Footer = () => {
   const blogOne: NavProps[] = [
     {
       name: t("footer.linkOne"),
-      path: "#",
+      path: "/",
     },
     {
       name: t("footer.linkTwo"),
-      path: "#",
+      path: "/our-projects",
     },
     {
       name: t("footer.linkThree"),
@@ -29,17 +29,17 @@ const Footer = () => {
     },
     {
       name: t("footer.linkFour"),
-      path: "#",
+      path: "/who-we-are",
     },
     {
       name: t("footer.linkFive"),
-      path: "#",
+      path: "/contact-us",
     },
   ];
 
   const blogThree: NavProps[] = [
     {
-      path: "#",
+      path: "https://web.facebook.com/JunctionerConstructionEngineering",
       icon: (
         <Image
           src={images.FacebookImg}
@@ -49,7 +49,7 @@ const Footer = () => {
       ),
     },
     {
-      path: "#",
+      path: "https://x.com/junctioner_Eng",
       icon: (
         <Image
           src={images.TwitterImg}
@@ -59,7 +59,7 @@ const Footer = () => {
       ),
     },
     {
-      path: "#",
+      path: "https://www.linkedin.com/company/junctioner-construction-engineering/",
       icon: (
         <Image
           src={images.LinkedinImg}
@@ -69,13 +69,9 @@ const Footer = () => {
       ),
     },
     {
-      path: "#",
+      path: "https://www.tiktok.com/@junctioner.constr",
       icon: (
-        <Image
-          src={images.PinterestImg}
-          alt="pic"
-          className="w-[16px] h-[16px]"
-        />
+        <Image src={images.Tiktok} alt="pic" className="w-[16px] h-[16px]" />
       ),
     },
   ];
@@ -131,7 +127,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={String(item.path)}
-                    className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%]`}
+                    className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] transition-all duration-300 hover:text-[#DF4D1B] hover:pl-2`}
                   >
                     {item.name}
                   </Link>
@@ -169,9 +165,11 @@ const Footer = () => {
                 <li key={index}>
                   <Link
                     href={String(item.path)}
-                    className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%]`}
+                    className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] transition-transform duration-300 hover:scale-125 group`}
                   >
-                    {item.icon}
+                    <span className="inline-block transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110">
+                      {item.icon}
+                    </span>
                   </Link>
                 </li>
               ))}
