@@ -7,6 +7,10 @@ import images from "../../../../public/imgs";
 import Link from "next/link";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import { useState } from "react";
+import Breadcrumb from "@/components/Breadcrumb";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { GetStaticProps } from "next";
 
 type ProjectProps = {
   picture: any;
@@ -130,7 +134,6 @@ const Index = () => {
 
   return (
     <DefaultLayout>
-      <Header />
       <main className="mt-[20px] sm:mt-[60px] lg:mt-[80px]">
         <section className="py-[15px] lg:py-[30px] lg:max-w-[62%] lg:mx-auto px-2 lg:px-0">
           <h5
@@ -140,6 +143,7 @@ const Index = () => {
             <br />
             <span className="font-[700] text-[#DF4D1B]">Projects</span>
           </h5>
+          <Breadcrumb />
         </section>
         <section className="my-[20px] lg:my-[60px]">
           <div className="container mx-auto">
@@ -202,6 +206,14 @@ const Index = () => {
       <Footer />
     </DefaultLayout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
 };
 
 export default Index;
