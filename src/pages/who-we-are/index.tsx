@@ -151,7 +151,7 @@ const WhoWeArePage = () => {
         <section>
           <Breadcrumb />
           <h5
-            className={`${fontClassRoboto} text-[#333333] font-[700] text-[36px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2 text-justify pt-4 lg:pt-0`}
+            className={`${fontClassRoboto} text-[#333333] font-[700] text-[36px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2 text-center lg:text-start pt-4 lg:pt-0`}
           >
             We are the junctioners that make averything possible
           </h5>
