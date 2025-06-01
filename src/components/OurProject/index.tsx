@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import SlideUp from "../Animation/SlideUp";
 import { useTranslation } from "next-i18next";
+import Breadcrumb from "../Breadcrumb";
 
 const fontClass = cn(RobotoUiDisplay.className, RobotoUiDisplay.variable);
 const fontClassInter = cn(InterUiDisplay.className, InterUiDisplay.variable);
@@ -19,9 +20,10 @@ type ProjectProps = {
 
 type MyProps = {
   showBtn?: boolean;
+  showBreadcrumb?: boolean;
 };
 
-const OurProjects = ({ showBtn }: MyProps) => {
+const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
   const { t } = useTranslation("common");
   const projectGrid01: ProjectProps[] = [
     {
@@ -57,6 +59,7 @@ const OurProjects = ({ showBtn }: MyProps) => {
     <section className="py-5 lg:py-12 px-4 lg:px-0">
       <SlideUp delay={0.5}>
         <div className="lg:max-w-[80%] lg:mx-auto">
+          {showBreadcrumb && <Breadcrumb />}
           <Menu
             title={t("projects.title")}
             titleLink={t("projects.viewAll")}

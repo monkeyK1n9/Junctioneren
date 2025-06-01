@@ -5,15 +5,17 @@ import Image from "next/image";
 import images from "../../../public/imgs";
 import SlideUp from "../Animation/SlideUp";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
+import { FaPlus } from "react-icons/fa";
 
 const CodeAndMeasurements = () => {
   const { t } = useTranslation("common");
   const fontClass = cn(InterUiDisplay.variable, InterUiDisplay.className);
   return (
-    <SlideUp delay={0.4}>
+    <SlideUp delay={0.4} className="bg-white lg:bg-transparent">
       <section className="py-[20px] lg:py-[46px]">
         <div className="container mx-auto">
-          <div className="bg-[#F8F8F8] rounded-[46px] p-[20px] lg:p-[54px]">
+          <div className="bg-white lg:bg-[#F8F8F8] rounded-[46px] p-[20px] lg:p-[54px]">
             <div className="flex flex-col lg:flex-row">
               <div>
                 <h3
@@ -27,30 +29,34 @@ const CodeAndMeasurements = () => {
                   {t("codeAndMeasure.description")}
                 </p>
                 <div className="mt-[18px] flex flex-col md:flex-row md:space-x-[24px] space-y-[10px] md:space-y-0">
-                  <CButton
-                    icon={
-                      <Image
-                        src={images.ArrowLong02}
-                        alt="icon"
-                        className="h-[24px] w-[24px]"
-                      />
-                    }
-                    className="bg-white text-[#656565] rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
-                  >
-                    {t("codeAndMeasure.service")}
-                  </CButton>
-                  <CButton
-                    icon={
-                      <Image
-                        src={images.ArrowLong01}
-                        alt="icon"
-                        className="h-[24px] w-[24px]"
-                      />
-                    }
-                    className="bg-[#312783] text-white rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
-                  >
-                    {t("codeAndMeasure.contact")}
-                  </CButton>
+                  <Link href={"/our-services"}>
+                    <CButton
+                      icon={
+                        <Image
+                          src={images.ArrowLong02}
+                          alt="icon"
+                          className="h-[24px] w-[24px]"
+                        />
+                      }
+                      className="bg-white text-[#656565] rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
+                    >
+                      {t("codeAndMeasure.service")}
+                    </CButton>
+                  </Link>
+                  <Link href={"/contact-us"}>
+                    <CButton
+                      icon={
+                        <Image
+                          src={images.ArrowLong01}
+                          alt="icon"
+                          className="h-[24px] w-[24px]"
+                        />
+                      }
+                      className="bg-[#312783] text-white rounded-[15px] w-full lg:w-[260px] h-[36px] lg:h-[42px]"
+                    >
+                      {t("codeAndMeasure.contact")}
+                    </CButton>
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col pt-[12px] lg:pt-0 w-full">
@@ -61,15 +67,18 @@ const CodeAndMeasurements = () => {
                 </p>
                 <div className="relative h-[73px] my-[17px]">
                   <div className="absolute w-[73px] h-[73px] rounded-full right-0 top-0 z-40 border-[#312783] border-[4px]">
-                    <Image
+                    {/* <Image
                       src={images.Prof3}
                       alt="picture"
                       className="w-[67px] h-[67px] rounded-full"
-                    />
+                    /> */}
+                    <div className="bg-[#d9d9d9] flex justify-center items-center h-full w-full rounded-full">
+                      <FaPlus size={29} className="text-[#DF4D1B]" />
+                    </div>
                   </div>
                   <div className="absolute w-[73px] h-[73px] rounded-full right-[50px] top-0 z-30 border-[#312783] border-[4px]">
                     <Image
-                      src={images.Prof2}
+                      src={images.Prof3}
                       alt="picture"
                       className="w-[67px] h-[67px] rounded-full"
                     />

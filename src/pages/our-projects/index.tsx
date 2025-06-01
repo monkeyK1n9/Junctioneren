@@ -12,15 +12,12 @@ import Breadcrumb from "@/components/Breadcrumb";
 const OurProjectsPage = () => {
   return (
     <DefaultLayout className="overflow-x-hidden">
-      <main className="mt-[100px] lg:mt-[147px]">
-        <div className="container mx-auto">
-          <Breadcrumb />
-        </div>
-        <OurProjects showBtn={false} />
+      <section>
+        <OurProjects showBtn={false} showBreadcrumb />
         <HowWeWork />
         <OthersProjects />
-        <Footer />
-      </main>
+      </section>
+      <Footer />
     </DefaultLayout>
   );
 };

@@ -22,7 +22,7 @@ const Breadcrumb = () => {
   }));
 
   return (
-    <nav aria-label="Breadcrumb" className="mt-3 lg:mt-6 lg:ml-2">
+    <nav aria-label="Breadcrumb" className="mt-[120px] lg:mt-[100px] lg:ml-2">
       <ol
         className={`flex flex-wrap items-center text-sm text-gray-500 space-x-2 ${fontClassRoboto}`}
       >

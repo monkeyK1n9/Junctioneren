@@ -9,6 +9,9 @@ import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Breadcrumb from "@/components/Breadcrumb";
+import Menu from "@/components/ui/Menu";
+import { useTranslation } from "react-i18next";
+import SlideUp from "@/components/Animation/SlideUp";
 
 export const fontClassRoboto = cn(
   RobotoUiDisplay.className,
@@ -100,82 +103,82 @@ const OurServices = () => {
     );
   };
 
+  const { t } = useTranslation("common");
+
   return (
     <DefaultLayout>
       <Header />
-      <main className="mt-[100px]">
-        <section className="py-[15px] lg:py-[30px] lg:max-w-[62%] lg:mx-auto px-2 lg:px-0">
-          <h5
-            className={`${fontClassRoboto} text-[#BDBDBD] font-[300] text-[40px] sm:text-[50px] lg:text-[64px] leading-[64px] tracking-[0%]`}
-          >
-            Our Services
-          </h5>
+      <SlideUp delay={0.5}>
+        <main className="lg:max-w-[80%] lg:mx-auto pt-[30px] lg:pt-[40px] px-4 lg:px-0">
           <Breadcrumb />
-        </section>
-        <section className="my-[14px] lg:my-[48px]">
-          <div className="container mx-auto">
-            <div className="mt-[20px] sm:mt-[40px] lg:mt-[100px] lg:max-w-[986px] mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-[20px] lg:gap-x-[76px] lg:gap-y-[50px]">
-                {datasOne.map((item, index) => (
-                  <CardItem
-                    key={index}
-                    content={item.content}
-                    title={item.title}
-                    pic={item.pic}
-                  />
-                ))}
+          <Menu title={"Our Services"} titleLink={""} path="" />
+          <section className="my-[14px] lg:my-[48px]">
+            <div className="mx-auto">
+              <div className="mt-[20px] sm:mt-[40px] lg:mt-[100px] mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-[20px] lg:gap-x-[76px] lg:gap-y-[50px]">
+                  {datasOne.map((item, index) => (
+                    <CardItem
+                      key={index}
+                      content={item.content}
+                      title={item.title}
+                      pic={item.pic}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="bg-[#312783] lg:h-[161px] rounded-[20px] lg:max-w-[90%] mx-auto flex flex-col justify-center items-center p-6 lg:p-0 text-white my-[10px] lg:my-[34px]">
-              <p
-                className={`${fontClassInter} text-[16px] lg:text-[20px] font-[500] leading-[100%] tracking-[0%] text-center`}
-              >
-                What can we do for you
-              </p>
-              <div className="lg:w-[605px] flex flex-col lg:flex-row justify-center items-center mt-[12px] lg:mt-[29px]">
-                <button
-                  className={`${fontClassRoboto} flex justify-center items-center text-[12px] uppercase leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105`}
+              <div className="bg-[#312783] lg:h-[161px] rounded-[20px] mx-auto flex flex-col justify-center items-center p-6 lg:p-0 text-white my-[10px] lg:my-[34px]">
+                <p
+                  className={`${fontClassInter} text-[16px] lg:text-[20px] font-[500] leading-[100%] tracking-[0%] text-center`}
                 >
-                  Send email
-                  <span className="pl-[4px]">
-                    <FaArrowRight />
+                  What can we do for you
+                </p>
+                <div className="lg:w-[605px] flex flex-col lg:flex-row justify-center items-center mt-[12px] lg:mt-[29px]">
+                  <button
+                    className={`${fontClassRoboto} flex justify-center items-center text-[12px] uppercase leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105`}
+                  >
+                    Send email
+                    <span className="pl-[4px]">
+                      <FaArrowRight />
+                    </span>
+                  </button>
+                  <span
+                    className={`mx-[52px] ${fontClassRoboto} flex justify-center items-center text-[12px] uppercase leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 my-2 lg:my-0`}
+                  >
+                    OR
                   </span>
-                </button>
-                <span
-                  className={`mx-[52px] ${fontClassRoboto} flex justify-center items-center text-[12px] uppercase leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 my-2 lg:my-0`}
-                >
-                  OR
-                </span>
-                <div
-                  className="rounded-full bg-[#DADADA] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
-                  onClick={() => window.open("https://wa.me/+23769", "_blank")}
-                >
-                  <FaWhatsapp
-                    color="green"
-                    size={27}
-                    className="mr-[14px] text-white"
-                  />
-                  <p className="text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
-                    Contact us on whatsapp
-                  </p>
+                  <div
+                    className="rounded-full bg-[#DADADA] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
+                    onClick={() =>
+                      window.open("https://wa.me/+23769", "_blank")
+                    }
+                  >
+                    <FaWhatsapp
+                      color="green"
+                      size={27}
+                      className="mr-[14px] text-white"
+                    />
+                    <p className="text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
+                      Contact us on whatsapp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-[20px] lg:gap-x-[76px] lg:gap-y-[50px]">
+                  {datasTwo.map((item, index) => (
+                    <CardItem
+                      key={index}
+                      content={item.content}
+                      title={item.title}
+                      pic={item.pic}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
-            <div className="lg:max-w-[986px] mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-[20px] lg:gap-x-[76px] lg:gap-y-[50px]">
-                {datasTwo.map((item, index) => (
-                  <CardItem
-                    key={index}
-                    content={item.content}
-                    title={item.title}
-                    pic={item.pic}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+      </SlideUp>
       <Footer />
     </DefaultLayout>
   );

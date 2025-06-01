@@ -29,7 +29,7 @@ const Header = () => {
     },
     {
       name: t("navigation.whatWeDo"),
-      path: "#",
+      path: "/our-services",
     },
     {
       name: t("navigation.whoWeAre"),

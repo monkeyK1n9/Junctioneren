@@ -25,7 +25,7 @@ const Footer = () => {
     },
     {
       name: t("footer.linkThree"),
-      path: "#",
+      path: "/our-services",
     },
     {
       name: t("footer.linkFour"),
