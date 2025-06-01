@@ -61,22 +61,34 @@ const datasTwo: CardType[] = [
     pic: images.Terrassement,
   },
   {
-    title: "Management de la construction",
+    title: "Services topographiques et cartographiques",
     content:
-      "Nous offrons une gestion complète des projets, incluant la planification, l'organisation et le contrôle de toutes les phases de construction. Notre équipe veille à respecter les délais, le budget et la qualité, tout en coordonnant les différents intervenants.",
-    pic: images.Others,
+      "Nous réalisons des études topographiques précises pour aider à la planification et à l'exécution des projets. Nos services incluent le relevé de terrain, l'analyse géospatiale et la production de cartes détaillées.",
+    pic: images.Ser1,
   },
   {
-    title: "Management de la construction",
+    title: "Services de plomberie, menuiserie, serrurerie",
     content:
-      "Nous offrons une gestion complète des projets, incluant la planification, l'organisation et le contrôle de toutes les phases de construction. Notre équipe veille à respecter les délais, le budget et la qualité, tout en coordonnant les différents intervenants.",
-    pic: images.Others,
+      "Nous proposons des travaux de plomberie, menuiserie et serrurerie pour assurer la fonctionnalité et la sécurité des bâtiments. Nos artisans qualifiés garantissent des installations conformes aux normes de qualité.",
+    pic: images.Ser2,
   },
   {
-    title: "Management de la construction",
+    title: "Recherche et Innovation",
     content:
-      "Nous offrons une gestion complète des projets, incluant la planification, l'organisation et le contrôle de toutes les phases de construction. Notre équipe veille à respecter les délais, le budget et la qualité, tout en coordonnant les différents intervenants.",
-    pic: images.Others,
+      "Nous nous engageons dans la recherche et le développement pour améliorer nos pratiques et introduire des solutions innovantes dans le secteur de la construction. Cela inclut l’adoption de nouveaux matériaux et techniques de construction.",
+    pic: images.Ser3,
+  },
+  {
+    title: "Électricité et Climatisation",
+    content:
+      "Nous offrons des services d’installation et de maintenance pour les systèmes électriques et de climatisation, veillant à ce qu'ils soient efficaces et conformes aux réglementations en vigueur.",
+    pic: images.Ser4,
+  },
+  {
+    title: "Import/Export et prestations de services",
+    content:
+      "Nous gérons l'importation et l'exportation de matériaux et d'équipements de construction, ainsi que d'autres services connexes. Cela nous permet de répondre à des besoins variés tout en garantissant la qualité des produits.",
+    pic: images.Ser5,
   },
 ];
 
@@ -87,14 +99,14 @@ const OurServices = () => {
         <Image
           src={pic}
           alt="picture"
-          className="w-[250px] h-[200px] lg:w-[193.33px] lg:h-[212px] rounded-[10px] object-cover"
+          className="w-full h-auto lg:w-[193.33px] lg:h-[212px] rounded-[10px] lg:object-cover"
         />
         <div className="text-left">
           <h5 className="pt-[6px] text-[#DF4D1B] font-[700] text-[12px] sm:text-[14px] lg:text-[20px] leading-[100%] tracking-[0%]">
             {title}
           </h5>
           <p
-            className={`text-gray-500 pt-[8px] lg:pt-[10px] font-[400] text-[10px] sm:text-[11px] lg:text-[14px] tracking-[0%] leading-[18px] ${fontClassInter}`}
+            className={`text-gray-500 pt-[8px] lg:pt-[10px] font-[400] text-[13px] sm:text-[11px] lg:text-[14px] tracking-[0%] leading-[18px] ${fontClassInter}`}
           >
             {content}
           </p>
@@ -109,7 +121,7 @@ const OurServices = () => {
     <DefaultLayout>
       <Header />
       <SlideUp delay={0.5}>
-        <main className="lg:max-w-[80%] lg:mx-auto pt-[30px] lg:pt-[40px] px-4 lg:px-0">
+        <main className="lg:max-w-[80%] lg:mx-auto py-[30px] lg:py-[40px] px-4 lg:px-0">
           <Breadcrumb />
           <Menu title={"Our Services"} titleLink={""} path="" />
           <section className="my-[14px] lg:my-[48px]">

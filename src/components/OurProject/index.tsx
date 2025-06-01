@@ -4,7 +4,7 @@ import Menu from "../ui/Menu";
 import Image from "next/image";
 import images from "../../../public/imgs";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import SlideUp from "../Animation/SlideUp";
 import { useTranslation } from "next-i18next";
 import Breadcrumb from "../Breadcrumb";
@@ -25,6 +25,8 @@ type MyProps = {
 
 const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
   const { t } = useTranslation("common");
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0); // default hover on first
+
   const projectGrid01: ProjectProps[] = [
     {
       picture: images.Card1Img,
@@ -73,6 +75,8 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
               <div
                 key={index}
                 className="relative group aspect-[4/3] lg:aspect-[5/3]"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(0)}
               >
                 <div className="relative h-full w-full">
                   <Image
@@ -83,7 +87,14 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                   />
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-lg p-4">
+                <div
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-lg p-4
+                  ${
+                    hoveredIndex === index
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
+                  }`}
+                >
                   <div className="text-white text-left p-4">
                     <h4
                       className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold ${fontClass}`}

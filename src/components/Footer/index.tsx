@@ -78,7 +78,7 @@ const Footer = () => {
 
   const blogTwo: NavProps[] = [
     {
-      name: "Before Tradex Simbock",
+      name: t("footer.adr"),
       icon: (
         <Image
           src={images.LocationImg}

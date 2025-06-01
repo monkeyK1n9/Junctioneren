@@ -71,8 +71,18 @@ import OtherPic8 from "./others/pic8.webp";
 import OtherPic9 from "./others/pic9.webp";
 import OtherPic10 from "./others/pic10.webp";
 import OtherPic11 from "./others/pic11.webp";
+import Ser1 from "./services/topo.webp";
+import Ser2 from "./services/plomb.webp";
+import Ser3 from "./services/search.webp";
+import Ser4 from "./services/electro.webp";
+import Ser5 from "./services/import.webp";
 
 const images = {
+  Ser1,
+  Ser2,
+  Ser3,
+  Ser4,
+  Ser5,
   Others1,
   Conception,
   Design,
