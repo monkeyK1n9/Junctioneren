@@ -10,9 +10,9 @@ const HowWeWork = () => {
           Below is a chart that shows how we organise our projects from start to
           finish.
         </CommonText>
-        <div className="mt-[101px]">
+        <div className="mt-[30px] lg:mt-[101px]">
           {/* Première ligne - Chef de projet centré */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[20px] sm:gap-y-[30px] lg:gap-y-[46px]">
             <div className="hidden lg:flex" />
             <Work
               title="CHEF DE PROJET"
@@ -20,10 +20,10 @@ const HowWeWork = () => {
             />
           </div>
 
-          <hr className="my-[29px]" />
+          <hr className="hidden lg:flex my-[29px]" />
 
           {/* Deuxième ligne - 3 postes */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
+          <div className="mt-[20px] lg:mt-0 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[20px] sm:gap-y-[30px] lg:gap-y-[40px]">
             <Work
               title="ARCHITECT"
               description="Responsable de la supervision globale des projets."
@@ -38,10 +38,10 @@ const HowWeWork = () => {
             />
           </div>
 
-          <hr className="my-[29px]" />
+          <hr className="hidden lg:flex my-[29px]" />
 
           {/* Troisième ligne - 3 postes */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
+          <div className="mt-[20px] lg:mt-0 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[20px] sm:gap-y-[30px] lg:gap-y-[40px]">
             <Work
               title="INGÉNIEUR DE CHANTIER"
               description="Supervise la planification et l'exécution des travaux sur le terrain."
@@ -56,10 +56,10 @@ const HowWeWork = () => {
             />
           </div>
 
-          <hr className="my-[29px]" />
+          <hr className="hidden lg:flex my-[29px]" />
 
           {/* Cinquième ligne - 2 postes centrés */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
+          <div className="mt-[20px] lg:mt-0 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[20px] sm:gap-y-[30px] lg:gap-y-[40px]">
             <div className="hidden xl:flex" />
             <Work
               title="RESPONSABLE ÉLECTRIQUE"
@@ -71,9 +71,9 @@ const HowWeWork = () => {
             />
           </div>
 
-          <hr className="my-[29px]" />
+          <hr className="hidden lg:flex my-[29px]" />
           {/* Quatrième ligne - 3 postes */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[46px]">
+          <div className="mt-[20px] lg:mt-0 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-y-[20px] sm:gap-y-[30px] lg:gap-y-[40px]">
             <Work
               title="RESPONSABLE PLOMBERIE"
               description="Responsable de la conception et de l'installation des systèmes de plomberie du projet."

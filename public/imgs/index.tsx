@@ -59,6 +59,18 @@ import Others from "./services/others.png";
 import Others1 from "./services/others1.png";
 import Terrassement from "./services/terras.png";
 import Tiktok from "./tiktok.png";
+import OtherPic0 from "./others/pic0.webp";
+import OtherPic1 from "./others/pic1.webp";
+import OtherPic2 from "./others/pic2.webp";
+import OtherPic3 from "./others/pic3.webp";
+import OtherPic4 from "./others/pic4.webp";
+import OtherPic5 from "./others/pic5.webp";
+import OtherPic6 from "./others/pic6.webp";
+import OtherPic7 from "./others/pic7.webp";
+import OtherPic8 from "./others/pic8.webp";
+import OtherPic9 from "./others/pic9.webp";
+import OtherPic10 from "./others/pic10.webp";
+import OtherPic11 from "./others/pic11.webp";
 
 const images = {
   Others1,
@@ -122,6 +134,18 @@ const images = {
   Rect2Img,
   Rect3Img,
   Tiktok,
+  OtherPic0,
+  OtherPic1,
+  OtherPic2,
+  OtherPic3,
+  OtherPic4,
+  OtherPic5,
+  OtherPic6,
+  OtherPic7,
+  OtherPic8,
+  OtherPic9,
+  OtherPic10,
+  OtherPic11,
 };
 
 export default images;

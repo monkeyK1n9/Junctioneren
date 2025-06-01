@@ -25,12 +25,12 @@ const OurProjects = ({ showBtn }: MyProps) => {
   const { t } = useTranslation("common");
   const projectGrid01: ProjectProps[] = [
     {
-      picture: images.PUnMf,
+      picture: images.Card1Img,
       title: t("projects.titleOne"),
       link: "/our-projects/cite-universitaire-mfou",
     },
     {
-      picture: images.PuEy,
+      picture: images.PUnMf,
       title: t("projects.titleTwo"),
       link: "/our-projects/cite-universitaire-eyang",
     },
@@ -38,17 +38,17 @@ const OurProjects = ({ showBtn }: MyProps) => {
 
   const projectGrid02: ProjectProps[] = [
     {
-      picture: images.pNm,
+      picture: images.PuEy,
       title: t("projects.titleThree"),
       link: "/our-projects/immeuble-nomayos",
     },
     {
-      picture: images.pJv,
+      picture: images.pNm,
       title: t("projects.titleFour"),
       link: "/our-projects/fairy-jouvence",
     },
     {
-      picture: images.Card4Img,
+      picture: images.pJv,
       title: t("projects.titleFive"),
       link: "/our-projects/residence-premium",
     },
