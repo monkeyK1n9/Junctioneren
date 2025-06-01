@@ -56,7 +56,8 @@ const TextAbout = ({ children, ...props }: TextAboutProps) => (
 
 const WhoWeAre = () => {
   const { t } = useTranslation("common");
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(4);
+
   const datas: DataProps[] = [
     {
       path: "#",
@@ -98,7 +99,7 @@ const WhoWeAre = () => {
             key={index}
             className="col-span-12 lg:col-span-4 relative text-[#B9B9B9]"
             onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+            onMouseLeave={() => setHoveredIndex(0)}
           >
             <div
               className={`flex justify-center items-center text-[#B9B9B9] ${

@@ -6,7 +6,7 @@ import images from "../../../public/imgs";
 import SlideUp from "../Animation/SlideUp";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { FaPlus } from "react-icons/fa";
+import { FaArrowRight, FaPlus } from "react-icons/fa";
 
 const CodeAndMeasurements = () => {
   const { t } = useTranslation("common");
@@ -60,11 +60,20 @@ const CodeAndMeasurements = () => {
                 </div>
               </div>
               <div className="flex flex-col pt-[12px] lg:pt-0 w-full">
-                <p
-                  className={`${fontClass} font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[19.36px] tracking-[0%] text-center lg:text-right w-full`}
+                <Link
+                  href={"/who-we-are#teams"}
+                  className={`${fontClass} font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[19.36px] tracking-[0%] text-center lg:text-right w-full flex justify-center items-center space-x-2 lg:justify-end transition-all duration-300 hover:text-[#DF4D1B] group`}
                 >
-                  {t("codeAndMeasure.teamTitle")}
-                </p>
+                  <span className="transition-all duration-300 group-hover:translate-x-1">
+                    {t("codeAndMeasure.titleRound")}
+                  </span>
+                  <span>
+                    <FaArrowRight
+                      size={11}
+                      className="text-[#1E1E1E] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#DF4D1B]"
+                    />
+                  </span>
+                </Link>
                 <div className="relative h-[73px] my-[17px]">
                   <div className="absolute w-[73px] h-[73px] rounded-full right-0 top-0 z-40 border-[#312783] border-[4px]">
                     {/* <Image
@@ -85,7 +94,7 @@ const CodeAndMeasurements = () => {
                   </div>
                   <div className="absolute w-[73px] h-[73px] rounded-full right-[100px] top-0 z-20 border-[#312783] border-[4px]">
                     <Image
-                      src={images.Prof1}
+                      src={images.Prof5}
                       alt="picture"
                       className="w-[67px] h-[67px] rounded-full"
                     />

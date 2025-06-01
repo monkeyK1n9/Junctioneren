@@ -111,11 +111,11 @@ const datas: CardType[] = [
 const WhoWeArePage = () => {
   const CardItem = ({ content, name, occupation, pic, linkedin }: CardType) => {
     return (
-      <div className="w-full flex flex-col sm:flex-row items-start gap-[16px] sm:gap-[20px] lg:gap-[20px] bg-white rounded-[14px] p-4 sm:p-6 max-h-[460px]">
+      <div className="w-full flex flex-col sm:flex-row items-start gap-[16px] sm:gap-[20px] lg:gap-[20px] bg-white rounded-[14px] p-4 sm:p-6 lg:max-h-[460px]">
         <Image
           src={pic}
           alt="picture"
-          className="w-full sm:w-[160px] sm:h-[180px] lg:w-[180px] lg:h-[222px] h-[200px] rounded-[10px] object-cover"
+          className="w-full sm:w-[160px] sm:h-[180px] lg:w-[180px] lg:h-[222px] h-[250px] rounded-[10px] object-cover"
         />
         <div className="text-left flex-1 flex flex-col justify-between">
           <h4 className="text-[#2A2A2A] font-[300] text-[16px] sm:text-[18px] md:text-[20px] leading-tight tracking-[0%]">
@@ -198,7 +198,10 @@ const WhoWeArePage = () => {
             </div>
           </div>
         </section>
-        <section className="pt-[16px] lg:pt-[62px] lg:mx-auto px-2 lg:px-0 pb-[100px] sm:pb-[200px] lg:pb-[300px]">
+        <section
+          id="teams"
+          className="pt-[16px] lg:pt-[62px] lg:mx-auto px-2 lg:px-0 pb-[100px] sm:pb-[200px] lg:pb-[300px]"
+        >
           <div className="mt-[20px] sm:mt-[40px] lg:mt-[100px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-[20px] lg:gap-y-0 lg:gap-x-[76px]">
               {datas.map((item, index) => (

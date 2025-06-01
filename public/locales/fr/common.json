@@ -28,7 +28,8 @@
     "contact": "Contactez-nous",
     "service": "Voir nos services",
     "teamTitle": "Les Junctioners",
-    "teamDesc": "L'équipe d'experts apporte une richesse de connaissances et de créativité à chaque projet"
+    "teamDesc": "L'équipe d'experts apporte une richesse de connaissances et de créativité à chaque projet",
+    "titleRound": "Rencontrez l'équipe"
   },
   "whatWeDo": {
     "title": "Ce que nous faisons",
@@ -79,6 +80,7 @@
     "linkFour": "Qui nous sommes",
     "linkFive": "Contacts",
     "copy": "Tous droits réservés.",
-    "int": "Junctioner Ingénierie de la construction"
+    "int": "Junctioner Ingénierie de la construction",
+    "adr": "Avant Tradex Simbock"
   }
 }
