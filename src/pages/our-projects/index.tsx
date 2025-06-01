@@ -7,13 +7,15 @@ import OthersProjects from "@/components/OthersProjects";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const OurProjectsPage = () => {
-  const { t } = useTranslation("common");
   return (
     <DefaultLayout className="overflow-x-hidden">
-      <Header />
       <main className="mt-[100px] lg:mt-[147px]">
+        <div className="container mx-auto">
+          <Breadcrumb />
+        </div>
         <OurProjects showBtn={false} />
         <HowWeWork />
         <OthersProjects />

@@ -8,6 +8,7 @@ import images from "../../../public/imgs";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const fontClassRoboto = cn(
   RobotoUiDisplay.className,
@@ -109,6 +110,7 @@ const OurServices = () => {
           >
             Our Services
           </h5>
+          <Breadcrumb />
         </section>
         <section className="my-[14px] lg:my-[48px]">
           <div className="container mx-auto">

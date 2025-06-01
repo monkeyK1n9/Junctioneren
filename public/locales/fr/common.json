@@ -1,4 +1,13 @@
 {
+  "breadcrumb": {
+    "welcome": "Accueil",
+    "ourprojects": "Nos projets",
+    "whatwedo": "Nos métiers",
+    "whoweare": "Qui sommes-nous",
+    "contact": "Contact",
+    "ourservices": "Nos Serices",
+    "allourprojects": "Voir tous les projets"
+  },
   "navigation": {
     "welcome": "Bienvenue",
     "projects": "Nos projets",
