@@ -28,9 +28,9 @@ const ContactUS = () => {
   return (
     <DefaultLayout className="overflow-auto">
       <Header />
-      <section className="mt-[120px] md:mt-[140px] lg:mt-[170px] xl:mt-[180px] container mx-auto flex flex-col px-4 sm:px-6 lg:px-8 mb-[40px] sm:mb-[80px] lg:mb-[150px]">
+      <section className="mt-[120px] md:mt-[140px] lg:mt-[170px] xl:mt-[180px] mx-auto flex flex-col px-4 sm:px-6 lg:px-8 mb-[40px] sm:mb-[80px] lg:mb-[150px] lg:max-w-[80%]">
         <div className="grid grid-cols-12 gap-[15px] sm:gap-[20px] md:gap-[25px] lg:gap-[30px] lg:mt-[22px]">
-          <div className="w-full col-span-12 lg:col-span-4 flex flex-col space-y-[15px] sm:space-y-[20px] lg:space-y-[10px] mb-[30px] lg:mb-0">
+          <div className="w-full col-span-12 lg:col-span-5 flex flex-col space-y-[15px] sm:space-y-[20px] lg:space-y-[10px] mb-[30px] lg:mb-0">
             <div>
               <Menu title="Contact" titleLink="" path="#" />
               <h4
@@ -66,7 +66,7 @@ const ContactUS = () => {
             </div>
             <div className="flex flex-col space-y-[25px] sm:space-y-[30px] md:space-y-[35px] lg:space-y-[40px] xl:space-y-[50px]"></div>
           </div>
-          <div className="w-full col-span-12 lg:col-span-8 h-full lg:mt-[230px]">
+          <div className="w-full col-span-12 lg:col-span-7 h-full lg:mt-[230px]">
             <div className="relative h-[400px] md:h-[276px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-gray-200 lg:w-[606px]">
               {/* Loader élégant */}
               {isMapLoading && (

@@ -111,7 +111,7 @@ const datas: CardType[] = [
 const WhoWeArePage = () => {
   const CardItem = ({ content, name, occupation, pic, linkedin }: CardType) => {
     return (
-      <div className="w-full flex flex-col sm:flex-row items-start gap-[16px] sm:gap-[20px] lg:gap-[20px] bg-white rounded-[14px] shadow-sm p-4 sm:p-6 h-[460px]">
+      <div className="w-full flex flex-col sm:flex-row items-start gap-[16px] sm:gap-[20px] lg:gap-[20px] bg-white rounded-[14px] p-4 sm:p-6 max-h-[460px]">
         <Image
           src={pic}
           alt="picture"
@@ -147,11 +147,11 @@ const WhoWeArePage = () => {
   return (
     <DefaultLayout>
       <Header />
-      <main className="mt-[100px]">
-        <section className="pt-[16px] lg:pt-[32px] lg:max-w-[1143px] mx-auto px-2 lg:px-0">
+      <main className="lg:max-w-[80%] lg:mx-auto pt-[30px] lg:pt-[40px] px-4 lg:px-0">
+        <section>
           <Breadcrumb />
           <h5
-            className={`${fontClassRoboto} text-[#333333] font-[700] text-[36px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2 text-center sm:text-left`}
+            className={`${fontClassRoboto} text-[#333333] font-[700] text-[36px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2 text-justify pt-4 lg:pt-0`}
           >
             We are the junctioners that make averything possible
           </h5>
@@ -198,7 +198,7 @@ const WhoWeArePage = () => {
             </div>
           </div>
         </section>
-        <section className="pt-[16px] lg:pt-[62px] lg:max-w-[62%] lg:mx-auto px-2 lg:px-0 pb-[100px] sm:pb-[200px] lg:pb-[300px]">
+        <section className="pt-[16px] lg:pt-[62px] lg:mx-auto px-2 lg:px-0 pb-[100px] sm:pb-[200px] lg:pb-[300px]">
           <div className="mt-[20px] sm:mt-[40px] lg:mt-[100px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-[20px] lg:gap-y-0 lg:gap-x-[76px]">
               {datas.map((item, index) => (

@@ -6,7 +6,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const OthersProjects = () => {
   return (
-    <section className="pt-[20px] pb-[40px] lg:pb-[200px] lg:pt-[46px] lg:max-w-[80%] lg:mx-auto px-4 lg:px-0">
+    <section className="pt-[20px] pb-[40px] lg:pb-[200px] lg:pt-[46px] lg:mx-auto lg:max-w-[80%] px-4 lg:px-0">
       <Menu
         title="Other projects"
         titleLink="See all galleries"

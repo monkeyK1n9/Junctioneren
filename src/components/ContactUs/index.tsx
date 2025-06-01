@@ -10,7 +10,7 @@ import { useTranslation } from "next-i18next";
 const ContactUs = () => {
   const { t } = useTranslation("common");
   return (
-    <section className="py-[20px] lg:py-[46px] lg:max-w-[891px] lg:mx-auto lg:my-[95px]">
+    <section className="py-[20px] lg:py-[46px] lg:max-w-[891px] lg:mx-auto lg:my-[95px] px-4 lg:px-0">
       <SlideUp delay={0.3}>
         <div className="mx-auto">
           <Menu title={t("contact.title")} titleLink="" path="#" />
