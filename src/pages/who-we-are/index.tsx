@@ -13,6 +13,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import WhoWeAre from "@/components/WhoWeAre";
 import Breadcrumb from "@/components/Breadcrumb";
 import { cleanText } from "@/utils/text";
+import { useTranslation } from "next-i18next";
 
 export const fontClassRoboto = cn(
   RobotoUiDisplay.className,
@@ -29,86 +30,74 @@ type CardType = {
   pic: any;
   linkedin?: string;
 };
-const datas: CardType[] = [
-  {
-    name: "Kacdeu Baudoin",
-    content:
-      "Visionnaire au sens de l'humanité, Kacdeu Baudoin incarne les valeurs de Junctioner Construction Engineering. Avec une forte volonté de faire grandir l'équipe, il se soucie du bien-être de chacun, créant un environnement propice à l'épanouissement professionnel",
-    occupation: "CEO Founder",
-    pic: images.Prof4,
-    linkedin: "#kacdeu",
-  },
-  {
-    name: "Eng. Kameni Lionel",
-    content:
-      "Ingénieur de conception talentueux, Eng. Kameni Lionel est reconnu pour son intelligence et son sens du leadership. Précis et optimisateur, il vise l’excellence dans tous ses projets, démontrant des compétences managériales et de coordination remarquables",
-    occupation:
-      "Ingénieur de Conception en Génie Civil, Chef des Infrastructures",
-    pic: images.Prof5,
-    linkedin: "#kameni",
-  },
-  {
-    name: "Arch. NGALANDEU KWEMO Adrien",
-    content:
-      "Dynamique et dévoué à la cause collective, Ngalandeu Kwemo Adrien veille au bon fonctionnement de chaque élément au sein de ses projets. Sa capacité à gérer des équipes avec efficacité fait de lui un atout essentiel pour Junctioner Construction Engineering",
-    occupation:
-      "Chef de Projet, Architecte, Responsable du Département d'Architecture",
-    pic: images.Prof3,
-    linkedin: "#",
-  },
-  {
-    name: "Arch. DZOUDJA NANA Alida Sandra",
-    content:
-      "DZOUDJA Nana Sandra incarne l'excellence avec un souci du détail et une passion pour l'architecture d'intérieur. Dynamique et proactive, elle a toujours une vue à 360 degrés sur ses projets. Professionnelle et disciplinée, ses atouts incluent un bon sens pratique, ainsi qu'un talent et une créativité remarquables.",
-    occupation:
-      "Chef de Projet, Architecte de conception, Responsable Département Qualité et Finition",
-    pic: images.Prof6,
-    linkedin: "#",
-  },
-  {
-    name: "Eng. ANDELE ONANA Christophe",
-    content:
-      "Eng. Andele Onana Christopher est un leader rigoureux et sérieux, toujours en quête de qualité. Pour lui, le management est un mode de vie, et il s'efforce d'inspirer son équipe à atteindre des résultats exceptionnels.",
-    occupation:
-      "Ingénieur de Conception en Génie Civil, Chef de Projet, Responsable des Ouvrages Spéciaux",
-    pic: images.Prof7,
-    linkedin: "#",
-  },
-  {
-    name: "AMBAMA Clémence",
-    content:
-      "Dynamique et proactive, Ambama Clémence veille à ce que tous les éléments soient réunis pour atteindre les objectifs de l'entreprise. Elle est toujours prête à soutenir son directeur et à contribuer au succès de l'équipe.",
-    occupation: "Assistante de Direction, Responsable communication",
-    pic: images.Prof8,
-    linkedin: "#",
-  },
-  {
-    name: "Arch. TEDONGMO IDENE Sinclaire",
-    content:
-      "Humble et exigeante, Idene Sinclair est toujours prête à apprendre et à obtenir des résultats concrets. Sa détermination et son sens de l'excellence font d'elle une architecte de choix au sein de Junctioner Construction Engineering.",
-    occupation: "Architecte, Chef de Projet",
-    pic: images.Prof9,
-    linkedin: "#",
-  },
-  {
-    name: "Eng. NGANGUEM Joyce",
-    content:
-      "Assidu et créatif, Eng. Nganguem Joyce se distingue par sa rigueur et sa capacité à gérer des situations complexes. Toujours respectueux et prêt à apprendre, il est un pilier de l'équipe, apportant des solutions innovantes à chaque projet.",
-    occupation: "Ingénieur de Conception en Génie Civil, Ingénieur de Projet",
-    pic: images.Prof10,
-    linkedin: "#",
-  },
-  {
-    name: "Eng. DJOUMBI NGANKAM Jeffry",
-    content:
-      "Polyvalent et dynamique, Jeffry DJOUMBI NGANKAM est assidu à sa tâche et dévoué à son travail. Sa créativité et son engagement font de lui un membre précieux de l'équipe de Junctioner Construction Engineering.",
-    occupation: "Ingénieur des Travaux",
-    pic: images.Prof11,
-    linkedin: "#",
-  },
-];
 
 const WhoWeArePage = () => {
+  const { t } = useTranslation("common");
+  const datas: CardType[] = [
+    {
+      name: t("weArePage.b1"),
+      content: t("weArePage.d1"),
+      occupation: t("weArePage.p1"),
+      pic: images.Prof4,
+      linkedin: "#kacdeu",
+    },
+    {
+      name: t("weArePage.b2"),
+      content: t("weArePage.d2"),
+      occupation: t("weArePage.p2"),
+      pic: images.Prof5,
+      linkedin: "#kameni",
+    },
+    {
+      name: t("weArePage.b3"),
+      content: t("weArePage.d3"),
+      occupation: t("weArePage.p3"),
+      pic: images.Prof3,
+      linkedin: "#",
+    },
+    {
+      name: t("weArePage.b4"),
+      content: t("weArePage.d4"),
+      occupation: t("weArePage.p4"),
+      pic: images.Prof6,
+      linkedin: "#",
+    },
+    {
+      name: t("weArePage.b5"),
+      content: t("weArePage.d5"),
+      occupation: t("weArePage.p5"),
+      pic: images.Prof7,
+      linkedin: "#",
+    },
+    {
+      name: t("weArePage.b6"),
+      content: t("weArePage.d6"),
+      occupation: t("weArePage.p6"),
+      pic: images.Prof8,
+      linkedin: "#",
+    },
+    {
+      name: t("weArePage.b7"),
+      content: t("weArePage.d7"),
+      occupation: t("weArePage.p7"),
+      pic: images.Prof9,
+      linkedin: "#",
+    },
+    {
+      name: t("weArePage.b8"),
+      content: t("weArePage.d8"),
+      occupation: t("weArePage.p8"),
+      pic: images.Prof10,
+      linkedin: "#",
+    },
+    {
+      name: t("weArePage.b9"),
+      content: t("weArePage.d9"),
+      occupation: t("weArePage.p9"),
+      pic: images.Prof11,
+      linkedin: "#",
+    },
+  ];
   const CardItem = ({ content, name, occupation, pic, linkedin }: CardType) => {
     return (
       <div className="w-full flex flex-col sm:flex-row items-start gap-[16px] sm:gap-[20px] lg:gap-[20px] bg-white rounded-[14px] p-4 sm:p-6 lg:max-h-[460px]">
@@ -153,7 +142,7 @@ const WhoWeArePage = () => {
           <h5
             className={`${fontClassRoboto} text-[#333333] font-[700] text-[36px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2 text-center lg:text-start pt-4 lg:pt-0`}
           >
-            We are the junctioners that make averything possible
+            {t("weArePage.title")}
           </h5>
           <div className="pt-[16px] lg:pt-[32px]">
             <WhoWeAre />
@@ -165,13 +154,13 @@ const WhoWeArePage = () => {
               <p
                 className={`${fontClassInter} text-[16px] lg:text-[20px] font-[500] leading-[100%] tracking-[0%] text-[#282828] text-center`}
               >
-                What can we do for you
+                {t("servicePage.contactTitle")}
               </p>
               <div className="lg:w-[605px] flex flex-col lg:flex-row justify-center items-center mt-[12px] lg:mt-[29px]">
                 <button
                   className={`${fontClassRoboto} flex justify-center items-center text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 hover:text-[#4a3b9d]`}
                 >
-                  Send email
+                  {t("servicePage.email")}
                   <span className="pl-[4px]">
                     <FaArrowRight />
                   </span>
@@ -179,7 +168,7 @@ const WhoWeArePage = () => {
                 <span
                   className={`mx-[52px] ${fontClassRoboto} flex justify-center items-center text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 hover:text-[#4a3b9d] my-2 lg:my-0`}
                 >
-                  OR
+                  {t("servicePage.or")}
                 </span>
                 <div
                   className="rounded-full bg-[#DADADA] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
@@ -191,7 +180,7 @@ const WhoWeArePage = () => {
                     className="mr-[14px] text-white"
                   />
                   <p className="text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
-                    Contact us on whatsapp
+                    {t("servicePage.wsp")}
                   </p>
                 </div>
               </div>
