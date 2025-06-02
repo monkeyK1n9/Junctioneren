@@ -116,7 +116,7 @@ const WhoWeArePage = () => {
           <p
             className={`text-gray-500 pt-[8px] font-[400] text-[12px] sm:text-[13px] tracking-[0%] leading-[18px] ${fontClassInter}`}
           >
-            {cleanText(content, 220)}
+            {content}
           </p>
           <Link href={String(linkedin)} aria-label="link">
             <button
