@@ -66,8 +66,8 @@ const ContactUS = () => {
             </div>
             <div className="flex flex-col space-y-[25px] sm:space-y-[30px] md:space-y-[35px] lg:space-y-[40px] xl:space-y-[50px]"></div>
           </div>
-          <div className="w-full col-span-12 lg:col-span-7 h-full lg:mt-[230px]">
-            <div className="relative h-[400px] md:h-[276px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-gray-200 lg:w-[606px]">
+          <div className="w-full col-span-12 lg:col-span-7 h-full lg:mt-[140px]">
+            <div className="relative h-[400px] lg:h-[374px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-gray-200 lg:w-[606px]">
               {/* Loader élégant */}
               {isMapLoading && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 z-10">

@@ -3,22 +3,24 @@ import Menu from "../ui/Menu";
 import { CommonText } from "../ui/Work";
 import images from "../../../public/imgs";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useTranslation } from "next-i18next";
 
 const OthersProjects = () => {
+  const { t } = useTranslation("common");
   return (
     <section className="pt-[20px] pb-[40px] lg:pb-[200px] lg:pt-[46px] lg:mx-auto lg:max-w-[80%] px-4 lg:px-0">
       <Menu
-        title="Other projects"
-        titleLink="See all galleries"
+        title={t("projectPage.otherProject")}
+        titleLink={t("projectPage.seeAllGalery")}
         path="#"
         show
       />
       <CommonText className="mt-[20px] lg:mt-[36px] text-center lg:text-left flex flex-col lg:flex-row items-center">
-        <span className="mr-2 text-[#808080]">Interior design</span>
+        <span className="mr-2 text-[#808080]">{t("projectPage.dO1")}</span>
         <span className="hidden lg:flex">
           <FaLongArrowAltRight className="mr-2 text-[#808080]" />
         </span>
-        Conception, Construction dans la ville de Yaoundé
+        {t("projectPage.dO2")}
       </CommonText>
       <div className="mt-[40px]">
         <div className="h-[300px] lg:h-[405px] relative">
@@ -55,11 +57,11 @@ const OthersProjects = () => {
         </div>
       </div>
       <CommonText className="mt-[20px] lg:mt-[36px] text-center lg:text-left flex flex-col lg:flex-row items-center">
-        <span className="mr-2 text-[#808080]">Interior design</span>
+        <span className="mr-2 text-[#808080]">{t("projectPage.dO3")}</span>
         <span className="hidden lg:flex">
           <FaLongArrowAltRight className="mr-2 text-[#808080]" />
         </span>
-        Our concepts
+        {t("projectPage.dO4")}
       </CommonText>
       <div className="py-[40px]">
         <div className="grid grid-cols-12 justify-center items-center gap-[20px]">
