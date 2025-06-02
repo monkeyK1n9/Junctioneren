@@ -23,75 +23,10 @@ export const fontClassInter = cn(
 );
 
 type CardType = {
-  title: string;
+  title: any;
   content: string;
   pic: any;
 };
-const datasOne: CardType[] = [
-  {
-    title: "Management de la construction",
-    content:
-      "Nous offrons une gestion complète des projets, incluant la planification, l'organisation et le contrôle de toutes les phases de construction. Notre équipe veille à respecter les délais, le budget et la qualité, tout en coordonnant les différents intervenants.",
-    pic: images.Management,
-  },
-  {
-    title: "Conception architecturale et réalisation d'infrastructures",
-    content:
-      "Nous offrons une gestion complète des projets, incluant la planification, l'organisation et le contrôle de toutes les phases de construction. Notre équipe veille à respecter les délais, le budget et la qualité, tout en coordonnant les différents intervenants.",
-    pic: images.Conception,
-  },
-  {
-    title: "Design d'intérieur et Extérieur",
-    content:
-      "Nous intégrons des technologies domotiques dans nos projets, permettant un contrôle intelligent des systèmes de sécurité, d'éclairage, de chauffage et d'autres fonctionnalités. Cela améliore le confort et l'efficacité énergétique des maisons.",
-    pic: images.Design,
-  },
-  {
-    title: "Maisons intelligentes",
-    content:
-      "Nous offrons une gestion complète des projets, incluant la planification, l'organisation et le contrôle de toutes les phases de construction. Notre équipe veille à respecter les délais, le budget et la qualité, tout en coordonnant les différents intervenants.",
-    pic: images.Maison,
-  },
-];
-const datasTwo: CardType[] = [
-  {
-    title: "Terrassement",
-    content:
-      "Nos services de terrassement incluent le nivellement et la préparation du terrain pour la construction. Nous utilisons des équipements modernes pour garantir une base solide pour tous les types de structures.",
-    pic: images.Terrassement,
-  },
-  {
-    title: "Services topographiques et cartographiques",
-    content:
-      "Nous réalisons des études topographiques précises pour aider à la planification et à l'exécution des projets. Nos services incluent le relevé de terrain, l'analyse géospatiale et la production de cartes détaillées.",
-    pic: images.Ser1,
-  },
-  {
-    title: "Services de plomberie, menuiserie, serrurerie",
-    content:
-      "Nous proposons des travaux de plomberie, menuiserie et serrurerie pour assurer la fonctionnalité et la sécurité des bâtiments. Nos artisans qualifiés garantissent des installations conformes aux normes de qualité.",
-    pic: images.Ser2,
-  },
-  {
-    title: "Recherche et Innovation",
-    content:
-      "Nous nous engageons dans la recherche et le développement pour améliorer nos pratiques et introduire des solutions innovantes dans le secteur de la construction. Cela inclut l’adoption de nouveaux matériaux et techniques de construction.",
-    pic: images.Ser3,
-  },
-  {
-    title: "Électricité et Climatisation",
-    content:
-      "Nous offrons des services d’installation et de maintenance pour les systèmes électriques et de climatisation, veillant à ce qu'ils soient efficaces et conformes aux réglementations en vigueur.",
-    pic: images.Ser4,
-  },
-  {
-    title: "Import/Export et prestations de services",
-    content:
-      "Nous gérons l'importation et l'exportation de matériaux et d'équipements de construction, ainsi que d'autres services connexes. Cela nous permet de répondre à des besoins variés tout en garantissant la qualité des produits.",
-    pic: images.Ser5,
-  },
-];
-
 const OurServices = () => {
   const CardItem = ({ content, title, pic }: CardType) => {
     return (
@@ -117,13 +52,68 @@ const OurServices = () => {
 
   const { t } = useTranslation("common");
 
+  const datasOne: CardType[] = [
+    {
+      title: t("servicePage.s1"),
+      content: t("servicePage.d1"),
+      pic: images.Management,
+    },
+    {
+      title: t("servicePage.s2"),
+      content: t("servicePage.d2"),
+      pic: images.Conception,
+    },
+    {
+      title: t("servicePage.s3"),
+      content: t("servicePage.d3"),
+      pic: images.Design,
+    },
+    {
+      title: t("servicePage.s4"),
+      content: t("servicePage.d4"),
+      pic: images.Maison,
+    },
+  ];
+  const datasTwo: CardType[] = [
+    {
+      title: t("servicePage.s5"),
+      content: t("servicePage.d5"),
+      pic: images.Terrassement,
+    },
+    {
+      title: t("servicePage.s6"),
+      content: t("servicePage.d6"),
+      pic: images.Ser1,
+    },
+    {
+      title: t("servicePage.s7"),
+      content: t("servicePage.d7"),
+      pic: images.Ser2,
+    },
+    {
+      title: t("servicePage.s8"),
+      content: t("servicePage.d8"),
+      pic: images.Ser3,
+    },
+    {
+      title: t("servicePage.s9"),
+      content: t("servicePage.d9"),
+      pic: images.Ser4,
+    },
+    {
+      title: t("servicePage.s10"),
+      content: t("servicePage.d10"),
+      pic: images.Ser5,
+    },
+  ];
+
   return (
     <DefaultLayout>
       <Header />
       <SlideUp delay={0.5}>
         <main className="lg:max-w-[80%] lg:mx-auto py-[30px] lg:py-[40px] px-4 lg:px-0">
           <Breadcrumb />
-          <Menu title={"Our Services"} titleLink={""} path="" />
+          <Menu title={t("servicePage.title")} titleLink={""} path="" />
           <section className="my-[14px] lg:my-[48px]">
             <div className="mx-auto">
               <div className="mt-[20px] sm:mt-[40px] lg:mt-[100px] mx-auto">
@@ -142,13 +132,13 @@ const OurServices = () => {
                 <p
                   className={`${fontClassInter} text-[16px] lg:text-[20px] font-[500] leading-[100%] tracking-[0%] text-center`}
                 >
-                  What can we do for you
+                  {t("servicePage.contactTitle")}
                 </p>
                 <div className="lg:w-[605px] flex flex-col lg:flex-row justify-center items-center mt-[12px] lg:mt-[29px]">
                   <button
                     className={`${fontClassRoboto} flex justify-center items-center text-[12px] uppercase leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105`}
                   >
-                    Send email
+                    {t("servicePage.email")}
                     <span className="pl-[4px]">
                       <FaArrowRight />
                     </span>
@@ -156,7 +146,7 @@ const OurServices = () => {
                   <span
                     className={`mx-[52px] ${fontClassRoboto} flex justify-center items-center text-[12px] uppercase leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 my-2 lg:my-0`}
                   >
-                    OR
+                    {t("servicePage.or")}
                   </span>
                   <div
                     className="rounded-full bg-[#DADADA] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
@@ -170,7 +160,7 @@ const OurServices = () => {
                       className="mr-[14px] text-white"
                     />
                     <p className="text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
-                      Contact us on whatsapp
+                      {t("servicePage.wsp")}
                     </p>
                   </div>
                 </div>
