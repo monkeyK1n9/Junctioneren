@@ -84,7 +84,7 @@ const ContactUS = () => {
                       <span
                         className={`${fontClass} text-gray-600 font-medium text-sm sm:text-base`}
                       >
-                        Chargement de la carte
+                        {t("contact.load")}
                       </span>
                       <div className="flex space-x-1">
                         <div
@@ -139,7 +139,7 @@ const ContactUS = () => {
                   <span
                     className={`${fontClass} text-xs sm:text-sm font-bold text-gray-800 drop-shadow-sm`}
                   >
-                    Notre localisation
+                    {t("contact.localisation")}
                   </span>
                 </div>
               </div>
@@ -195,7 +195,7 @@ const ContactUS = () => {
                       <h4
                         className={`${fontClass} text-xs sm:text-sm font-bold text-gray-900 drop-shadow-sm`}
                       >
-                        Junctioner Construction Engineering
+                        {t("contact.int")}
                       </h4>
                     </div>
                   </div>
@@ -206,9 +206,9 @@ const ContactUS = () => {
               <p
                 className={`${fontClass} font-bold text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] lg:leading-[21.09px] text-[#333333] text-center lg:text-left`}
               >
-                Junctioner Construction Engineering
+                {t("contact.int")}
                 <br />
-                <span className="font-light">Before Tradex Simbock</span>
+                <span className="font-light">{t("contact.position")}</span>
               </p>
               <div className="flex flex-col lg:flex-row lg:space-x-[45px] items-center mt-[18px]">
                 <p

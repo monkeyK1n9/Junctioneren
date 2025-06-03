@@ -68,7 +68,11 @@
     "intrs": "Intéressé par",
     "msg": "Message*",
     "send": "Envoyer l'email",
-    "contact": "Contactez-nous sur WhatsApp"
+    "contact": "Contactez-nous sur WhatsApp",
+    "load": "Chargement de la carte",
+    "localisation": "Notre localisation",
+    "int": "Junctioner Ingénierie de la construction",
+    "position": "Avant Tradex Simbock"
   },
   "footer": {
     "titleOne": "Informations",
