@@ -9,8 +9,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState } from "react";
 import Form from "@/components/Form";
 import { useTranslation } from "next-i18next";
-import { FaArrowRight, FaWhatsapp } from "react-icons/fa";
-import { fontClassRoboto } from "../who-we-are";
+import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import CButton from "@/components/ui/Button";
 
