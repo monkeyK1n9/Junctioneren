@@ -9,12 +9,16 @@ import { DefaultLayout } from "@/layouts/default.layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { RobotoUiDisplay } from "@/lib/fonts";
 
 type ProjectProps = {
   frontMatter: {
     title: string;
     description: string;
     coverImage?: string;
+    status?: string;
+    pictureOne?: string;
+    descriptionOne?: string;
   };
   mdxSource: MDXRemoteSerializeResult;
 };
@@ -23,32 +27,68 @@ const ProjectPage = ({ frontMatter, mdxSource }: ProjectProps) => {
   return (
     <DefaultLayout className="overflow-x-hidden">
       <Header />
-      <div className="container mx-auto px-4 py-8 mt-[100px]">
+      <div className="container mx-auto px-4 py-[64px] mt-[100px]">
         <div className="text-center lg:text-left mb-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#312783]">
+          <h4
+            className={`text-3xl lg:text-[64px] font-normal text-[#BDBDBD] ${RobotoUiDisplay.className}`}
+          >
             {frontMatter.title}
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 mt-4 max-w-3xl">
-            {frontMatter.description}
-          </p>
+          </h4>
+          <h4
+            className={`text-3xl lg:text-[60px] font-normal text-black ${RobotoUiDisplay.className} mt-[30px] font-bold`}
+          >
+            Status:{" "}
+            <span
+              className={`${
+                frontMatter.status === "En cours"
+                  ? "text-[#DF4D1B]"
+                  : "text-[#2C9C0A]"
+              } `}
+            >
+              {frontMatter.status}
+            </span>
+          </h4>
         </div>
         {frontMatter.coverImage && (
           <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] mb-8">
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70 rounded-lg z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70 z-10"></div>
             {/* Cover Image */}
             <Image
-              src={frontMatter.coverImage}
+              src={frontMatter.coverImage || ""}
               alt={frontMatter.title}
               layout="fill"
-              className="w-full h-full object-cover rounded-lg shadow-2xl"
+              className="w-full h-full object-cover shadow-2xl"
             />
           </div>
         )}
         {/* Content */}
-        <div className="prose prose-lg sm:prose-xl lg:prose-2xl mx-auto mt-10">
-          <MDXRemote {...mdxSource} />
-        </div>
+        <p>{frontMatter.description}</p>
+        {frontMatter.pictureOne && frontMatter.title && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 mt-[32px] gap-y-8 lg:gap-x-[24px] items-center">
+            <div className="w-full h-[250px] sm:h-[350px] lg:h-[400px] relative">
+              <Image
+                src={frontMatter.pictureOne || ""}
+                alt={frontMatter.title}
+                fill
+                className="object-cover rounded-lg"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div>
+              <p
+                className={`${RobotoUiDisplay.className} font-[300] text-black`}
+              >
+                {frontMatter.descriptionOne?.split("\n").map((line, idx) => (
+                  <span key={idx}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </p>
+            </div>
+          </div>
+        )}
       </div>
       <Footer />
     </DefaultLayout>
