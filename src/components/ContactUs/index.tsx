@@ -44,7 +44,9 @@ const ContactUs = () => {
             {/* WhatsApp Button */}
             <div
               className="rounded-full bg-[#F3F3F3] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
-              onClick={() => window.open("https://wa.me/+23769", "_blank")}
+              onClick={() =>
+                window.open("https://wa.me/+237695977562", "_blank")
+              }
             >
               <FaWhatsapp color="green" size={27} className="mr-[14px]" />
               <p className="text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
