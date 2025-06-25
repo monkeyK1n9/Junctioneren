@@ -90,13 +90,13 @@ const WhoWeArePage = () => {
       pic: images.Prof10,
       linkedin: "#",
     },
-    {
-      name: t("weArePage.b9"),
-      content: t("weArePage.d9"),
-      occupation: t("weArePage.p9"),
-      pic: images.Prof11,
-      linkedin: "#",
-    },
+    // {
+    //   name: t("weArePage.b9"),
+    //   content: t("weArePage.d9"),
+    //   occupation: t("weArePage.p9"),
+    //   pic: images.Prof11,
+    //   linkedin: "#",
+    // },
   ];
   const CardItem = ({ content, name, occupation, pic, linkedin }: CardType) => {
     return (
