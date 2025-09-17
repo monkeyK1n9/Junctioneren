@@ -72,7 +72,9 @@
     "load": "Card loading",
     "localisation": "Our location",
     "int": "Junctioner Construction Engineering",
-    "position": "Before Tradex Simbock"
+    "position": "Before Tradex Simbock",
+    "form_success": "Your request has been sent! Your email client will now open.",
+    "form_error": "Please fill in at least your name, email, and message."
   },
   "footer": {
     "titleOne": "Information",
