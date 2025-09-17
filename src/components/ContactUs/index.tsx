@@ -1,61 +1,120 @@
 import Image from "next/image";
-import Menu from "../ui/Menu";
-import images from "../../../public/imgs";
-import Form from "../Form";
-import SlideUp from "../Animation/SlideUp";
-import { FaArrowRight, FaWhatsapp } from "react-icons/fa";
-import { fontClassRoboto } from "@/pages/who-we-are";
+import { FaPhone, FaWhatsapp } from "react-icons/fa";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "next-i18next";
+import cn from "clsx";
+import { RobotoUiDisplay } from "@/lib/fonts";
+import Form from "../Form";
+import images from "../../../public/imgs";
 
 const ContactUs = () => {
   const { t } = useTranslation("common");
-  return (
-    <section className="py-[20px] lg:py-[46px] lg:max-w-[891px] lg:mx-auto lg:my-[95px] px-4 lg:px-0">
-      <SlideUp delay={0.3}>
-        <div className="mx-auto">
-          <Menu title={t("contact.title")} titleLink="" path="#" />
-          <div className="grid grid-cols-12 lg:mt-[22px] gap-[10px] sm:gap-[20px] lg:gap-[30px] h-[369px]">
-            <div className="w-full col-span-12 lg:col-span-5 flex flex-col space-y-[10px]">
-              <Form text={t("contact.name")} />
-              <Form text={t("contact.phone")} />
-              <Form text={t("contact.email")} />
-              <Form text={t("contact.intrs")} />
-              <Form textarea text={t("contact.msg")} />
-            </div>
-            <div className="w-full col-span-12 lg:col-span-7 h-full hidden lg:flex">
-              <Image
-                src={images.ContactImg}
-                alt="picture"
-                className="relative object-cover lg:w-[749px] lg:h-[369px] rounded"
-              />
-            </div>
-          </div>
-          <div className="mt-[20px] lg:mt-[50px] flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-[50px]">
-            {/* Send Email Button */}
-            <button
-              className={`flex justify-center items-center text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 hover:text-[#4a3b9d] ${fontClassRoboto}`}
-            >
-              {t("contact.send")}
-              <span className="pl-[4px]">
-                <FaArrowRight />
-              </span>
-            </button>
+  const fontClass = cn(RobotoUiDisplay.variable, RobotoUiDisplay.className);
 
-            {/* WhatsApp Button */}
-            <div
-              className="rounded-full bg-[#F3F3F3] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
-              onClick={() =>
-                window.open("https://wa.me/+237695977562", "_blank")
-              }
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleEmailClick = () => {
+    if (!phone.trim() || !message.trim()) {
+      toast.error(t("contact.form_error"), {
+        position: "top-center",
+        autoClose: 3000,
+      });
+      return;
+    }
+
+    const subject = encodeURIComponent(
+      `Demande de contact de la part de ${name}`
+    );
+    const body = encodeURIComponent(
+      `Nom: ${name}\nTéléphone: ${phone}\nE-mail: ${email}\n\nMessage:\n${message}`
+    );
+    const mailtoLink = `mailto:junctionerce@gmail.com?subject=${subject}&body=${body}`;
+
+    setName("");
+    setPhone("");
+    setEmail("");
+    setMessage("");
+    toast.success(t("contact.form_success"), {
+      position: "top-center",
+      autoClose: 5000,
+    });
+    setTimeout(() => {
+      window.location.href = mailtoLink;
+    }, 500);
+  };
+
+  return (
+    <section className="py-10 px-4 md:py-20 max-w-[900px] mx-auto">
+      <h1 className="text-3xl font-light text-gray-700 mb-8">
+        {t("contact.title")}
+      </h1>
+      <div className="flex flex-col md:flex-row w-full lg:space-x-[20px]">
+        {/* Section de gauche: Formulaire */}
+        <div className="w-full md:w-1/2">
+          <div className="w-full space-y-4">
+            <Form
+              text={t("contact.name")}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <Form
+              text={t("contact.phone")}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <Form
+              text={t("contact.email")}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Form
+              textarea
+              text={t("contact.msg")}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <button
+              onClick={handleEmailClick}
+              className="w-full py-4 text-white rounded-full bg-indigo-900 hover:bg-indigo-800 transition-colors duration-300 uppercase"
             >
-              <FaWhatsapp color="green" size={27} className="mr-[14px]" />
-              <p className="text-[12px] uppercase text-[#312783] leading-[12px] tracking-[20%] font-medium">
-                {t("contact.contact")}
-              </p>
-            </div>
+              {t("contact.send_message")}
+            </button>
           </div>
         </div>
-      </SlideUp>
+
+        {/* Section de droite: image */}
+        <div className="hidden md:flex w-1/2 items-center justify-center relative">
+          <Image
+            src={images.ContactImg}
+            alt="picture"
+            className="object-cover w-full h-full rounded-lg"
+            fill
+          />
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row lg:max-w-[664px]">
+        <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full">
+          <button
+            className={`w-full sm:w-1/2 py-3 text-gray-500 rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal`}
+            onClick={() => window.open("tel:+237695977562", "_self")}
+          >
+            <FaPhone size={20} />
+            <span>{t("contact.call_us")}</span>
+          </button>
+          <button
+            className={`w-full sm:w-1/2 py-3 text-gray-500 rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal`}
+            onClick={() => window.open("https://wa.me/+23769", "_blank")}
+          >
+            <FaWhatsapp size={20} className="text-green-500" />
+            <span>{t("contact.contact_whatsapp")}</span>
+          </button>
+        </div>
+      </div>
     </section>
   );
 };

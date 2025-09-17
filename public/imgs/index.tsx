@@ -21,6 +21,8 @@ import Rect1Img from "./Rectangle1.svg";
 import Rect2Img from "./Rectangle2.png";
 import Rect3Img from "./Rectangle3.png";
 import ContactImg from "./contact.webp";
+import Contact1Img from "./contact1.webp";
+import Contact2Img from "./contact2.webp";
 import MapImg from "./map.webp";
 import Cadre from "./cadre.svg";
 import Prof1 from "./prof1.png";
@@ -117,6 +119,8 @@ const images = {
   Who1Img,
   Rect1Img,
   ContactImg,
+  Contact1Img,
+  Contact2Img,
   MapImg,
   Cadre,
   Prof1,

@@ -16,10 +16,11 @@
     "contact": "Contacts"
   },
   "banner": {
-    "titleOne": "Gagnez du temps, de la confiance et des ressources avec notre expérience",
-    "titleTwo": "Vos rêves et vos mythes sont notre quotidien",
-    "titleThree": "Vos rêves et vos mythes sont notre quotidien",
-    "contact": "Contactez-nous",
+    "titleOne": "Vos rêves et vos mythes sont notre quotidien",
+    "titleTwo": "Nous construisons aujourd'hui, ce qui va vous inspirer demain.",
+    "titleThree": "Gagnez du temps, de la confiance et des ressources avec notre expérience",
+    "titleFour": "Nous travaillons dur pour rendre vos rêves possibles, où que vous soyez.",
+    "contact": "envoyer le message",
     "service": "Voir nos services"
   },
   "codeAndMeasure": {
@@ -74,7 +75,11 @@
     "int": "Junctioner Ingénierie de la construction",
     "position": "Avant Tradex Simbock",
     "form_success": "Votre demande a été envoyée ! Votre client de messagerie va s'ouvrir.",
-    "form_error": "Veuillez remplir au moins le nom, l'email et le message."
+    "form_error": "Veuillez remplir au moins le nom, l'email et le message.",
+    "information": "Informations",
+    "send_message": "Envoyer le message",
+    "call_us": "Appelez-nous des maintenant",
+    "contact_whatsapp": "Contact us on whatsapp"
   },
   "footer": {
     "titleOne": "Informations",
