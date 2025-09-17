@@ -47,6 +47,11 @@ const Banner = () => {
       text: t("banner.titleThree"),
       isBlack: false,
     },
+    {
+      image: images.Hero4,
+      text: t("banner.titleThree"),
+      isBlack: false,
+    },
   ];
 
   const goToSlide = (slideIndex: any) => {

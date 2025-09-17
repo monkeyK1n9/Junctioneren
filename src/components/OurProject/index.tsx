@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import SlideUp from "../Animation/SlideUp";
 import { useTranslation } from "next-i18next";
 import Breadcrumb from "../Breadcrumb";
+import { useRouter } from "next/router";
 
 const fontClass = cn(RobotoUiDisplay.className, RobotoUiDisplay.variable);
 const fontClassInter = cn(InterUiDisplay.className, InterUiDisplay.variable);
@@ -26,6 +27,7 @@ type MyProps = {
 const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
   const { t } = useTranslation("common");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0); // default hover on first
+  const router = useRouter();
 
   const projectGrid01: ProjectProps[] = [
     {
@@ -74,9 +76,10 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
             {projectGrid01.map((item, index) => (
               <div
                 key={index}
-                className="relative group aspect-[4/3] lg:aspect-[5/3]"
+                className="relative group aspect-[4/3] lg:aspect-[5/3] cursor-pointer"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(0)}
+                onClick={() => router.push(item.link)}
               >
                 <div className="relative h-full w-full">
                   <Image
@@ -124,7 +127,11 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
           {/* Second Grid Row */}
           <div className="mt-4 sm:mt-6 lg:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {projectGrid02.map((item, index) => (
-              <div key={index} className="relative group aspect-[4/3]">
+              <div
+                key={index}
+                className="relative group aspect-[4/3] cursor-pointer"
+                onClick={() => router.push(item.link)}
+              >
                 <div className="relative h-full w-full">
                   <Image
                     src={item.picture}

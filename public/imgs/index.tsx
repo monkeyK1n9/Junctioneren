@@ -37,6 +37,7 @@ import Prof11 from "./prof11.webp";
 import Hero1 from "./hero1.webp";
 import Hero2 from "./hero2.webp";
 import Hero3 from "./hero3.webp";
+import Hero4 from "./hero4.webp";
 import WWDDesign from "./wwdDesign.jpg";
 import WWDInfras from "./wwdInfras.jpg";
 import WWDIntell from "./wwdIntell.jpg";
@@ -125,6 +126,7 @@ const images = {
   Hero1,
   Hero2,
   Hero3,
+  Hero4,
   WWDDesign,
   WWDInfras,
   WWDIntell,
