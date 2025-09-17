@@ -72,7 +72,9 @@
     "load": "Chargement de la carte",
     "localisation": "Notre localisation",
     "int": "Junctioner Ingénierie de la construction",
-    "position": "Avant Tradex Simbock"
+    "position": "Avant Tradex Simbock",
+    "form_success": "Votre demande a été envoyée ! Votre client de messagerie va s'ouvrir.",
+    "form_error": "Veuillez remplir au moins le nom, l'email et le message."
   },
   "footer": {
     "titleOne": "Informations",

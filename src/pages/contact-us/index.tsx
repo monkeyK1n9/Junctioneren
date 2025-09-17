@@ -12,16 +12,54 @@ import { useTranslation } from "next-i18next";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import CButton from "@/components/ui/Button";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactUS = () => {
   const fontClass = cn(RobotoUiDisplay.variable, RobotoUiDisplay.className);
   const [isMapLoading, setIsMapLoading] = useState(true);
   const { t } = useTranslation();
 
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [interest, setInterest] = useState("");
+  const [message, setMessage] = useState("");
+
   const handleMapLoad = () => {
     setTimeout(() => {
       setIsMapLoading(false);
     }, 1500);
+  };
+
+  const handleEmailClick = () => {
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      toast.error(t("contact.form_error"), {
+        position: "top-center",
+        autoClose: 3000,
+      });
+      return;
+    }
+    const subject = encodeURIComponent(
+      `Demande de contact de la part de ${name}`
+    );
+    const body = encodeURIComponent(
+      `Nom: ${name}\nTéléphone: ${phone}\nE-mail: ${email}\n\nIntérêt: ${interest}\n\nMessage:\n${message}`
+    );
+    const mailtoLink = `mailto:junctionerce@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    setName("");
+    setPhone("");
+    setEmail("");
+    setInterest("");
+    setMessage("");
+    toast.success(t("contact.form_success"), {
+      position: "top-center",
+      autoClose: 5000,
+    });
+    setTimeout(() => {
+      window.location.href = mailtoLink;
+    }, 500);
   };
 
   return (
@@ -39,19 +77,41 @@ const ContactUS = () => {
               </h4>
             </div>
             <div className="w-full col-span-12 lg:col-span-5 flex flex-col space-y-[10px]">
-              <Form text={t("contact.name")} />
-              <Form text={t("contact.phone")} />
-              <Form text={t("contact.email")} />
-              <Form text={t("contact.intrs")} />
-              <Form textarea text={t("contact.msg")} />
+              <Form
+                text={t("contact.name")}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Form
+                text={t("contact.phone")}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+              <Form
+                text={t("contact.email")}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Form
+                text={t("contact.intrs")}
+                value={interest}
+                onChange={(e) => setInterest(e.target.value)}
+              />
+              <Form
+                textarea
+                text={t("contact.msg")}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
             </div>
             <div className="mt-[20px] lg:mt-[50px] flex flex-col space-y-4">
               {/* Send Email Button */}
-              <Link href={"/contact-us"}>
-                <CButton className="bg-[#312783] hover:bg-[#3d2f9a] text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%] transition-all duration-300 hover:shadow-xl hover:scale-105 backdrop-blur-sm border-none">
-                  {t("banner.contact")}
-                </CButton>
-              </Link>
+              <CButton
+                onClick={handleEmailClick}
+                className="bg-[#312783] hover:bg-[#3d2f9a] text-white rounded-[15px] w-full md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px] lg:leading-[14.96px] lg:tracking-[20%] transition-all duration-300 hover:shadow-xl hover:scale-105 backdrop-blur-sm border-none"
+              >
+                {t("banner.contact")}
+              </CButton>
               {/* WhatsApp Button */}
               <div
                 className="rounded-full bg-[#F3F3F3] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0] md:w-[350px] lg:w-[280px] h-[36px] lg:h-[52.37px] lg:text-[14.96px]"
