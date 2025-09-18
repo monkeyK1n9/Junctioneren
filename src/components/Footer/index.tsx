@@ -142,15 +142,42 @@ const Footer = () => {
               {t("footer.titleTwo")}
             </h4>
             <ul className="flex flex-col space-y-[4px] md:space-y-[10px] pt-[10px] lg:pt-[25px]">
-              {blogTwo.map((item, index) => (
-                <li key={index}>
-                  <p
-                    className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center`}
-                  >
-                    <span className="mr-[12.8px]">{item.icon}</span> {item.name}
-                  </p>
-                </li>
-              ))}
+              {blogTwo.map((item, index) => {
+                let content;
+                if (item.name === "junctionerce@gmail.com") {
+                  content = (
+                    <Link
+                      href={`mailto:${item.name}`}
+                      className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center transition-all duration-300 hover:text-[#DF4D1B]`}
+                    >
+                      <span className="mr-[12.8px]">{item.icon}</span>{" "}
+                      {item.name}
+                    </Link>
+                  );
+                } else if (item.name === "(+237) 695 977 562") {
+                  const phoneNumber = item.name.replace(/[()\s-]/g, "");
+                  content = (
+                    <Link
+                      href={`tel:${phoneNumber}`}
+                      className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center transition-all duration-300 hover:text-[#DF4D1B]`}
+                    >
+                      <span className="mr-[12.8px]">{item.icon}</span>{" "}
+                      {item.name}
+                    </Link>
+                  );
+                } else {
+                  content = (
+                    <p
+                      className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center`}
+                    >
+                      <span className="mr-[12.8px]">{item.icon}</span>{" "}
+                      {item.name}
+                    </p>
+                  );
+                }
+
+                return <li key={index}>{content}</li>;
+              })}
             </ul>
           </div>
           <div className="hidden xl:flex" />
