@@ -135,14 +135,15 @@ const OurServices = () => {
                   {t("servicePage.contactTitle")}
                 </p>
                 <div className="lg:w-[605px] flex flex-col lg:flex-row justify-center items-center mt-[12px] lg:mt-[29px]">
-                  <button
+                  <a
+                    href={`mailto:junctionerce@gmail.com`}
                     className={`${fontClassRoboto} flex justify-center items-center text-[12px] uppercase leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105`}
                   >
                     {t("servicePage.email")}
                     <span className="pl-[4px]">
                       <FaArrowRight />
                     </span>
-                  </button>
+                  </a>
                   <span
                     className={`mx-[52px] ${fontClassRoboto} flex justify-center items-center text-[12px] uppercase leading-[12px] tracking-[20%] font-medium transition-transform duration-300 hover:scale-105 my-2 lg:my-0`}
                   >
@@ -151,7 +152,7 @@ const OurServices = () => {
                   <div
                     className="rounded-full bg-[#DADADA] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
                     onClick={() =>
-                      window.open("https://wa.me/+23769", "_blank")
+                      window.open("https://wa.me/+237695977562", "_blank")
                     }
                   >
                     <FaWhatsapp
