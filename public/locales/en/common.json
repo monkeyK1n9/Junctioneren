@@ -63,6 +63,7 @@
   },
   "contact": {
     "title": "Contact Us",
+    "title01": "Connect with us",
     "name": "Name",
     "phone": "Phone Number*",
     "email": "Email",
@@ -77,6 +78,7 @@
     "form_success": "Your request has been sent! Your email client will now open.",
     "form_error": "Please fill in at least your name, email, and message.",
     "information": "Informations",
+    "information01": "In person or online",
     "send_message": "Send the message",
     "call_us": "Call us now",
     "contact_whatsapp": "Contact us on whatsapp"

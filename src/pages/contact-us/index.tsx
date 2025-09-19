@@ -63,28 +63,67 @@ const ContactUS = () => {
     <DefaultLayout className="overflow-auto">
       <Header />
       <section className="mt-[120px] md:mt-[140px] lg:mt-[170px] xl:mt-[180px] mx-auto px-4 sm:px-6 lg:px-8 mb-[40px] lg:max-w-[80%]">
+        <div>
+          <h1 className="text-4xl font-light text-gray-500 mb-2 lg:mb-1 text-start">
+            {t("contact.title01")}
+          </h1>
+          <h1 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-8 lg:px-0 text-start">
+            {t("contact.information01")}
+          </h1>
+        </div>
         {/* Section de images */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 justify-center items-center lg:w-[664px] mx-auto">
-          <Image
-            src={images.Contact1Img}
-            alt="picture"
-            className="relative object-cover w-full h-auto lg:h-[290px]"
-          />
+        <div className="flex flex-col gap-6 lg:gap-10 mx-auto my-[20px] lg:my-[40px]">
           <Image
             src={images.Contact2Img}
             alt="picture"
             className="relative object-cover w-full h-auto lg:h-[290px]"
           />
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 mt-[30px] md:mt-[140px] lg:mt-[170px]">
+        <div>
+          <p
+            className={`${fontClass} text-[18px] tracking-[0%] font-bold leading-[100%]`}
+          >
+            {t("contact.int")}
+          </p>
+          <p
+            className={`${fontClass} text-[18px] tracking-[0%] font-light leading-[141%] mt-1`}
+          >
+            {t("contact.position")}
+          </p>
+          <div className="flex flex-col md:flex-row lg:max-w-[664px]">
+            <div className="mt-[21px] flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full">
+              <button
+                className={`w-full sm:w-1/2 lg:w-[314px] py-3 text-primaryTitle rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal bg-[#f3f3f3] border-none`}
+                onClick={() => window.open("tel:+237695977562", "_self")}
+              >
+                <Image
+                  src={images.CallImg}
+                  className="w-[16px] h-[16px]"
+                  alt="icon"
+                />
+                <span className="text-[12px] font-normal leading-[12px] tracking-[20%] text-primaryTitle">
+                  {t("contact.call_us")}
+                </span>
+              </button>
+              <button
+                className={`w-full sm:w-1/2 lg:w-[314px] py-3 text-primaryTitle rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal bg-[#f3f3f3] border-none`}
+                onClick={() => window.open("https://wa.me/+23769", "_blank")}
+              >
+                <Image
+                  src={images.WhatsImg}
+                  className="w-[16px] h-[16px]"
+                  alt="icon"
+                />
+                <span className="text-[12px] font-normal leading-[12px] tracking-[20%] text-primaryTitle">
+                  {t("contact.contact_whatsapp")}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 mt-[20px] md:mt-[30px] lg:mt-[40px]">
           {/* Section de gauche: Formulaire */}
-          <div className="w-full md:w-1/3 flex flex-col items-center md:items-start">
-            <h1 className="text-4xl font-light text-gray-500 mb-2 lg:mb-1">
-              {t("contact.title")}
-            </h1>
-            <h1 className="text-3xl lg:text-4xl font-medium text-black mb-8 px-4 lg:px-0">
-              {t("contact.information")}
-            </h1>
+          <div className="w-full lg:w-[391px] flex flex-col items-center md:items-start lg:h-[315px]">
             <div className="w-full space-y-4">
               <Form
                 text={t("contact.name")}
@@ -107,17 +146,11 @@ const ContactUS = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              <button
-                onClick={handleEmailClick}
-                className="w-full py-4 text-white rounded-full bg-indigo-900 hover:bg-indigo-800 transition-colors duration-300 uppercase"
-              >
-                {t("contact.send_message")}
-              </button>
             </div>
           </div>
 
           {/* Section de droite: Carte (iframe) */}
-          <div className="w-full md:w-2/3 relative h-[400px] lg:h-[374px] rounded-lg overflow-hidden">
+          <div className="w-full lg:w-[765px] relative h-[400px] lg:h-[340px] rounded-lg overflow-hidden lg:pt-4">
             {isMapLoading && (
               <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
                 <div className="relative">
@@ -176,26 +209,65 @@ const ContactUS = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row lg:max-w-[664px]">
-          <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full">
-            <button
-              className={`w-full sm:w-1/2 py-3 text-gray-500 rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal`}
-              onClick={() => window.open("tel:+237695977562", "_self")}
-            >
-              <FaPhone size={20} />
-              <span>{t("contact.call_us")}</span>
-            </button>
-            <button
-              className={`w-full sm:w-1/2 py-3 text-gray-500 rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal`}
-              onClick={() => window.open("https://wa.me/+23769", "_blank")}
-            >
-              <FaWhatsapp size={20} className="text-green-500" />
-              <span>{t("contact.contact_whatsapp")}</span>
-            </button>
+      </section>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 mb-[40px] lg:max-w-[80%]">
+        <button
+          onClick={handleEmailClick}
+          className="w-full lg:w-[280px] py-4 text-white rounded-[18.7px] bg-indigo-900 hover:bg-indigo-800 transition-colors duration-300 uppercase"
+        >
+          <span className="text-[12px] font-normal leading-[12px] tracking-[20%] text-white">
+            {t("contact.send_message")}
+          </span>
+        </button>
+        <div className="mt-[10px] sm:mt-[20px] lg:mt-[40px]">
+          <h4 className="text-3xl lg:text-[44.88px] font-bold text-[#333333] mb-8 lg:px-0 text-start">
+            Meet the Junctioners at events
+          </h4>
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <div className="relative overflow-hidden">
+                <Image
+                  src={images.C1}
+                  alt="image"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              <div className="relative overflow-hidden">
+                <Image
+                  src={images.C4}
+                  alt="image"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              <div className="relative overflow-hidden">
+                <Image
+                  src={images.C3}
+                  alt="image"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* second */}
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+                <Image
+                  src={images.C5}
+                  alt="image"
+                  className="w-full h-auto col-span-2"
+                />
+                <Image
+                  src={images.C2}
+                  alt="image"
+                  className="w-full h-auto col-span-2"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-      {/* Boutons d'action en bas */}
+      </div>
       <div className="mb-[40px] sm:mb-[80px] lg:mb-[150px] ] bg-red-500 container "></div>
       <Footer />
     </DefaultLayout>

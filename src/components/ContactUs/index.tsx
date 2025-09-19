@@ -80,9 +80,11 @@ const ContactUs = () => {
             />
             <button
               onClick={handleEmailClick}
-              className="w-full py-4 text-white rounded-full bg-indigo-900 hover:bg-indigo-800 transition-colors duration-300 uppercase"
+              className="w-full lg:w-[324px] py-4 text-white rounded-[18.7px] bg-indigo-900 hover:bg-indigo-800 transition-colors duration-300 uppercase"
             >
-              {t("contact.send_message")}
+              <span className="text-[12px] font-normal leading-[12px] tracking-[20%] text-white">
+                {t("contact.send_message")}
+              </span>
             </button>
           </div>
         </div>
@@ -98,20 +100,32 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row lg:max-w-[664px]">
-        <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full">
+        <div className="mt-[21px] lg:mt-[37px] flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full">
           <button
-            className={`w-full sm:w-1/2 py-3 text-gray-500 rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal`}
+            className={`w-full sm:w-1/2 lg:w-[314px] py-3 text-primaryTitle rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal bg-[#f3f3f3] border-none`}
             onClick={() => window.open("tel:+237695977562", "_self")}
           >
-            <FaPhone size={20} />
-            <span>{t("contact.call_us")}</span>
+            <Image
+              src={images.CallImg}
+              className="w-[16px] h-[16px]"
+              alt="icon"
+            />
+            <span className="text-[12px] font-normal leading-[12px] tracking-[20%] text-primaryTitle">
+              {t("contact.call_us")}
+            </span>
           </button>
           <button
-            className={`w-full sm:w-1/2 py-3 text-gray-500 rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal`}
+            className={`w-full sm:w-1/2 lg:w-[314px] py-3 text-primaryTitle rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal bg-[#f3f3f3] border-none`}
             onClick={() => window.open("https://wa.me/+23769", "_blank")}
           >
-            <FaWhatsapp size={20} className="text-green-500" />
-            <span>{t("contact.contact_whatsapp")}</span>
+            <Image
+              src={images.WhatsImg}
+              className="w-[16px] h-[16px]"
+              alt="icon"
+            />
+            <span className="text-[12px] font-normal leading-[12px] tracking-[20%] text-primaryTitle">
+              {t("contact.contact_whatsapp")}
+            </span>
           </button>
         </div>
       </div>

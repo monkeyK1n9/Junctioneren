@@ -1,3 +1,5 @@
+import WhatsImg from "./iwhats.png";
+import CallImg from "./icall.png";
 import LogoImg from "./logo.svg";
 import Logo2Img from "./Logo2.svg";
 import LocationImg from "./location.svg";
@@ -79,6 +81,11 @@ import Ser2 from "./services/plomb.webp";
 import Ser3 from "./services/search.webp";
 import Ser4 from "./services/electro.webp";
 import Ser5 from "./services/import.webp";
+import C1 from "./c1.webp";
+import C2 from "./c2.webp";
+import C3 from "./c3.webp";
+import C4 from "./c4.webp";
+import C5 from "./c5.webp";
 
 const images = {
   Ser1,
@@ -162,6 +169,13 @@ const images = {
   OtherPic9,
   OtherPic10,
   OtherPic11,
+  WhatsImg,
+  CallImg,
+  C1,
+  C2,
+  C3,
+  C4,
+  C5,
 };
 
 export default images;
