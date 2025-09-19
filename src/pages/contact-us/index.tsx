@@ -107,7 +107,9 @@ const ContactUS = () => {
               </button>
               <button
                 className={`w-full sm:w-1/2 lg:w-[314px] py-3 text-primaryTitle rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal bg-[#f3f3f3] border-none`}
-                onClick={() => window.open("https://wa.me/+23769", "_blank")}
+                onClick={() =>
+                  window.open("https://wa.me/+237695977562", "_blank")
+                }
               >
                 <Image
                   src={images.WhatsImg}
