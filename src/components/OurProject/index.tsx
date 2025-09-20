@@ -26,12 +26,12 @@ type MyProps = {
 
 const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
   const { t } = useTranslation("common");
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0); // default hover on first
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
   const router = useRouter();
 
   const projectGrid01: ProjectProps[] = [
     {
-      picture: images.Card1Img,
+      picture: images.PNsfai,
       title: t("projects.titleOne"),
       link: "/our-projects/cite-universitaire-mfou",
     },
@@ -59,17 +59,19 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
       link: "/our-projects/residence-premium",
     },
   ];
+
   return (
     <section className="py-5 lg:py-12 px-4 lg:px-0">
       <SlideUp delay={0.5}>
-        <div className="lg:max-w-[80%] lg:mx-auto">
-          {showBreadcrumb && <Breadcrumb />}
-          <Menu
-            title={t("projects.title")}
-            titleLink={t("projects.viewAll")}
-            path="/our-projects/all-our-projects"
-            show
-          />
+        <div className="lg:max-w-[1170px] lg:mx-auto mt-[120xp] lg:mt-[100px]">
+          <div className="pt-[100px] lg:pt-[50px]">
+            <Menu
+              title={t("projects.title")}
+              titleLink={t("projects.viewAll")}
+              path="/our-projects/all-our-projects"
+              show
+            />
+          </div>
 
           {/* First Grid Row */}
           <div className="mt-6 sm:mt-10 lg:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
@@ -78,7 +80,7 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
                 key={index}
                 className="relative group aspect-[4/3] lg:aspect-[5/3] cursor-pointer"
                 onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(0)}
+                onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => router.push(item.link)}
               >
                 <div className="relative h-full w-full">
@@ -92,11 +94,7 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
                 </div>
                 <div
                   className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-lg p-4
-                  ${
-                    hoveredIndex === index
-                      ? "opacity-100"
-                      : "opacity-0 group-hover:opacity-100"
-                  }`}
+                    ${hoveredIndex === index ? "opacity-100" : "opacity-0"}`}
                 >
                   <div className="text-white text-left p-4">
                     <h4
@@ -126,46 +124,56 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
 
           {/* Second Grid Row */}
           <div className="mt-4 sm:mt-6 lg:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-            {projectGrid02.map((item, index) => (
-              <div
-                key={index}
-                className="relative group aspect-[4/3] cursor-pointer"
-                onClick={() => router.push(item.link)}
-              >
-                <div className="relative h-full w-full">
-                  <Image
-                    src={item.picture}
-                    alt={item.title}
-                    className="rounded-lg object-cover"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-lg p-4">
-                  <div className="text-white text-left p-4">
-                    <h4
-                      className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${fontClass}`}
-                    >
-                      {item.title}
-                    </h4>
-                    <Link
-                      href={item.link}
-                      className={`flex items-center mt-2 ${fontClass} text-xs lg:text-sm uppercase tracking-widest`}
-                    >
-                      View More
-                      <span className="ml-2">
-                        <Image
-                          src={images.ArrowLong01}
-                          alt="arrow"
-                          width={24}
-                          height={24}
-                        />
-                      </span>
-                    </Link>
+            {projectGrid02.map((item, index) => {
+              const globalIndex = index + projectGrid01.length;
+              return (
+                <div
+                  key={globalIndex}
+                  className="relative group aspect-[4/3] cursor-pointer"
+                  onMouseEnter={() => setHoveredIndex(globalIndex)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  onClick={() => router.push(item.link)}
+                >
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={item.picture}
+                      alt={item.title}
+                      className="rounded-lg object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div
+                    className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 bg-[#312783] bg-opacity-80 rounded-lg p-4
+                    ${
+                      hoveredIndex === globalIndex ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <div className="text-white text-left p-4">
+                      <h4
+                        className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${fontClass}`}
+                      >
+                        {item.title}
+                      </h4>
+                      <Link
+                        href={item.link}
+                        className={`flex items-center mt-2 ${fontClass} text-xs lg:text-sm uppercase tracking-widest`}
+                      >
+                        View More
+                        <span className="ml-2">
+                          <Image
+                            src={images.ArrowLong01}
+                            alt="arrow"
+                            width={24}
+                            height={24}
+                          />
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </SlideUp>

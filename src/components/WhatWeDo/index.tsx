@@ -104,7 +104,7 @@ const WhatWeDo = () => {
 
   return (
     <section className="bg-[#f1f1f1] py-[30px] sm:py-[50px] md:py-[80px] lg:py-[131px] rounded-[43px] overflow-hidden">
-      <div className="lg:max-w-[80%] lg:mx-auto">
+      <div className="lg:max-w-[1170px] lg:mx-auto">
         <Menu
           title={t("whatWeDo.title")}
           titleLink={t("whatWeDo.seeAll")}

@@ -8,7 +8,7 @@ import { useTranslation } from "next-i18next";
 const OthersProjects = () => {
   const { t } = useTranslation("common");
   return (
-    <section className="pt-[20px] pb-[40px] lg:pb-[200px] lg:pt-[46px] lg:mx-auto lg:max-w-[80%] px-4 lg:px-0">
+    <section className="pt-[20px] pb-[40px] lg:pb-[200px] lg:pt-[46px] lg:mx-auto lg:max-w-[1170px] px-4 lg:px-0">
       <Menu
         title={t("projectPage.otherProject")}
         titleLink={t("projectPage.seeAllGalery")}

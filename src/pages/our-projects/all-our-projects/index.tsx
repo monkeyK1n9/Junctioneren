@@ -15,54 +15,9 @@ import { GetStaticProps } from "next";
 type ProjectProps = {
   picture: any;
   title: string;
-  link: string;
+  link: any;
   content?: string;
 };
-
-const projectGrid01: ProjectProps[] = [
-  {
-    picture: images.Others1,
-    title: "Société New Food Agro Industry (sNFAI)",
-    link: "/our-projects/cite-universitaire-mfou",
-    content:
-      "Pour le compte de la Société New Food Agro Industry (sNFAI), nous assurons le management et le suivi du projet de construction d'une industrie agro-alimentaire dans la localité de Missole 1 à Dibamba. Ce projet a débuté sur une superficie de 3 hectares et s'est étendu pour couvrir 10 hectares.",
-  },
-  {
-    picture: images.PUnMf,
-    title: "Cité universitaire a Mfou",
-    link: "/our-projects/cite-universitaire-mfou",
-    content:
-      "Construction d'une cité universitaire dans la Commune de Mfou , 21 chambres (7 chambres par niveau) avec Toilettes plus espace cuisine",
-  },
-  {
-    picture: images.PuEy,
-    title: "Cité universitaire a Eyang",
-    link: "/our-projects/cite-universitaire-eyang",
-    content:
-      "Construction d'une cité universitaire dans la Commune d'Eyang prêt de l'université Catholique Saint Jean. Spécificité: 21 chambres (7 chambres par niveau avec Toilettes, espace cuisine), Boutiques au RDC",
-  },
-  {
-    picture: images.PuEy,
-    title: "Cité universitaire a Eyang",
-    link: "/our-projects/cite-universitaire-eyang",
-    content:
-      "Construction d'une cité universitaire dans la Commune d'Eyang prêt de l'université Catholique Saint Jean. Spécificité: 21 chambres (7 chambres par niveau avec Toilettes, espace cuisine), Boutiques au RDC",
-  },
-  {
-    picture: images.PUnMf,
-    title: "Cité universitaire a Mfou",
-    link: "/our-projects/cite-universitaire-mfou",
-    content:
-      "Construction d'une cité universitaire dans la Commune de Mfou , 21 chambres (7 chambres par niveau) avec Toilettes plus espace cuisine",
-  },
-  {
-    picture: images.Others1,
-    title: "Société New Food Agro Industry (sNFAI)",
-    link: "/our-projects/cite-universitaire-mfou",
-    content:
-      "Pour le compte de la Société New Food Agro Industry (sNFAI), nous assurons le management et le suivi du projet de construction d'une industrie agro-alimentaire dans la localité de Missole 1 à Dibamba. Ce projet a débuté sur une superficie de 3 hectares et s'est étendu pour couvrir 10 hectares.",
-  },
-];
 
 const CardItem = ({
   content,
@@ -75,8 +30,9 @@ const CardItem = ({
   content: string;
   path: string;
 }) => {
+  const { t } = useTranslation("common");
   return (
-    <div className="gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start bg-[#FBFBFB] rounded-lg lg:shadow-sm overflow-hidden h-full">
+    <div className="gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start bg-[#FBFBFB] overflow-hidden h-full">
       {/* Image Section */}
       <div className="w-full lg:w-[50%] h-[200px] sm:h-[300px] lg:h-[435px]">
         <Image
@@ -104,7 +60,7 @@ const CardItem = ({
             href={path}
             className={`flex items-center justify-between mt-[5px] ${fontClassRoboto} font-[400] text-[10px] lg:text-[14px] leading-[15px] tracking-[20%] uppercase text-[#333333] w-full`}
           >
-            read more
+            {t("projects.more")}
             <FaLongArrowAltRight className="pl-[4px] lg:pl-[6px]" size={17} />
           </Link>
         </div>
@@ -117,6 +73,51 @@ const ITEMS_PER_PAGE = 3;
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const { t } = useTranslation("common");
+  const projectGrid01: ProjectProps[] = [
+    {
+      picture: images.PNsfai,
+      title: t("projects.titleOne"),
+      link: "#",
+      content: t("projects.contentOne"),
+    },
+    {
+      picture: images.PUnMf,
+      title: t("projects.titleTwo"),
+      link: "/our-projects/cite-universitaire-mfou",
+      content: t("projects.contentTwo"),
+    },
+    {
+      picture: images.PuEy,
+      title: t("projects.titleThree"),
+      link: "/our-projects/cite-universitaire-eyang",
+      content: t("projects.contentThree"),
+    },
+    {
+      picture: images.pNm,
+      title: t("projects.titleFour"),
+      link: "#",
+      content: t("projects.contentFour"),
+    },
+    {
+      picture: images.pJv,
+      title: t("projects.titleFive"),
+      link: "#",
+      content: t("projects.contentFive"),
+    },
+    {
+      picture: images.POdz,
+      title: t("projects.titleSix"),
+      link: "#",
+      content: t("projects.contentSix"),
+    },
+    {
+      picture: images.PBank,
+      title: t("projects.titleSeven"),
+      link: "#",
+      content: t("projects.contentSeven"),
+    },
+  ];
 
   // Calculate the total number of pages
   const totalPages = Math.ceil(projectGrid01.length / ITEMS_PER_PAGE);
@@ -134,19 +135,20 @@ const Index = () => {
 
   return (
     <DefaultLayout>
-      <main className="mt-[20px] sm:mt-[60px] lg:mt-[80px]">
-        <section className="py-[15px] lg:py-[30px] lg:max-w-[62%] lg:mx-auto px-2 lg:px-0">
+      <main className="mt-[80px]">
+        {/* <div className="lg:max-w-[1000px] mx-auto flex flex-col space-y-[30px] lg:space-y-[60px]"> */}
+        <section className="pt-[20px] lg:max-w-[1000px] mx-auto lg:pt-[60px] px-2 lg:px-0">
           <h5
-            className={`${fontClassRoboto} text-[#BDBDBD] font-[300] text-[40px] sm:text-[50px] lg:text-[64px] leading-[64px] tracking-[0%]`}
+            className={`${fontClassRoboto} text-[#BDBDBD] font-[300] text-[40px] sm:text-[50px] lg:text-[64px] lg:leading-[64px] tracking-[0%]`}
           >
             Our
             <br />
             <span className="font-[700] text-[#DF4D1B]">Projects</span>
           </h5>
-          <Breadcrumb />
+          {/* <Breadcrumb /> */}
         </section>
         <section className="my-[20px] lg:my-[60px]">
-          <div className="container mx-auto">
+          <div className="px-4 mx-auto">
             <div className="lg:max-w-[1000px] mx-auto flex flex-col space-y-[30px] lg:space-y-[60px]">
               {currentItems.map((item, index) => (
                 <CardItem
