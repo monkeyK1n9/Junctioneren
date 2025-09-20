@@ -21,9 +21,9 @@ type ProjectProps = {
 
 const projectGrid01: ProjectProps[] = [
   {
-    picture: images.Others1,
+    picture: images.PNsfai,
     title: "Société New Food Agro Industry (sNFAI)",
-    link: "/our-projects/cite-universitaire-mfou",
+    link: "#",
     content:
       "Pour le compte de la Société New Food Agro Industry (sNFAI), nous assurons le management et le suivi du projet de construction d'une industrie agro-alimentaire dans la localité de Missole 1 à Dibamba. Ce projet a débuté sur une superficie de 3 hectares et s'est étendu pour couvrir 10 hectares.",
   },
@@ -42,25 +42,32 @@ const projectGrid01: ProjectProps[] = [
       "Construction d'une cité universitaire dans la Commune d'Eyang prêt de l'université Catholique Saint Jean. Spécificité: 21 chambres (7 chambres par niveau avec Toilettes, espace cuisine), Boutiques au RDC",
   },
   {
-    picture: images.PuEy,
-    title: "Cité universitaire a Eyang",
-    link: "/our-projects/cite-universitaire-eyang",
+    picture: images.pNm,
+    title: "Immeuble à but locatif à Nomayos",
+    link: "#",
     content:
-      "Construction d'une cité universitaire dans la Commune d'Eyang prêt de l'université Catholique Saint Jean. Spécificité: 21 chambres (7 chambres par niveau avec Toilettes, espace cuisine), Boutiques au RDC",
+      "Un projet de construction est en cours pour un immeuble de rapport de 300 m². Le rez-de-chaussée comprendra trois appartements T2 et deux appartements T1. Les deux étages supérieurs, le R+1 et le R+2, auront chacun six appartements T1 et deux chambres modernes, ce qui portera le total à vingt-quatre unités locatives une fois le bâtiment achevé.",
   },
   {
-    picture: images.PUnMf,
-    title: "Cité universitaire a Mfou",
-    link: "/our-projects/cite-universitaire-mfou",
+    picture: images.pJv,
+    title: "Fairy Appartement Montée Jouvence",
+    link: "#",
     content:
-      "Construction d'une cité universitaire dans la Commune de Mfou , 21 chambres (7 chambres par niveau) avec Toilettes plus espace cuisine",
+      "Ce projet de rénovation a pour objectif la création d'appartements meublés de haut standing. Le plan inclut la transformation de l'espace pour y aménager un studio, une chambre et un appartement de 2 chambres, tous conçus avec des finitions et un équipement de qualité supérieure pour une offre locative premium.",
   },
   {
-    picture: images.Others1,
-    title: "Société New Food Agro Industry (sNFAI)",
-    link: "/our-projects/cite-universitaire-mfou",
+    picture: images.POdz,
+    title: "Duplex résidentiel à Odza",
+    link: "#",
     content:
-      "Pour le compte de la Société New Food Agro Industry (sNFAI), nous assurons le management et le suivi du projet de construction d'une industrie agro-alimentaire dans la localité de Missole 1 à Dibamba. Ce projet a débuté sur une superficie de 3 hectares et s'est étendu pour couvrir 10 hectares.",
+      "Ce projet de rénovation a pour objectif la création d'appartements meublés de haut standing. Le plan inclut la transformation de l'espace pour y aménager un studio, une chambre et un appartement de 2 chambres, tous conçus avec des finitions et un équipement de qualité supérieure pour une offre locative premium.",
+  },
+  {
+    picture: images.PBank,
+    title: "Nouvelle agence de la Banque UBC, agence de Biyem-Assi",
+    link: "#",
+    content:
+      "Travaux de rénovation, construction des locaux de l'Union Bank of Cameroon, agence de Biyem-Assi. Lot 3 : faux plafond, revêtement sol et mur, façade en alucobond.",
   },
 ];
 
@@ -76,7 +83,7 @@ const CardItem = ({
   path: string;
 }) => {
   return (
-    <div className="gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start bg-[#FBFBFB] rounded-lg lg:shadow-sm overflow-hidden h-full">
+    <div className="gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start bg-[#FBFBFB] overflow-hidden h-full">
       {/* Image Section */}
       <div className="w-full lg:w-[50%] h-[200px] sm:h-[300px] lg:h-[435px]">
         <Image
@@ -134,19 +141,20 @@ const Index = () => {
 
   return (
     <DefaultLayout>
-      <main className="mt-[20px] sm:mt-[60px] lg:mt-[80px]">
-        <section className="py-[15px] lg:py-[30px] lg:max-w-[62%] lg:mx-auto px-2 lg:px-0">
+      <main className="mt-[80px]">
+        {/* <div className="lg:max-w-[1000px] mx-auto flex flex-col space-y-[30px] lg:space-y-[60px]"> */}
+        <section className="pt-[20px] lg:max-w-[1000px] mx-auto lg:pt-[60px] px-2 lg:px-0">
           <h5
-            className={`${fontClassRoboto} text-[#BDBDBD] font-[300] text-[40px] sm:text-[50px] lg:text-[64px] leading-[64px] tracking-[0%]`}
+            className={`${fontClassRoboto} text-[#BDBDBD] font-[300] text-[40px] sm:text-[50px] lg:text-[64px] lg:leading-[64px] tracking-[0%]`}
           >
             Our
             <br />
             <span className="font-[700] text-[#DF4D1B]">Projects</span>
           </h5>
-          <Breadcrumb />
+          {/* <Breadcrumb /> */}
         </section>
         <section className="my-[20px] lg:my-[60px]">
-          <div className="container mx-auto">
+          <div className="px-4 mx-auto">
             <div className="lg:max-w-[1000px] mx-auto flex flex-col space-y-[30px] lg:space-y-[60px]">
               {currentItems.map((item, index) => (
                 <CardItem

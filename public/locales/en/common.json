@@ -53,11 +53,13 @@
   "projects": {
     "title": "Our Projects",
     "viewAll": "View All Projects",
-    "titleOne": "University Residence in Mfou",
-    "titleTwo": "University Residence in Eyang",
-    "titleThree": "Rental Apartment Building in Nomayos",
-    "titleFour": "Fairy Apartments – Montée Jouvence",
-    "titleFive": "Premium Residential Project",
+    "titleOne": "New Food Agro Industry Company (sNFAI) Industry",
+    "titleTwo": "University Residence in Mfou",
+    "titleThree": "University Residence in Eyang",
+    "titleFour": "Rental Apartment Building in Nomayos",
+    "titleFive": "Fairy Apartments - Montée Jouvence",
+    "titleSix": "Duplex résidentiel à Odza",
+    "titleSeven": "Nouvelle agence de la Banque UBC, agence de Biyem-Assi",
     "work": "See our work process",
     "more": "View More"
   },

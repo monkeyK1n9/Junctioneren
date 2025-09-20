@@ -62,7 +62,7 @@ const ContactUS = () => {
   return (
     <DefaultLayout className="overflow-auto">
       <Header />
-      <section className="mt-[120px] md:mt-[140px] lg:mt-[170px] xl:mt-[180px] mx-auto px-4 sm:px-6 lg:px-8 mb-[40px] lg:max-w-[80%]">
+      <section className="mt-[120px] md:mt-[140px] lg:mt-[170px] xl:mt-[180px] mx-auto px-4 sm:px-6 lg:px-8 mb-[40px] lg:max-w-[1170px]">
         <div>
           <h1 className="text-4xl font-light text-gray-500 mb-2 lg:mb-1 text-start">
             {t("contact.title01")}
@@ -212,7 +212,7 @@ const ContactUS = () => {
           </div>
         </div>
       </section>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 mb-[40px] lg:max-w-[80%]">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 mb-[40px] lg:max-w-[1170px]">
         <button
           onClick={handleEmailClick}
           className="w-full lg:w-[280px] py-4 text-white rounded-[18.7px] bg-indigo-900 hover:bg-indigo-800 transition-colors duration-300 uppercase"

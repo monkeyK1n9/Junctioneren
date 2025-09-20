@@ -53,11 +53,13 @@
   "projects": {
     "title": "Nos projets",
     "viewAll": "Voir tous les projets",
-    "titleOne": "Cité universitaire a Mfou",
-    "titleTwo": "Cité universitaire a Eyang",
-    "titleThree": "Immeuble à but locatif a Nomayos",
-    "titleFour": "Fairy Appartement Montée Jouvence",
-    "titleFive": "Projet résidentiel premium",
+    "titleOne": "Société New Food Agro Industry (sNFAI)",
+    "titleTwo": "Cité universitaire a Mfou",
+    "titleThree": "Cité universitaire a Eyang",
+    "titleFour": "Immeuble à but locatif a Nomayos",
+    "titleFive": "Fairy Appartement Montée Jouvence",
+    "titleSix": "Residential duplex in Odza",
+    "titleSeven": "New UBC Bank branch, Biyem-Assi branch",
     "work": "Voir notre démarche de travail",
     "more": "Voir Plus"
   },

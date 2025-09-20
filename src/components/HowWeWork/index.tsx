@@ -5,7 +5,7 @@ import { CommonText, Work } from "../ui/Work";
 const HowWeWork = () => {
   const { t } = useTranslation("common");
   return (
-    <section className="py-[20px] lg:py-[46px] lg:max-w-[80%] lg:mx-auto px-4 lg:px-0">
+    <section className="py-[20px] lg:py-[46px] lg:max-w-[1170px] lg:mx-auto px-4 lg:px-0">
       <Menu title={t("projectPage.title")} titleLink="" path="#" />
       <CommonText className="lg:mt-[41px] text-center lg:text-left">
         {t("projectPage.description")}

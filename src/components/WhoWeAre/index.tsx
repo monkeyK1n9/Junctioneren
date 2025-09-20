@@ -99,11 +99,13 @@ const WhoWeAre = () => {
             key={index}
             className="col-span-12 lg:col-span-4 relative text-[#B9B9B9]"
             onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(0)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
+            {/* Le texte "visible" lorsque l'image n'est pas survolée */}
             <div
               className={`flex justify-center items-center text-[#B9B9B9] ${
-                hoveredIndex === index ? "hidden" : "flex"
+                // Affiche ce bloc si l'élément n'est PAS survolé
+                hoveredIndex !== index ? "flex" : "hidden"
               }`}
             >
               <TextAbout className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[520px]">
@@ -115,6 +117,7 @@ const WhoWeAre = () => {
                 </div>
               )}
             </div>
+
             <AnimatePresence>
               {hoveredIndex === index && (
                 <motion.div

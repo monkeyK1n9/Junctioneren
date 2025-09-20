@@ -1,3 +1,6 @@
+import PBank from "./pBank.webp";
+import POdz from "./pOdz.webp";
+import PNsfai from "./pSNFAI.webp";
 import WhatsImg from "./iwhats.png";
 import CallImg from "./icall.png";
 import LogoImg from "./logo.svg";
@@ -176,6 +179,9 @@ const images = {
   C3,
   C4,
   C5,
+  PNsfai,
+  POdz,
+  PBank,
 };
 
 export default images;
