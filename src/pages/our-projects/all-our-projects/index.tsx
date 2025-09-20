@@ -15,61 +15,9 @@ import { GetStaticProps } from "next";
 type ProjectProps = {
   picture: any;
   title: string;
-  link: string;
+  link: any;
   content?: string;
 };
-
-const projectGrid01: ProjectProps[] = [
-  {
-    picture: images.PNsfai,
-    title: "Société New Food Agro Industry (sNFAI)",
-    link: "#",
-    content:
-      "Pour le compte de la Société New Food Agro Industry (sNFAI), nous assurons le management et le suivi du projet de construction d'une industrie agro-alimentaire dans la localité de Missole 1 à Dibamba. Ce projet a débuté sur une superficie de 3 hectares et s'est étendu pour couvrir 10 hectares.",
-  },
-  {
-    picture: images.PUnMf,
-    title: "Cité universitaire a Mfou",
-    link: "/our-projects/cite-universitaire-mfou",
-    content:
-      "Construction d'une cité universitaire dans la Commune de Mfou , 21 chambres (7 chambres par niveau) avec Toilettes plus espace cuisine",
-  },
-  {
-    picture: images.PuEy,
-    title: "Cité universitaire a Eyang",
-    link: "/our-projects/cite-universitaire-eyang",
-    content:
-      "Construction d'une cité universitaire dans la Commune d'Eyang prêt de l'université Catholique Saint Jean. Spécificité: 21 chambres (7 chambres par niveau avec Toilettes, espace cuisine), Boutiques au RDC",
-  },
-  {
-    picture: images.pNm,
-    title: "Immeuble à but locatif à Nomayos",
-    link: "#",
-    content:
-      "Un projet de construction est en cours pour un immeuble de rapport de 300 m². Le rez-de-chaussée comprendra trois appartements T2 et deux appartements T1. Les deux étages supérieurs, le R+1 et le R+2, auront chacun six appartements T1 et deux chambres modernes, ce qui portera le total à vingt-quatre unités locatives une fois le bâtiment achevé.",
-  },
-  {
-    picture: images.pJv,
-    title: "Fairy Appartement Montée Jouvence",
-    link: "#",
-    content:
-      "Ce projet de rénovation a pour objectif la création d'appartements meublés de haut standing. Le plan inclut la transformation de l'espace pour y aménager un studio, une chambre et un appartement de 2 chambres, tous conçus avec des finitions et un équipement de qualité supérieure pour une offre locative premium.",
-  },
-  {
-    picture: images.POdz,
-    title: "Duplex résidentiel à Odza",
-    link: "#",
-    content:
-      "Ce projet de rénovation a pour objectif la création d'appartements meublés de haut standing. Le plan inclut la transformation de l'espace pour y aménager un studio, une chambre et un appartement de 2 chambres, tous conçus avec des finitions et un équipement de qualité supérieure pour une offre locative premium.",
-  },
-  {
-    picture: images.PBank,
-    title: "Nouvelle agence de la Banque UBC, agence de Biyem-Assi",
-    link: "#",
-    content:
-      "Travaux de rénovation, construction des locaux de l'Union Bank of Cameroon, agence de Biyem-Assi. Lot 3 : faux plafond, revêtement sol et mur, façade en alucobond.",
-  },
-];
 
 const CardItem = ({
   content,
@@ -82,6 +30,7 @@ const CardItem = ({
   content: string;
   path: string;
 }) => {
+  const { t } = useTranslation("common");
   return (
     <div className="gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start bg-[#FBFBFB] overflow-hidden h-full">
       {/* Image Section */}
@@ -111,7 +60,7 @@ const CardItem = ({
             href={path}
             className={`flex items-center justify-between mt-[5px] ${fontClassRoboto} font-[400] text-[10px] lg:text-[14px] leading-[15px] tracking-[20%] uppercase text-[#333333] w-full`}
           >
-            read more
+            {t("projects.more")}
             <FaLongArrowAltRight className="pl-[4px] lg:pl-[6px]" size={17} />
           </Link>
         </div>
@@ -124,6 +73,51 @@ const ITEMS_PER_PAGE = 3;
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const { t } = useTranslation("common");
+  const projectGrid01: ProjectProps[] = [
+    {
+      picture: images.PNsfai,
+      title: t("projects.titleOne"),
+      link: "#",
+      content: t("projects.contentOne"),
+    },
+    {
+      picture: images.PUnMf,
+      title: t("projects.titleTwo"),
+      link: "/our-projects/cite-universitaire-mfou",
+      content: t("projects.contentTwo"),
+    },
+    {
+      picture: images.PuEy,
+      title: t("projects.titleThree"),
+      link: "/our-projects/cite-universitaire-eyang",
+      content: t("projects.contentThree"),
+    },
+    {
+      picture: images.pNm,
+      title: t("projects.titleFour"),
+      link: "#",
+      content: t("projects.contentFour"),
+    },
+    {
+      picture: images.pJv,
+      title: t("projects.titleFive"),
+      link: "#",
+      content: t("projects.contentFive"),
+    },
+    {
+      picture: images.POdz,
+      title: t("projects.titleSix"),
+      link: "#",
+      content: t("projects.contentSix"),
+    },
+    {
+      picture: images.PBank,
+      title: t("projects.titleSeven"),
+      link: "#",
+      content: t("projects.contentSeven"),
+    },
+  ];
 
   // Calculate the total number of pages
   const totalPages = Math.ceil(projectGrid01.length / ITEMS_PER_PAGE);

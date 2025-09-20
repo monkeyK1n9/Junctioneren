@@ -51,17 +51,24 @@
     "eng": "Ingénieurs"
   },
   "projects": {
-    "title": "Nos projets",
+    "title": "Nos Projets",
     "viewAll": "Voir tous les projets",
     "titleOne": "Société New Food Agro Industry (sNFAI)",
-    "titleTwo": "Cité universitaire a Mfou",
-    "titleThree": "Cité universitaire a Eyang",
-    "titleFour": "Immeuble à but locatif a Nomayos",
-    "titleFive": "Fairy Appartement Montée Jouvence",
-    "titleSix": "Residential duplex in Odza",
-    "titleSeven": "New UBC Bank branch, Biyem-Assi branch",
-    "work": "Voir notre démarche de travail",
-    "more": "Voir Plus"
+    "contentOne": "Pour le compte de la Société New Food Agro Industry (sNFAI), nous assurons la gestion et le suivi du projet de construction d’une industrie agroalimentaire dans la localité de Missolé 1 à Dibamba. Ce projet a débuté sur une superficie de 3 hectares et s’est étendu pour couvrir 10 hectares.",
+    "titleTwo": "Résidence universitaire à Mfou",
+    "contentTwo": "Construction d’une cité universitaire dans la commune de Mfou, composée de 21 chambres (7 chambres par étage) avec toilettes et espace cuisine.",
+    "titleThree": "Résidence universitaire à Eyang",
+    "contentThree": "Construction d’une cité universitaire dans la commune d’Eyang, à proximité de l’Université Catholique Saint Jean. Spécificités : 21 chambres (7 chambres par étage avec toilettes et espace cuisine), ainsi que des boutiques au rez-de-chaussée.",
+    "titleFour": "Immeuble locatif à Nomayos",
+    "contentFour": "Un projet de construction est en cours pour un immeuble de rapport de 300 m². Le rez-de-chaussée comprendra trois appartements de type T2 et deux appartements de type T1. Les deux étages supérieurs (R+1 et R+2) accueilleront chacun six appartements T1 et deux chambres modernes, portant ainsi le total à vingt-quatre unités locatives une fois le bâtiment achevé.",
+    "titleFive": "Fairy Apartments - Montée Jouvence",
+    "contentFive": "Ce projet de rénovation a pour objectif la création d’appartements meublés de haut standing. Le plan prévoit l’aménagement d’un studio, d’un appartement d’une chambre et d’un appartement de deux chambres, tous conçus avec des finitions et des équipements haut de gamme pour une offre locative premium.",
+    "titleSix": "Duplex résidentiel à Odza",
+    "contentSix": "Ce projet de rénovation vise la création d’appartements meublés de haut standing. Le plan prévoit l’aménagement d’un studio, d’un appartement d’une chambre et d’un appartement de deux chambres, tous conçus avec des finitions et des équipements haut de gamme pour une offre locative premium.",
+    "titleSeven": "Nouvelle agence UBC - Biyem-Assi",
+    "contentSeven": "Travaux de rénovation et construction des locaux de l’Union Bank of Cameroon, agence de Biyem-Assi. Lot 3 : faux plafond, revêtements de sol et de mur, façade en alucobond.",
+    "work": "Découvrez notre processus de travail",
+    "more": "Voir plus"
   },
   "contact": {
     "title": "Nous contacter",
