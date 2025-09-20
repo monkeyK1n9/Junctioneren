@@ -223,7 +223,7 @@ const ContactUS = () => {
         </button>
         <div className="mt-[10px] sm:mt-[20px] lg:mt-[40px]">
           <h4 className="text-3xl lg:text-[44.88px] font-bold text-[#333333] mb-8 lg:px-0 text-start">
-            Meet the Junctioners at events
+            {t("contact.even")}
           </h4>
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-4">
