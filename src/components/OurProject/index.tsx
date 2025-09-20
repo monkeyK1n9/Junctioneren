@@ -33,7 +33,7 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
     {
       picture: images.PNsfai,
       title: t("projects.titleOne"),
-      link: "/our-projects/cite-universitaire-mfou",
+      link: "/our-projects/s-nfai",
     },
     {
       picture: images.PUnMf,
