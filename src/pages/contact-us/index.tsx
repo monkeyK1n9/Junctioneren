@@ -117,7 +117,7 @@ const ContactUS = () => {
                   alt="icon"
                 />
                 <span className="text-[12px] font-normal leading-[12px] tracking-[20%] text-primaryTitle">
-                  {t("contact.contact_whatsapp")}
+                  {t("contact.contact")}
                 </span>
               </button>
             </div>
