@@ -33,12 +33,12 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
     {
       picture: images.PNsfai,
       title: t("projects.titleOne"),
-      link: "/our-projects/cite-universitaire-mfou",
+      link: "/our-projects/s-nfai",
     },
     {
       picture: images.PUnMf,
       title: t("projects.titleTwo"),
-      link: "/our-projects/cite-universitaire-eyang",
+      link: "/our-projects/cite-universitaire-mfou",
     },
   ];
 
@@ -46,17 +46,17 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
     {
       picture: images.PuEy,
       title: t("projects.titleThree"),
-      link: "/our-projects/immeuble-nomayos",
+      link: "/our-projects/cite-universitaire-eyang",
     },
     {
       picture: images.pNm,
       title: t("projects.titleFour"),
-      link: "/our-projects/fairy-jouvence",
+      link: "/our-projects/imm-nomayos",
     },
     {
       picture: images.pJv,
       title: t("projects.titleFive"),
-      link: "/our-projects/residence-premium",
+      link: "/our-projects/app-jouvence",
     },
   ];
 

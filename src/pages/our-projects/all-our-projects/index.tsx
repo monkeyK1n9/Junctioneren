@@ -78,7 +78,7 @@ const Index = () => {
     {
       picture: images.PNsfai,
       title: t("projects.titleOne"),
-      link: "#",
+      link: "/our-projects/s-nfai",
       content: t("projects.contentOne"),
     },
     {
@@ -96,25 +96,25 @@ const Index = () => {
     {
       picture: images.pNm,
       title: t("projects.titleFour"),
-      link: "#",
+      link: "/our-projects/imm-nomayos",
       content: t("projects.contentFour"),
     },
     {
       picture: images.pJv,
       title: t("projects.titleFive"),
-      link: "#",
+      link: "/our-projects/app-jouvence",
       content: t("projects.contentFive"),
     },
     {
       picture: images.POdz,
       title: t("projects.titleSix"),
-      link: "#",
+      link: "/our-projects/dup-odza",
       content: t("projects.contentSix"),
     },
     {
       picture: images.PBank,
       title: t("projects.titleSeven"),
-      link: "#",
+      link: "/our-projects/bank-ubc",
       content: t("projects.contentSeven"),
     },
   ];

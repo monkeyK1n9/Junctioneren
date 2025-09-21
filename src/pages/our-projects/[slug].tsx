@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import Image from "next/image";
 import { DefaultLayout } from "@/layouts/default.layout";
@@ -19,73 +19,134 @@ type ProjectProps = {
     status?: string;
     pictureOne?: string;
     descriptionOne?: string;
+    pictureTwo?: string;
+    pictureThree?: string;
+    pictureFour?: string;
+    pictureFive?: string;
   };
   mdxSource: MDXRemoteSerializeResult;
 };
 
-const ProjectPage = ({ frontMatter, mdxSource }: ProjectProps) => {
+const ProjectPage = ({ frontMatter }: ProjectProps) => {
   return (
     <DefaultLayout className="overflow-x-hidden">
       <Header />
-      <div className="container mx-auto px-4 py-[64px] mt-[100px]">
-        <div className="text-center lg:text-left mb-8">
-          <h4
-            className={`text-3xl lg:text-[64px] font-normal text-[#BDBDBD] ${RobotoUiDisplay.className}`}
+      <div className="container mx-auto px-4 py-12 mt-[100px] lg:max-w-[1170px] mb-[100px] md:mb-[150px] lg:mb-[200px]">
+        <div className="mb-12">
+          <h2
+            className={`text-2xl md:text-[64px] font-light text-[#BDBDBD] ${RobotoUiDisplay.className} md:leading-[64px] tracking-[0%]`}
           >
             {frontMatter.title}
-          </h4>
-          <h4
-            className={`text-3xl lg:text-[60px] font-normal text-black ${RobotoUiDisplay.className} mt-[30px] font-bold`}
+          </h2>
+          <h3
+            className={`text-xl md:text-[64px] font-bold mt-4 md:mt-[14px] ${RobotoUiDisplay.className}`}
           >
-            Status:{" "}
+            Statuts:{" "}
             <span
               className={`${
                 frontMatter.status === "En cours"
                   ? "text-[#DF4D1B]"
                   : "text-[#2C9C0A]"
-              } `}
+              }`}
             >
               {frontMatter.status}
             </span>
-          </h4>
+          </h3>
         </div>
+
+        {/* Main Cover Image */}
         {frontMatter.coverImage && (
-          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] mb-8">
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70 z-10"></div>
-            {/* Cover Image */}
+          <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] mb-8 md:mb-12 overflow-hidden">
             <Image
-              src={frontMatter.coverImage || ""}
+              src={frontMatter.coverImage}
               alt={frontMatter.title}
-              layout="fill"
-              className="w-full h-full object-cover shadow-2xl"
+              fill
+              className="object-cover"
+              sizes="100vw"
             />
           </div>
         )}
-        {/* Content */}
-        <p>{frontMatter.description}</p>
-        {frontMatter.pictureOne && frontMatter.title && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 mt-[32px] gap-y-8 lg:gap-x-[24px] items-center">
-            <div className="w-full h-[250px] sm:h-[350px] lg:h-[400px] relative">
+
+        {/* Description */}
+        <p className="text-base text-gray-800 mb-10 md:mb-12 leading-relaxed">
+          {frontMatter.description}
+        </p>
+
+        {frontMatter.pictureOne && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px] overflow-hidden">
               <Image
-                src={frontMatter.pictureOne || ""}
+                src={frontMatter.pictureOne}
                 alt={frontMatter.title}
                 fill
-                className="object-cover rounded-lg"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div>
               <p
-                className={`${RobotoUiDisplay.className} font-[300] text-black`}
+                className={`${RobotoUiDisplay.className} text-gray-900 font-light whitespace-pre-line`}
               >
-                {frontMatter.descriptionOne?.split("\n").map((line, idx) => (
-                  <span key={idx}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
+                {frontMatter.descriptionOne}
               </p>
+            </div>
+          </div>
+        )}
+
+        {/* Gallery Section (pictureTwo, pictureThree, pictureFour) */}
+        {(frontMatter.pictureTwo ||
+          frontMatter.pictureThree ||
+          frontMatter.pictureFour) && (
+          <div className="mt-4 space-y-6">
+            {/* Grande image en haut */}
+            {frontMatter.pictureTwo && (
+              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] overflow-hidden mb-4">
+                <Image
+                  src={frontMatter.pictureTwo}
+                  alt={`${frontMatter.title} - photo 2`}
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+              </div>
+            )}
+            {/* Grande image en haut */}
+            {frontMatter.pictureFive && (
+              <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] overflow-hidden mb-8 md:mb-4">
+                <Image
+                  src={frontMatter.pictureFive}
+                  alt={`${frontMatter.title} - photo 2`}
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+              </div>
+            )}
+
+            {/* Deux images côte à côte */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 md:mb-4">
+              {frontMatter.pictureThree && (
+                <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
+                  <Image
+                    src={frontMatter.pictureThree}
+                    alt={`${frontMatter.title} - photo 3`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              )}
+              {frontMatter.pictureFour && (
+                <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
+                  <Image
+                    src={frontMatter.pictureFour}
+                    alt={`${frontMatter.title} - photo 4`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -100,8 +161,6 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   const filenames = fs.readdirSync(projectsDir);
 
   const paths = [];
-
-  // Générer les paths pour toutes les locales
   for (const locale of locales || ["fr"]) {
     for (const filename of filenames) {
       paths.push({
@@ -130,7 +189,6 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     props: {
       frontMatter,
       mdxSource,
-      // Ajouter les traductions pour que le Header fonctionne
       ...(await serverSideTranslations(locale || "fr", ["common"])),
     },
   };
