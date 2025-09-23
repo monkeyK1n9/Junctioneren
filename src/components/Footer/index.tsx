@@ -214,7 +214,7 @@ const Footer = () => {
           className={`${fontClass} text-[#C8C8C880] text-[18px] leading-[24px] tracking-[4%] text-center flex items-center justify-center`}
         >
           Built with <FaHeart className="text-red-500 mx-2" size={22} /> from
-          Kody Tech
+          Kody Team
         </p>
         <p
           className={`${fontClass} text-[#C8C8C880] text-[14px] leading-[24px] tracking-[3%] text-center pt-2`}
