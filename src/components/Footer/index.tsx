@@ -4,6 +4,7 @@ import images from "../../../public/imgs";
 import { RobotoUiDisplay } from "@/lib/fonts";
 import cn from "clsx";
 import { useTranslation } from "next-i18next";
+import { FaHeart } from "react-icons/fa";
 
 type NavProps = {
   name?: string;
@@ -210,7 +211,13 @@ const Footer = () => {
         </div>
         <div className="h-[0.2px] bg-gray-400 my-[10px] lg:my-[24px]" />
         <p
-          className={`${fontClass} text-[#C8C8C880] text-[14px] leading-[24px] tracking-[3%] text-center`}
+          className={`${fontClass} text-[#C8C8C880] text-[18px] leading-[24px] tracking-[4%] text-center flex items-center justify-center`}
+        >
+          Built with <FaHeart className="text-red-500 mx-2" size={22} /> from
+          Kody Team
+        </p>
+        <p
+          className={`${fontClass} text-[#C8C8C880] text-[14px] leading-[24px] tracking-[3%] text-center pt-2`}
         >
           © {new Date().getFullYear()} {t("footer.copy")}
         </p>
