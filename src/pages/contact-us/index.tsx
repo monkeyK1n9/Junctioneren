@@ -13,6 +13,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
 import images from "../../../public/imgs";
+import { NextSeo } from "next-seo";
 
 const ContactUS = () => {
   const fontClass = cn(RobotoUiDisplay.variable, RobotoUiDisplay.className);
@@ -61,6 +62,32 @@ const ContactUS = () => {
 
   return (
     <DefaultLayout className="overflow-auto">
+      <NextSeo
+        title={t("contactSeo.title")}
+        description={t("contactSeo.description")}
+        canonical="https://junctioneren.com/contact-us"
+        openGraph={{
+          url: "https://junctioneren.com/contact-us",
+          title: "Contact | Junctioner Construction Engineering",
+          description:
+            "Prenez contact avec nous pour discuter de vos projets de construction et obtenir un accompagnement personnalisé.",
+          images: [
+            {
+              url: "https://junctioneren.com/favicon.svg",
+              width: 1200,
+              height: 630,
+              alt: "Contactez Junctioner Construction Engineering",
+              type: "image/jpeg",
+            },
+          ],
+          siteName: "Junctioner Construction Engineering",
+        }}
+        twitter={{
+          handle: "@junctioner_Eng",
+          site: "@junctioner_Eng",
+          cardType: "summary_large_image",
+        }}
+      />
       <Header />
       <section className="mt-[120px] md:mt-[140px] lg:mt-[170px] xl:mt-[180px] mx-auto px-4 sm:px-6 lg:px-8 mb-[40px] lg:max-w-[1170px]">
         <div>

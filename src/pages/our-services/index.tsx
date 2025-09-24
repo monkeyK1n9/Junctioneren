@@ -12,6 +12,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Menu from "@/components/ui/Menu";
 import { useTranslation } from "react-i18next";
 import SlideUp from "@/components/Animation/SlideUp";
+import { NextSeo } from "next-seo";
 
 export const fontClassRoboto = cn(
   RobotoUiDisplay.className,
@@ -109,6 +110,32 @@ const OurServices = () => {
 
   return (
     <DefaultLayout>
+      <NextSeo
+        title={t("whatWeDoSeo.title")}
+        description={t("whatWeDoSeo.description")}
+        canonical="https://junctioneren.com/our-services"
+        openGraph={{
+          url: "https://junctioneren.com/our-services",
+          title: "Nos Projets | Junctioner Construction Engineering",
+          description:
+            "Un aperçu de nos réalisations dans le secteur de la construction et de l'ingénierie.",
+          images: [
+            {
+              url: "https://junctioneren.com/favicon.svg",
+              width: 1200,
+              height: 630,
+              alt: "Services de Junctioner Construction Engineering",
+              type: "image/jpeg",
+            },
+          ],
+          siteName: "Junctioner Construction Engineering",
+        }}
+        twitter={{
+          handle: "@junctioner_Eng",
+          site: "@junctioner_Eng",
+          cardType: "summary_large_image",
+        }}
+      />
       <Header />
       <SlideUp delay={0.5}>
         <main className="lg:max-w-[80%] lg:mx-auto py-[30px] lg:py-[40px] px-4 lg:px-0">
