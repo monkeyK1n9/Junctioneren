@@ -11,11 +11,50 @@ import { DefaultLayout } from "@/layouts/default.layout";
 import SlideUp from "@/components/Animation/SlideUp";
 import { useTranslation } from "next-i18next";
 import Menu from "@/components/ui/Menu";
+import { NextSeo } from "next-seo";
 
 const Home = () => {
   const { t } = useTranslation("common");
   return (
     <DefaultLayout className="overflow-x-hidden">
+      <NextSeo
+        title={t("homeSeo.title")}
+        description={t("homeSeo.description")}
+        canonical="https://junctioneren.com"
+        openGraph={{
+          url: "https://junctioneren.com",
+          title: "Junctioner Construction Engineering",
+          description:
+            "Expertise en construction et ingénierie. Junctioner Construction Engineering bâtit sur les valeurs fondamentales de fiabilité, qualité et innovation.",
+          images: [
+            {
+              url: "https://junctioneren.com/favicon.svg",
+              width: 1200,
+              height: 630,
+              alt: "Junctioner Construction Engineering",
+              type: "image/jpeg",
+            },
+          ],
+          siteName: "Junctioner Construction Engineering",
+        }}
+        twitter={{
+          handle: "@junctioner_Eng",
+          site: "@junctioner_Eng",
+          cardType: "summary_large_image",
+        }}
+        additionalMetaTags={[
+          {
+            property: "facebook",
+            content:
+              "https://web.facebook.com/JunctionerConstructionEngineering",
+          },
+          {
+            property: "linkedin",
+            content:
+              "https://www.linkedin.com/company/junctioner-construction-engineering/",
+          },
+        ]}
+      />
       <Banner />
       <CodeAndMeasurements />
       <WhatWeDo />

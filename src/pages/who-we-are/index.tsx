@@ -14,6 +14,7 @@ import WhoWeAre from "@/components/WhoWeAre";
 import Breadcrumb from "@/components/Breadcrumb";
 import { cleanText } from "@/utils/text";
 import { useTranslation } from "next-i18next";
+import { NextSeo } from "next-seo";
 
 export const fontClassRoboto = cn(
   RobotoUiDisplay.className,
@@ -135,6 +136,32 @@ const WhoWeArePage = () => {
 
   return (
     <DefaultLayout>
+      <NextSeo
+        title={t("whoWeAreSeo.title")}
+        description={t("whoWeAreSeo.description")}
+        canonical="https://junctioneren.com/who-we-are"
+        openGraph={{
+          url: "https://junctioneren.com/who-we-are",
+          title: "Qui nous sommes | Junctioner Construction Engineering",
+          description:
+            "Découvrez nos valeurs, notre vision et notre équipe dédiée à l'excellence dans le secteur de la construction.",
+          images: [
+            {
+              url: "https://junctioneren.com/favicon.svg",
+              width: 1200,
+              height: 630,
+              alt: "À propos de Junctioner Construction Engineering",
+              type: "image/jpeg",
+            },
+          ],
+          siteName: "Junctioner Construction Engineering",
+        }}
+        twitter={{
+          handle: "@junctioner_Eng",
+          site: "@junctioner_Eng",
+          cardType: "summary_large_image",
+        }}
+      />
       <Header />
       <main className="lg:max-w-[80%] lg:mx-auto pt-[30px] lg:pt-[40px] px-4 lg:px-0">
         <section>

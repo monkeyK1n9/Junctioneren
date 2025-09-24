@@ -206,5 +206,25 @@
     "b9": "Eng. DJOUMBI NGANKAM Jeffry",
     "p9": "Works Engineer",
     "d9": "Versatile and dynamic, Jeffry DJOUMBI NGANKAM is diligent in his work and dedicated to his tasks. His creativity and commitment make him a valuable member of the Junctioner Construction Engineering team."
+  },
+  "homeSeo": {
+    "title": "Junctioner Construction Engineering | Expertise in Building and Engineering",
+    "description": "At Junctioner Construction Engineering, we have built our values on the pillars of the construction industry: expertise, reliability, and innovation."
+  },
+  "projectSeo": {
+    "title": "Our Projects | Junctioner Construction Engineering",
+    "description": "Discover the projects of Junctioner Construction Engineering: buildings, infrastructures, and engineering works delivered with quality, innovation, and sustainability."
+  },
+  "whoWeAreSeo": {
+    "title": "Who We Are | Junctioner Construction Engineering",
+    "description": "Learn more about Junctioner Construction Engineering: our history, our values, and our team of experts in construction and engineering."
+  },
+  "whatWeDoSeo": {
+    "title": "What We Do | Junctioner Construction Engineering",
+    "description": "Our engineering and construction services: design, supervision, project management, and the realization of modern and sustainable infrastructures."
+  },
+  "contactSeo": {
+    "title": "Contact | Junctioner Construction Engineering",
+    "description": "Get in touch with Junctioner Construction Engineering for your construction and engineering projects. We will be happy to connect with you."
   }
 }

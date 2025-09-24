@@ -8,10 +8,38 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Breadcrumb from "@/components/Breadcrumb";
+import { NextSeo } from "next-seo";
 
 const OurProjectsPage = () => {
+  const { t } = useTranslation("common");
   return (
     <DefaultLayout className="overflow-x-hidden">
+      <NextSeo
+        title={t("projectSeo.title")}
+        description={t("projectSeo.description")}
+        canonical="https://junctioneren.com/our-projects"
+        openGraph={{
+          url: "https://junctioneren.com/our-projects",
+          title: "Nos Projets | Junctioner Construction Engineering",
+          description:
+            "Un aperçu de nos réalisations dans le secteur de la construction et de l’ingénierie.",
+          images: [
+            {
+              url: "https://junctioneren.com/favicon.svg",
+              width: 1200,
+              height: 630,
+              alt: "Projets de Junctioner Construction Engineering",
+              type: "image/jpeg",
+            },
+          ],
+          siteName: "Junctioner Construction Engineering",
+        }}
+        twitter={{
+          handle: "@junctioner_Eng",
+          site: "@junctioner_Eng",
+          cardType: "summary_large_image",
+        }}
+      />
       <section>
         <OurProjects showBtn={false} showBreadcrumb />
         <HowWeWork />
