@@ -121,11 +121,11 @@ const OurServices = () => {
             "Un aperçu de nos réalisations dans le secteur de la construction et de l'ingénierie.",
           images: [
             {
-              url: "https://junctioneren.com/favicon.svg",
+              url: "https://junctioneren.com/imgs/contact2.webp",
               width: 1200,
               height: 630,
               alt: "Services de Junctioner Construction Engineering",
-              type: "image/jpeg",
+              type: "image/webp",
             },
           ],
           siteName: "Junctioner Construction Engineering",
