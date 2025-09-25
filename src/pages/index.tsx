@@ -20,15 +20,15 @@ const Home = () => {
       <NextSeo
         title={t("homeSeo.title")}
         description={t("homeSeo.description")}
-        canonical="https://junctioneren.com"
+        canonical="https://www.junctioneren.com"
         openGraph={{
-          url: "https://junctioneren.com",
+          url: "https://www.junctioneren.com",
           title: "Junctioner Construction Engineering",
           description:
             "Expertise en construction et ingénierie. Junctioner Construction Engineering bâtit sur les valeurs fondamentales de fiabilité, qualité et innovation.",
           images: [
             {
-              url: "https://junctioneren.com/imgs/contact2.webp",
+              url: "https://www.junctioneren.com/imgs/contact2.webp",
               width: 1200,
               height: 630,
               alt: "Junctioner Construction Engineering",

@@ -65,15 +65,15 @@ const ContactUS = () => {
       <NextSeo
         title={t("contactSeo.title")}
         description={t("contactSeo.description")}
-        canonical="https://junctioneren.com/contact-us"
+        canonical="https://www.junctioneren.com/contact-us"
         openGraph={{
-          url: "https://junctioneren.com/contact-us",
+          url: "https://www.junctioneren.com/contact-us",
           title: "Contact | Junctioner Construction Engineering",
           description:
             "Prenez contact avec nous pour discuter de vos projets de construction et obtenir un accompagnement personnalisé.",
           images: [
             {
-              url: "https://junctioneren.com/imgs/contact2.webp",
+              url: "https://www.junctioneren.com/imgs/contact2.webp",
               width: 1200,
               height: 630,
               alt: "Contactez Junctioner Construction Engineering",

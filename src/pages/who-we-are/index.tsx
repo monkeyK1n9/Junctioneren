@@ -139,15 +139,15 @@ const WhoWeArePage = () => {
       <NextSeo
         title={t("whoWeAreSeo.title")}
         description={t("whoWeAreSeo.description")}
-        canonical="https://junctioneren.com/who-we-are"
+        canonical="https://www.junctioneren.com/who-we-are"
         openGraph={{
-          url: "https://junctioneren.com/who-we-are",
+          url: "https://www.junctioneren.com/who-we-are",
           title: "Qui nous sommes | Junctioner Construction Engineering",
           description:
             "Découvrez nos valeurs, notre vision et notre équipe dédiée à l'excellence dans le secteur de la construction.",
           images: [
             {
-              url: "https://junctioneren.com/imgs/contact2.webp",
+              url: "https://www.junctioneren.com/imgs/contact2.webp",
               width: 1200,
               height: 630,
               alt: "À propos de Junctioner Construction Engineering",
