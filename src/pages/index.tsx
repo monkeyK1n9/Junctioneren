@@ -28,11 +28,11 @@ const Home = () => {
             "Expertise en construction et ingénierie. Junctioner Construction Engineering bâtit sur les valeurs fondamentales de fiabilité, qualité et innovation.",
           images: [
             {
-              url: "https://junctioneren.com/favicon.svg",
+              url: "https://junctioneren.com/imgs/contact2.webp",
               width: 1200,
               height: 630,
               alt: "Junctioner Construction Engineering",
-              type: "image/jpeg",
+              type: "image/webp",
             },
           ],
           siteName: "Junctioner Construction Engineering",
