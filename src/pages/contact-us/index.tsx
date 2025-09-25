@@ -73,11 +73,11 @@ const ContactUS = () => {
             "Prenez contact avec nous pour discuter de vos projets de construction et obtenir un accompagnement personnalisé.",
           images: [
             {
-              url: "https://junctioneren.com/favicon.svg",
+              url: "https://junctioneren.com/imgs/contact2.webp",
               width: 1200,
               height: 630,
               alt: "Contactez Junctioner Construction Engineering",
-              type: "image/jpeg",
+              type: "image/webp",
             },
           ],
           siteName: "Junctioner Construction Engineering",
