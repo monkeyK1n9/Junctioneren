@@ -179,7 +179,10 @@ const OurServices = () => {
                   <div
                     className="rounded-full bg-[#DADADA] px-[25px] py-[6px] text-center flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-105 hover:bg-[#e0e0e0]"
                     onClick={() =>
-                      window.open("https://wa.me/+237695977562", "_blank")
+                      window.open(
+                        "https://wa.me/message/YEZBH4GZF6YYP1",
+                        "_blank"
+                      )
                     }
                   >
                     <FaWhatsapp
