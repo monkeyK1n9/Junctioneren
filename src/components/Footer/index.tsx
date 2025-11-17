@@ -99,7 +99,7 @@ const Footer = () => {
       ),
     },
     {
-      name: "junctionerce@gmail.com",
+      name: "contact@junctioneren.com",
       icon: (
         <Image src={images.MailImg} alt="pic" className="w-[13.2px] h-[16px]" />
       ),
