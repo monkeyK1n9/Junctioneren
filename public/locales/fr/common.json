@@ -20,6 +20,7 @@
     "titleTwo": "Nous construisons aujourd'hui, ce qui va vous inspirer demain.",
     "titleThree": "Gagnez du temps, de la confiance et des ressources avec notre expérience",
     "titleFour": "Nous travaillons dur pour rendre vos rêves possibles, où que vous soyez.",
+    "titleFive": "Nous sommes impatients de réaliser vos rêves",
     "contact": "envoyer le message",
     "service": "Voir nos services"
   },
@@ -43,11 +44,11 @@
   "whoWeAre": {
     "title": "Nos valeurs",
     "link": "en savoir plus sur nous",
-    "team": "Équipe Jeune",
-    "amb": "Ambitieux",
-    "dream": "Rêveurs",
-    "bestTeam": "Meilleure Équipe",
-    "cam": "Camerounais",
+    "team": "Responsabilité",
+    "amb": "Confiance",
+    "dream": "Compétence",
+    "bestTeam": "Transparence",
+    "cam": "Satisfaction du client",
     "eng": "Ingénieurs"
   },
   "projects": {

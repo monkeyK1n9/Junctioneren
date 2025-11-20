@@ -84,11 +84,6 @@ const WhoWeAre = () => {
       picture: images.wwaCam,
       title: t("whoWeAre.cam"),
     },
-    {
-      path: "#",
-      picture: images.wwaEng,
-      title: t("whoWeAre.eng"),
-    },
   ];
 
   return (
@@ -101,20 +96,17 @@ const WhoWeAre = () => {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            {/* Le texte "visible" lorsque l'image n'est pas survolée */}
             <div
-              className={`flex justify-center items-center text-[#B9B9B9] ${
-                // Affiche ce bloc si l'élément n'est PAS survolé
+              className={`flex items-center justify-center text-[#B9B9B9] lg:w-[480px] ${
                 hoveredIndex !== index ? "flex" : "hidden"
               }`}
             >
               <TextAbout className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[520px]">
                 {item.title}
               </TextAbout>
+
               {index < datas.length - 1 && index !== 2 && (
-                <div className="hidden flex-1 lg:flex justify-center">
-                  <TextAbout>/</TextAbout>
-                </div>
+                <span className="mx-6 lg:mx-10 text-center text-5xl">/</span>
               )}
             </div>
 

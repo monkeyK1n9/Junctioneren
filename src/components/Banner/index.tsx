@@ -52,6 +52,11 @@ const Banner = () => {
       text: t("banner.titleFour"),
       isBlack: false,
     },
+    {
+      image: images.PBank,
+      text: t("banner.titleFive"),
+      isBlack: false,
+    },
   ];
 
   const goToSlide = (slideIndex: any) => {

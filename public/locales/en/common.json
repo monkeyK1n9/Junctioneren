@@ -20,6 +20,7 @@
     "titleTwo": "We build today what will inspire you tomorrow.",
     "titleThree": "Save time, build trust, and gain resources with our experience.",
     "titleFour": "We work hard to make your dreams possible no matter where you are",
+    "titleFive": "We can't wait to make your dreams a reality",
     "contact": "send the message",
     "service": "See our services"
   },
@@ -43,11 +44,11 @@
   "whoWeAre": {
     "title": "Our Values",
     "link": "learn more about us",
-    "team": "Young Team",
-    "amb": "Ambitious",
-    "dream": "Dreamers",
-    "bestTeam": "Architects",
-    "cam": "Cameroonians",
+    "team": "Responsibility",
+    "amb": "Trust",
+    "dream": "Competence",
+    "bestTeam": "Transparency",
+    "cam": "Customer satisfaction",
     "eng": "Engineers"
   },
   "projects": {

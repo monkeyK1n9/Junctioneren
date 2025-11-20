@@ -81,27 +81,17 @@ const Footer = () => {
     {
       name: t("footer.adr"),
       icon: (
-        <Image
-          src={images.LocationImg}
-          alt="pic"
-          className="w-[13.2px] h-[16px]"
-        />
+        <Image src={images.LocationImg} alt="pic" className="w-auto h-[16px]" />
       ),
     },
     {
       name: "(+237) 695 977 562",
-      icon: (
-        <Image
-          src={images.PhoneImg}
-          alt="pic"
-          className="w-[13.2px] h-[16px]"
-        />
-      ),
+      icon: <Image src={images.LgWsp} alt="pic" className="w-auto h-[16px]" />,
     },
     {
       name: "contact@junctioneren.com",
       icon: (
-        <Image src={images.MailImg} alt="pic" className="w-[13.2px] h-[16px]" />
+        <Image src={images.MailImg} alt="pic" className="w-[16px] h-[16px]" />
       ),
     },
   ];
@@ -145,15 +135,28 @@ const Footer = () => {
             <ul className="flex flex-col space-y-[4px] md:space-y-[10px] pt-[10px] lg:pt-[25px]">
               {blogTwo.map((item, index) => {
                 let content;
-                if (item.name === "junctionerce@gmail.com") {
+                if (
+                  item.name === "junctionerce@gmail.com" ||
+                  item.name === "contact@junctioneren.com"
+                ) {
                   content = (
-                    <Link
-                      href={`mailto:${item.name}`}
-                      className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center transition-all duration-300 hover:text-[#DF4D1B]`}
-                    >
+                    <div className="flex items-center">
                       <span className="mr-[12.8px]">{item.icon}</span>{" "}
-                      {item.name}
-                    </Link>
+                      <div>
+                        <Link
+                          href={`mailto:junctionerce@gmail.com`}
+                          className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center transition-all duration-300 hover:text-[#DF4D1B]`}
+                        >
+                          junctionerce@gmail.com
+                        </Link>
+                        <Link
+                          href={`mailto:contact@junctioneren.com`}
+                          className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center transition-all duration-300 hover:text-[#DF4D1B]`}
+                        >
+                          contact@junctioneren.com
+                        </Link>
+                      </div>
+                    </div>
                   );
                 } else if (item.name === "(+237) 695 977 562") {
                   const phoneNumber = item.name.replace(/[()\s-]/g, "");
