@@ -90,6 +90,7 @@ import C3 from "./c3.webp";
 import C4 from "./c4.webp";
 import C5 from "./c5.webp";
 import LocationPic from "./localtion.webp";
+import LgWsp from "./lgwsp.png";
 
 const images = {
   Ser1,
@@ -184,6 +185,7 @@ const images = {
   POdz,
   PBank,
   LocationPic,
+  LgWsp,
 };
 
 export default images;
