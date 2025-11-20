@@ -135,7 +135,7 @@ const ContactUS = () => {
               <button
                 className={`w-full sm:w-1/2 lg:w-[314px] py-3 text-primaryTitle rounded-full border border-gray-300 flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-300 ${fontClass} uppercase text-[12px] tracking-[20%] font-normal bg-[#f3f3f3] border-none`}
                 onClick={() =>
-                  window.open("https://wa.me/+237695977562", "_blank")
+                  window.open("https://wa.me/message/YEZBH4GZF6YYP1", "_blank")
                 }
               >
                 <Image
@@ -180,23 +180,22 @@ const ContactUS = () => {
 
           {/* Section de droite: Carte (iframe) */}
           <div className="w-full lg:w-[765px] relative h-[400px] lg:h-[340px] rounded-lg overflow-hidden lg:pt-4">
-            {isMapLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
-                <div className="relative">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin"></div>
-                </div>
-              </div>
-            )}
-            <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=11.5200%2C3.8400%2C11.5500%2C3.8600&layer=mapnik&marker=3.8500%2C11.5350"
-              className={`w-full h-full border-0 transition-opacity duration-700 ${
+            <Image
+              src={images.LocationPic}
+              alt="Junctioner Construction Engineering Location"
+              className={`w-full h-full object-cover transition-opacity duration-700 ${
                 isMapLoading ? "opacity-0" : "opacity-100"
               }`}
-              allowFullScreen={true}
-              loading="lazy"
-              title="Junctioner Construction Engineering Location"
               onLoad={handleMapLoad}
+              onClick={() =>
+                window.open(
+                  "https://maps.google.com/?q=3.8500,11.5350",
+                  "_blank"
+                )
+              }
+              style={{ cursor: "pointer" }}
             />
+
             <button
               className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white/95 backdrop-blur-md rounded-xl p-2 sm:p-3 shadow-xl border-2 border-white/50 hover:bg-white hover:shadow-2xl transition-all duration-300 group"
               onClick={() =>
@@ -206,36 +205,15 @@ const ContactUS = () => {
                 )
               }
               title="Ouvrir dans Google Maps"
-            ></button>
-            <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 lg:right-auto lg:max-w-[350px]">
-              <div className="bg-white/98 backdrop-blur-md rounded-xl p-3 sm:p-4 shadow-2xl border-2 border-white/60">
-                <div className="flex items-start space-x-2 sm:space-x-3">
-                  <div className="relative flex-shrink-0">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
-                      <svg
-                        className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <div className="absolute inset-0 w-5 h-5 sm:w-6 sm:h-6 bg-red-400 rounded-full animate-ping opacity-20"></div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4
-                      className={`${fontClass} text-[12px] tracking-[20%] leading-[12px] font-normal text-gray-900 drop-shadow-sm`}
-                    >
-                      {t("contact.int")}
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
+            >
+              <svg
+                className="w-5 h-5 text-gray-700 group-hover:text-black"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M10 2a6 6 0 00-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
