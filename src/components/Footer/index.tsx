@@ -161,13 +161,16 @@ const Footer = () => {
                 } else if (item.name === "(+237) 695 977 562") {
                   const phoneNumber = item.name.replace(/[()\s-]/g, "");
                   content = (
-                    <Link
-                      href={`tel:${phoneNumber}`}
-                      className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center transition-all duration-300 hover:text-[#DF4D1B]`}
-                    >
-                      <span className="mr-[12.8px]">{item.icon}</span>{" "}
-                      {item.name}
-                    </Link>
+                    <div className="flex flex-row space-x-2 underline underline-offset-4">
+                      <Link
+                        href={`tel:${phoneNumber}`}
+                        className={`${fontClass} text-white text-[14px] leading-[24px] tracking-[3%] flex items-center transition-all duration-300 hover:text-[#DF4D1B]`}
+                      >
+                        <span className="mr-[12.8px]">{item.icon}</span>{" "}
+                        {item.name}
+                      </Link>
+                      <Image src={images.ArrR} alt="pic" />
+                    </div>
                   );
                 } else {
                   content = (
