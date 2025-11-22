@@ -44,11 +44,18 @@
   "whoWeAre": {
     "title": "Our Values",
     "link": "learn more about us",
+    "ds": "We have built our values on the pillars of the construction industry—an industry characterized by risk, multiple stakeholders, huge investments, and our clients' intense focus on their projects. These values includ",
+    "ds_1": "These values guide our actions, decisions, and relationships, enabling us to successfully navigate the challenges of the construction industry and provide exceptional service to our customers.",
     "team": "Responsibility",
+    "team_des": "We take responsibility for our actions and decisions, ensuring that we fulfill our obligations and deliver results that meet the highest standards.",
     "amb": "Trust",
+    "amb_des": "We believe in building strong relationships based on trust with our clients, partners, and team members. Trust is the foundation of successful collaborations and long-term partnerships.",
     "dream": "Competence",
+    "dream_des": "We take pride in the expertise and skills of our team. Through continuous learning and professional development, we ensure that we remain at the forefront of industry knowledge and deliver exceptional solutions.",
     "bestTeam": "Transparency",
+    "bt_des": "We embrace transparency in all aspects of our work. We communicate openly and honestly, providing clear information and perspectives to our customers and stakeholders.",
     "cam": "Customer satisfaction",
+    "cam_des": "Our ultimate goal is customer satisfaction. We prioritize our customers' needs, preferences, and objectives, constantly striving to exceed their expectations and deliver successful results.",
     "eng": "Engineers"
   },
   "projects": {

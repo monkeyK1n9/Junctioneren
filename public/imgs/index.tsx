@@ -79,11 +79,11 @@ import OtherPic8 from "./others/pic8.webp";
 import OtherPic9 from "./others/pic9.webp";
 import OtherPic10 from "./others/pic10.webp";
 import OtherPic11 from "./others/pic11.webp";
-import Ser1 from "./services/topo.webp";
-import Ser2 from "./services/plomb.webp";
-import Ser3 from "./services/search.webp";
-import Ser4 from "./services/electro.webp";
-import Ser5 from "./services/import.webp";
+import Ser1 from "./services/topo.png";
+import Ser2 from "./services/plomb.png";
+import Ser3 from "./services/search.png";
+import Ser4 from "./services/electro.png";
+import Ser5 from "./services/import.png";
 import C1 from "./c1.webp";
 import C2 from "./c2.webp";
 import C3 from "./c3.webp";
@@ -91,6 +91,7 @@ import C4 from "./c4.webp";
 import C5 from "./c5.webp";
 import LocationPic from "./localtion.webp";
 import LgWsp from "./lgwsp.png";
+import ArrR from "./ar.png";
 
 const images = {
   Ser1,
@@ -186,6 +187,7 @@ const images = {
   PBank,
   LocationPic,
   LgWsp,
+  ArrR,
 };
 
 export default images;

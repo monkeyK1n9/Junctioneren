@@ -37,7 +37,7 @@ const CardPicture = ({ picture, title }: { picture: any; title: string }) => {
   );
 };
 
-const TextAbout = ({ children, ...props }: TextAboutProps) => (
+export const TextAbout = ({ children, ...props }: TextAboutProps) => (
   <h4
     {...props}
     className={`
@@ -87,7 +87,7 @@ const WhoWeAre = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <div>
       <div className="mt-[30px] sm:mt-[40px] md:mt-[60px] lg:mt-[76px] grid grid-cols-12 gap-[10px] sm:gap-[20px]">
         {datas.map((item, index) => (
           <div

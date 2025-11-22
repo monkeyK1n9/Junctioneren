@@ -226,56 +226,8 @@ const ContactUS = () => {
             {t("contact.send_message")}
           </span>
         </button>
-        <div className="mt-[10px] sm:mt-[20px] lg:mt-[40px]">
-          <h4 className="text-3xl lg:text-[44.88px] font-bold text-[#333333] mb-8 lg:px-0 text-start">
-            {t("contact.even")}
-          </h4>
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="relative overflow-hidden">
-                <Image
-                  src={images.C1}
-                  alt="image"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-
-              <div className="relative overflow-hidden">
-                <Image
-                  src={images.C4}
-                  alt="image"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-
-              <div className="relative overflow-hidden">
-                <Image
-                  src={images.C3}
-                  alt="image"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-
-            {/* second */}
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
-                <Image
-                  src={images.C5}
-                  alt="image"
-                  className="w-full h-auto col-span-2"
-                />
-                <Image
-                  src={images.C2}
-                  alt="image"
-                  className="w-full h-auto col-span-2"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <div className="mb-[40px] sm:mb-[80px] lg:mb-[150px] ] bg-red-500 container "></div>
+      <div className="mb-[40px] sm:mb-40" />
       <Footer />
     </DefaultLayout>
   );
