@@ -41,7 +41,7 @@ const WhoWeArePage = () => {
       content: t("weArePage.d1"),
       occupation: t("weArePage.p1"),
       pic: images.Prof4,
-      linkedin: "linkedin.com/in/kacdeu-baudoin-426506a8",
+      linkedin: "https://www.linkedin.com/in/kacdeu-baudoin-426506a8",
     },
     {
       name: t("weArePage.b2"),
@@ -62,7 +62,8 @@ const WhoWeArePage = () => {
       content: t("weArePage.d4"),
       occupation: t("weArePage.p4"),
       pic: images.Prof6,
-      linkedin: "https://www.linkedin.com/in/sandra-alida-1b29a21bb/ ",
+      linkedin:
+        "https://www.linkedin.com/in/alida-sandra-dzoudja-1b29a21bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: t("weArePage.b5"),
