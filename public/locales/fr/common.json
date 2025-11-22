@@ -44,11 +44,18 @@
   "whoWeAre": {
     "title": "Nos valeurs",
     "link": "en savoir plus sur nous",
+    "ds": "Nous avons construit nos valeurs sur les piliers du secteur de la construction - un secteur caractérisé par les risques, les multiples intervenants, les investissements colossaux et l'attention particulière portée par nos clients sur leurs projets. Ces valeurs comprennent :",
+    "ds_1": "Ces valeurs guident nos actions, nos décisions et nos relations, nous permettant de naviguer avec succès dans les défis du secteur de la construction et de fournir des services exceptionnels à nos clients.",
     "team": "Responsabilité",
+    "team_des": "Nous assumons nos actions et nos décisions, veillant à remplir nos obligations et à fournir des résultats qui répondent aux normes les plus élevées.",
     "amb": "Confiance",
+    "amb_des": "Nous croyons en la création d'une relation de confiance solide avec nos clients, nos partenaires et les membres de notre équipe. La confiance est le fondement de collaborations fructueuses et de partenariats à long terme.",
     "dream": "Compétence",
+    "dream_des": "Nous sommes fiers de l'expertise et des compétences de notre équipe. Grâce à un apprentissage continu et à un développement professionnel, nous nous assurons de rester à la pointe des connaissances de l'industrie et de fournir des solutions exceptionnelles.",
     "bestTeam": "Transparence",
+    "bt_des": "Nous adoptons la transparence dans tous les aspects de notre travail. Nous communiquons de manière ouverte et honnête, en fournissant des informations claires et des perspectives à nos clients et parties prenantes.",
     "cam": "Satisfaction du client",
+    "cam_des": "Notre objectif ultime est la satisfaction de nos clients. Nous accordons la priorité à leurs besoins, préférences et objectifs, nous efforçant constamment de dépasser leurs attentes et de fournir des résultats réussis.",
     "eng": "Ingénieurs"
   },
   "projects": {

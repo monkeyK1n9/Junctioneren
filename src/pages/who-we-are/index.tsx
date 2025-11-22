@@ -10,11 +10,12 @@ import { FaArrowRight, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import WhoWeAre from "@/components/WhoWeAre";
+import WhoWeAre, { TextAbout } from "@/components/WhoWeAre";
 import Breadcrumb from "@/components/Breadcrumb";
 import { cleanText } from "@/utils/text";
 import { useTranslation } from "next-i18next";
 import { NextSeo } from "next-seo";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export const fontClassRoboto = cn(
   RobotoUiDisplay.className,
@@ -137,6 +138,8 @@ const WhoWeArePage = () => {
     );
   };
 
+  const fontClass = cn(InterUiDisplay.variable, InterUiDisplay.className);
+
   return (
     <DefaultLayout>
       <NextSeo
@@ -166,18 +169,111 @@ const WhoWeArePage = () => {
         }}
       />
       <Header />
-      <main className="lg:max-w-[80%] lg:mx-auto pt-[30px] lg:pt-[40px] px-4 lg:px-0">
-        <section>
-          <Breadcrumb />
-          <h5
-            className={`${fontClassRoboto} text-[#333333] font-[700] text-[36px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2 text-center lg:text-start pt-4 lg:pt-0`}
-          >
-            {t("weArePage.title")}
-          </h5>
-          <div className="pt-[16px] lg:pt-[32px]">
-            <WhoWeAre />
+      <main>
+        <section className="py-[20px] lg:py-[46px] lg:max-w-[1170px] lg:mx-auto px-4 lg:px-0">
+          {/* <Breadcrumb /> */}
+          <div className="pt-[32px] sm:pt-[50px] lg:pt-[80px] xl:pt-[103px]">
+            <div className="mt-[10px] sm:mt-[20px] lg:mt-[40px]">
+              <div className="mx-auto">
+                <h5
+                  className={`${fontClassRoboto} text-[#333333] font-[700] text-[36px] sm:text-[50px] lg:text-[64px] leading-[40px] sm:leading-[50px] xl:leading-[75px] tracking-[0%] lg:max-w-[986px] lg:mt-[25px] px-2 text-center lg:text-start pt-4 lg:pt-0`}
+                >
+                  {t("contact.even")}
+                </h5>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[20px] lg:mt-[33px]">
+                  <div className="space-y-4">
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src={images.C1}
+                        alt="image"
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src={images.C4}
+                        alt="image"
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src={images.C3}
+                        alt="image"
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* second */}
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+                      <Image
+                        src={images.C5}
+                        alt="image"
+                        className="w-full h-auto col-span-2"
+                      />
+                      <Image
+                        src={images.C2}
+                        alt="image"
+                        className="w-full h-auto col-span-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
+        <div className="w-full max-w-[1170px] mx-auto px-4 lg:px-0">
+          <TextAbout className="text-start text-[#b9b9b9]">
+            Nos Valeurs
+          </TextAbout>
+          <p
+            className={`text-black font-[400] text-[12px] sm:text-[13px] tracking-[0%] leading-[18px] ${fontClassInter}`}
+          >
+            {t("whoWeAre.ds")}
+          </p>
+          <div>
+            <SectionTitle
+              title={t("whoWeAre.team")}
+              description={t("whoWeAre.team_des")}
+              fontTitle={fontClass}
+              fontText={fontClassInter}
+            />
+            <SectionTitle
+              title={t("whoWeAre.amb")}
+              description={t("whoWeAre.amb_des")}
+              fontTitle={fontClass}
+              fontText={fontClassInter}
+            />
+            <SectionTitle
+              title={t("whoWeAre.dream")}
+              description={t("whoWeAre.dream_des")}
+              fontTitle={fontClass}
+              fontText={fontClassInter}
+            />
+            <SectionTitle
+              title={t("whoWeAre.bestTeam")}
+              description={t("whoWeAre.bt_des")}
+              fontTitle={fontClass}
+              fontText={fontClassInter}
+            />
+            <SectionTitle
+              title={t("whoWeAre.cam")}
+              description={t("whoWeAre.cam_des")}
+              fontTitle={fontClass}
+              fontText={fontClassInter}
+            />
+          </div>
+          <p
+            className={`text-black font-[400] text-[12px] sm:text-[13px] tracking-[0%] leading-[18px] ${fontClassInter}`}
+          >
+            {t("whoWeAre.ds_1")}
+          </p>
+        </div>
         <section className="pt-[14px] lg:pt-[72px]">
           <div className="container mx-auto">
             <div className="bg-[#F4F4F4] lg:h-[161px] rounded-[20px] lg:max-w-[90%] mx-auto flex flex-col justify-center items-center p-6 lg:p-0">
@@ -224,7 +320,7 @@ const WhoWeArePage = () => {
         </section>
         <section
           id="teams"
-          className="pt-[16px] lg:pt-[62px] lg:mx-auto px-2 lg:px-0 pb-[100px] sm:pb-[200px] lg:pb-[300px]"
+          className="pt-[16px] lg:pt-[62px] lg:mx-auto lg:max-w-[1170px] px-2 lg:px-0 pb-[100px] sm:pb-[200px] lg:pb-[300px]"
         >
           <div className="mt-[20px] sm:mt-[40px] lg:mt-[100px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-[20px] lg:gap-y-0 lg:gap-x-[76px]">

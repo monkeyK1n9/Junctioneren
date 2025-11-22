@@ -138,8 +138,9 @@ const OurServices = () => {
       />
       <Header />
       <SlideUp delay={0.5}>
-        <main className="lg:max-w-[80%] lg:mx-auto py-[30px] lg:py-[40px] px-4 lg:px-0">
-          <Breadcrumb />
+        <main className="lg:max-w-[1342px] lg:mx-auto py-[30px] lg:py-[40px] px-4 lg:px-0">
+          {/* <Breadcrumb /> */}
+          <div className="pt-[32px] sm:pt-[50px] lg:pt-[80px] xl:pt-[103px]" />
           <Menu title={t("servicePage.title")} titleLink={""} path="" />
           <section className="my-[14px] lg:my-[48px]">
             <div className="mx-auto">
