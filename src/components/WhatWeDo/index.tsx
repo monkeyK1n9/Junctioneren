@@ -78,25 +78,25 @@ const WhatWeDo = () => {
   const datas: DataProps[] = [
     {
       title: t("whatWeDo.one"),
-      path: "#",
+      path: "/our-services",
       picture: images.WWDManag,
       shape: "rounded-md",
     },
     {
       title: t("whatWeDo.two"),
-      path: "#",
+      path: "/our-services",
       picture: images.WWDInfras,
       shape: "rounded-full",
     },
     {
       title: t("whatWeDo.three"),
-      path: "#",
+      path: "/our-services",
       picture: images.WWDDesign,
       shape: "rounded-tl-[50px] rounded-br-[50px]",
     },
     {
       title: t("whatWeDo.four"),
-      path: "#",
+      path: "/our-services",
       picture: images.WWDIntell,
       shape: "rounded-tr-[100px] rounded-bl-[100px]",
     },
