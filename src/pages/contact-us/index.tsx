@@ -189,7 +189,7 @@ const ContactUS = () => {
               onLoad={handleMapLoad}
               onClick={() =>
                 window.open(
-                  "https://maps.google.com/?q=3.8500,11.5350",
+                  "https://maps.google.com/?q=3.828142003070225,11.470684151887637",
                   "_blank"
                 )
               }
