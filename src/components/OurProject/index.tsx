@@ -36,9 +36,9 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
       link: "/our-projects/s-nfai",
     },
     {
-      picture: images.PUnMf,
-      title: t("projects.titleTwo"),
-      link: "/our-projects/cite-universitaire-mfou",
+      picture: images.PBank,
+      title: t("projects.titleSeven"),
+      link: "/our-projects/bank-ubc",
     },
   ];
 
@@ -49,9 +49,9 @@ const OurProjects = ({ showBtn, showBreadcrumb }: MyProps) => {
       link: "/our-projects/cite-universitaire-eyang",
     },
     {
-      picture: images.pNm,
-      title: t("projects.titleFour"),
-      link: "/our-projects/imm-nomayos",
+      picture: images.POdz,
+      title: t("projects.titleSix"),
+      link: "/our-projects/dup-odza",
     },
     {
       picture: images.pJv,

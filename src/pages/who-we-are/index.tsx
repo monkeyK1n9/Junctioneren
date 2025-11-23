@@ -171,7 +171,7 @@ const WhoWeArePage = () => {
       />
       <Header />
       <main>
-        <section className="py-[20px] lg:py-[46px] lg:max-w-[1170px] lg:mx-auto px-4 lg:px-0">
+        <section className="py-[20px] lg:py-[46px] lg:max-w-[1170px] lg:mx-auto px-4 lg:px-0 mt-[80px] lg:mt-0">
           {/* <Breadcrumb /> */}
           <div className="pt-[32px] sm:pt-[50px] lg:pt-[80px] xl:pt-[103px]">
             <div className="mt-[10px] sm:mt-[20px] lg:mt-[40px]">

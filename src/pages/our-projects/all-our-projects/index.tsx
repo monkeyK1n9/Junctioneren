@@ -82,10 +82,10 @@ const Index = () => {
       content: t("projects.contentOne"),
     },
     {
-      picture: images.PUnMf,
-      title: t("projects.titleTwo"),
-      link: "/our-projects/cite-universitaire-mfou",
-      content: t("projects.contentTwo"),
+      picture: images.PBank,
+      title: t("projects.titleSeven"),
+      link: "/our-projects/bank-ubc",
+      content: t("projects.contentSeven"),
     },
     {
       picture: images.PuEy,
@@ -94,10 +94,10 @@ const Index = () => {
       content: t("projects.contentThree"),
     },
     {
-      picture: images.pNm,
-      title: t("projects.titleFour"),
-      link: "/our-projects/imm-nomayos",
-      content: t("projects.contentFour"),
+      picture: images.POdz,
+      title: t("projects.titleSix"),
+      link: "/our-projects/dup-odza",
+      content: t("projects.contentSix"),
     },
     {
       picture: images.pJv,
@@ -106,16 +106,16 @@ const Index = () => {
       content: t("projects.contentFive"),
     },
     {
-      picture: images.POdz,
-      title: t("projects.titleSix"),
-      link: "/our-projects/dup-odza",
-      content: t("projects.contentSix"),
+      picture: images.pNm,
+      title: t("projects.titleFour"),
+      link: "/our-projects/imm-nomayos",
+      content: t("projects.contentFour"),
     },
     {
-      picture: images.PBank,
-      title: t("projects.titleSeven"),
-      link: "/our-projects/bank-ubc",
-      content: t("projects.contentSeven"),
+      picture: images.PUnMf,
+      title: t("projects.titleTwo"),
+      link: "/our-projects/cite-universitaire-mfou",
+      content: t("projects.contentTwo"),
     },
   ];
 
