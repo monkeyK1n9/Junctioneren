@@ -40,7 +40,7 @@ const LogisticCard: React.FC<LogisticCardProps> = ({
         className="w-full h-full object-cover"
       />
 
-      <div className="absolute bottom-3 left-3 w-[80px] h-[80px] rounded-[10px] overflow-hidden border-2 border-white/50 shadow-lg">
+      <div className="absolute bottom-3 left-3 w-[100px] lg:w-[80px] h-[100px] lg:h-[80px] rounded-[10px] overflow-hidden border-2 border-white/50 shadow-lg">
         <Image
           src={smallImage}
           alt="Small Overlay"
