@@ -33,12 +33,13 @@ const LogisticCard: React.FC<LogisticCardProps> = ({
   smallImage,
 }) => {
   return (
-    <div className="relative overflow-hidden w-[194px] h-[250px] lg:h-[212px] rounded-[10px] lg:object-cover group">
+    <div className="relative overflow-hidden w-full aspect-square rounded-[10px] group lg:w-[194px] lg:h-[212px]">
       <Image
         src={bigImage}
         alt="Main Background"
         className="w-full h-full object-cover"
       />
+
       <div className="absolute bottom-3 left-3 w-[80px] h-[80px] rounded-[10px] overflow-hidden border-2 border-white/50 shadow-lg">
         <Image
           src={smallImage}
