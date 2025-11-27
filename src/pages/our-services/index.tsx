@@ -23,21 +23,45 @@ export const fontClassInter = cn(
   InterUiDisplay.variable
 );
 
+interface LogisticCardProps {
+  bigImage: string;
+  smallImage: string;
+}
+
+const LogisticCard: React.FC<LogisticCardProps> = ({
+  bigImage,
+  smallImage,
+}) => {
+  return (
+    <div className="relative overflow-hidden w-[194px] h-[250px] lg:h-[212px] rounded-[10px] lg:object-cover group">
+      <Image
+        src={bigImage}
+        alt="Main Background"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute bottom-3 left-3 w-[80px] h-[80px] rounded-[10px] overflow-hidden border-2 border-white/50 shadow-lg">
+        <Image
+          src={smallImage}
+          alt="Small Overlay"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  );
+};
+
 type CardType = {
   title: any;
   content: string;
   pic: any;
+  small: any;
 };
 const OurServices = () => {
-  const CardItem = ({ content, title, pic }: CardType) => {
+  const CardItem = ({ content, title, pic, small }: CardType) => {
     return (
-      <div className="w-full lg:w-[474px] h-auto lg:h-[222px] gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start">
-        <Image
-          src={pic}
-          alt="picture"
-          className="w-full h-auto lg:w-[193.33px] lg:h-[212px] rounded-[10px] lg:object-cover"
-        />
-        <div className="text-left">
+      <div className="w-full lg:w-[543px] h-auto lg:h-[212px] gap-[16px] lg:gap-[24px] flex flex-col lg:flex-row items-start">
+        <LogisticCard bigImage={pic} smallImage={small} />
+        <div className="text-left flex-grow lg:w-[342px]">
           <h5 className="pt-[6px] text-[#DF4D1B] font-[700] text-[12px] sm:text-[14px] lg:text-[20px] leading-[100%] tracking-[0%]">
             {title}
           </h5>
@@ -58,21 +82,25 @@ const OurServices = () => {
       title: t("servicePage.s1"),
       content: t("servicePage.d1"),
       pic: images.Management,
+      small: images.Management1,
     },
     {
       title: t("servicePage.s2"),
       content: t("servicePage.d2"),
       pic: images.Conception,
+      small: images.Conception1,
     },
     {
       title: t("servicePage.s3"),
       content: t("servicePage.d3"),
       pic: images.Design,
+      small: images.Design1,
     },
     {
       title: t("servicePage.s4"),
       content: t("servicePage.d4"),
       pic: images.Maison,
+      small: images.Maison1,
     },
   ];
   const datasTwo: CardType[] = [
@@ -80,31 +108,37 @@ const OurServices = () => {
       title: t("servicePage.s5"),
       content: t("servicePage.d5"),
       pic: images.Terrassement,
+      small: images.Terrassement1,
     },
     {
       title: t("servicePage.s6"),
       content: t("servicePage.d6"),
       pic: images.Ser1,
+      small: images.Ser11,
     },
     {
       title: t("servicePage.s7"),
       content: t("servicePage.d7"),
       pic: images.Ser2,
+      small: images.Ser22,
     },
     {
       title: t("servicePage.s8"),
       content: t("servicePage.d8"),
       pic: images.Ser3,
+      small: images.Ser33,
     },
     {
       title: t("servicePage.s9"),
       content: t("servicePage.d9"),
       pic: images.Ser4,
+      small: images.Ser44,
     },
     {
       title: t("servicePage.s10"),
       content: t("servicePage.d10"),
       pic: images.Ser5,
+      small: images.Ser55,
     },
   ];
 
@@ -151,6 +185,7 @@ const OurServices = () => {
                       key={index}
                       content={item.content}
                       title={item.title}
+                      small={item.small}
                       pic={item.pic}
                     />
                   ))}
@@ -204,6 +239,7 @@ const OurServices = () => {
                       key={index}
                       content={item.content}
                       title={item.title}
+                      small={item.small}
                       pic={item.pic}
                     />
                   ))}

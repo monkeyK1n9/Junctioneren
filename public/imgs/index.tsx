@@ -59,13 +59,18 @@ import wwaAmb from "./wwaAmb.webp";
 import wwaCam from "./wwaCam.webp";
 import wwaYoung from "./wwaYoung.webp";
 import ArrowTopRigth from "./topright.png";
-import Conception from "./services/concep.png";
-import Design from "./services/design.png";
-import Maison from "./services/maison.png";
-import Management from "./services/mang.png";
+import Conception from "./services/concep.webp";
+import Conception1 from "./services/concep1.webp";
+import Design from "./services/design.webp";
+import Design1 from "./services/design1.webp";
+import Maison from "./services/maison.webp";
+import Maison1 from "./services/maison1.webp";
+import Management from "./services/mang.webp";
+import Management1 from "./services/mang1.png";
 import Others from "./services/others.png";
 import Others1 from "./services/others1.png";
-import Terrassement from "./services/terras.png";
+import Terrassement from "./services/terras.webp";
+import Terrassement1 from "./services/terras1.webp";
 import Tiktok from "./tiktok.png";
 import OtherPic0 from "./others/pic0.webp";
 import OtherPic1 from "./others/pic1.webp";
@@ -79,11 +84,16 @@ import OtherPic8 from "./others/pic8.webp";
 import OtherPic9 from "./others/pic9.webp";
 import OtherPic10 from "./others/pic10.webp";
 import OtherPic11 from "./others/pic11.webp";
-import Ser1 from "./services/topo.png";
-import Ser2 from "./services/plomb.png";
-import Ser3 from "./services/search.png";
-import Ser4 from "./services/electro.png";
-import Ser5 from "./services/import.png";
+import Ser1 from "./services/topo.webp";
+import Ser11 from "./services/topo1.webp";
+import Ser2 from "./services/plomb.jpeg";
+import Ser22 from "./services/plomb1.webp";
+import Ser3 from "./services/search.jpg";
+import Ser33 from "./services/search1.webp";
+import Ser4 from "./services/electro.webp";
+import Ser44 from "./services/electro1.webp";
+import Ser5 from "./services/import.webp";
+import Ser55 from "./services/import1.webp";
 import C1 from "./c1.webp";
 import C2 from "./c2.webp";
 import C3 from "./c3.webp";
@@ -188,6 +198,16 @@ const images = {
   LocationPic,
   LgWsp,
   ArrR,
+  Conception1,
+  Design1,
+  Maison1,
+  Management1,
+  Terrassement1,
+  Ser11,
+  Ser22,
+  Ser33,
+  Ser44,
+  Ser55,
 };
 
 export default images;
