@@ -319,7 +319,7 @@ const WhoWeArePage = () => {
             </div>
           </div>
         </section>
-        <section
+        {/* <section
           id="teams"
           className="pt-[16px] lg:pt-[62px] lg:mx-auto lg:max-w-[1170px] px-2 lg:px-0 pb-[100px] sm:pb-[200px] lg:pb-[300px]"
         >
@@ -337,7 +337,7 @@ const WhoWeArePage = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </DefaultLayout>
